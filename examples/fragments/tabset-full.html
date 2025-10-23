@@ -1,0 +1,29 @@
+<script type="text/javascript">
+  Reveal.on("fragmentshown", (event) => {
+    if (event.fragment.classList.contains("tabswitch")) {
+      const tabs = Reveal.getCurrentSlide().querySelectorAll(
+        ".panel-tabset ul li a"
+      );
+
+      const currentIndex = [...tabs].findIndex(
+        (node) => node.getAttribute("aria-selected") === "true"
+      );
+
+      tabs[currentIndex + 1]?.click();
+    }
+  });
+
+  Reveal.on("fragmenthidden", (event) => {
+    if (event.fragment.classList.contains("tabswitch")) {
+      const tabs = Reveal.getCurrentSlide().querySelectorAll(
+        ".panel-tabset ul li a"
+      );
+
+      const currentIndex = [...tabs].findIndex(
+        (node) => node.getAttribute("aria-selected") === "true"
+      );
+
+      tabs[currentIndex - 1]?.click();
+    }
+  });
+</script>

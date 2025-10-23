@@ -649,11 +649,6 @@ It requires a mouse to correctly toggle in the middle of a presentation.
 We can deal with this as well.
 As always we need to find the elements and how to toggle them.
 
-:::: {.callout-note}
-The astute reader will notice that the following will only work on a tabset with 2 tabs.
-Making this fragment work for multiple tabs is left as an exercise for the reader.
-:::
-
 We are again using `.getCurrentSlide()` and `querySelector()`,
 and with some trial and error,
 determine that the following two [CSS selectors](https://www.w3schools.com/cssref/css_selectors.php) captures the two tabs.
@@ -690,6 +685,36 @@ Reveal.on('fragmenthidden', (event) => {
 
 <a href="examples/fragments/fragment-tabset.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
 <a href="examples/fragments/tabset.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js<a>
+
+The above only works with 2 tabs, 
+since we are toggling between the first and last one with `first-of-type` and `last-of-type`.
+
+Let us now see how we can expand this to work with any number of tabs.
+The toggling code now looks like this:
+
+```js
+const tabs = Reveal.getCurrentSlide().querySelectorAll(
+  ".panel-tabset ul li a"
+);
+
+const currentIndex = [...tabs].findIndex(
+  (node) => node.getAttribute("aria-selected") === "true"
+);
+
+tabs[currentIndex + 1]?.click();
+```
+
+We have a slightly different strategy now.
+First we find all the tabs.
+next we identify the index of current tab that we are on.
+Lastly we select the next tab and `.click()` on it.
+For the reverse we do `currentIndex - 1` instead.
+
+<iframe class="slide-deck" src="examples/fragments/fragment-tabset-full.html">
+</iframe>
+
+<a href="examples/fragments/fragment-tabset-full.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/fragments/tabset-full.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js<a>
 
 ## advance embedded slides
 

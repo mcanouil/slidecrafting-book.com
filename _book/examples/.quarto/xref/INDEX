@@ -167,5 +167,8 @@
   },
   "colors/no-syntax-highlighting.qmd": {
     "no-syntax-highlighting.html": "05ad3bd9"
+  },
+  "fragments/fragment-tabset-full.qmd": {
+    "fragment-tabset-full.html": "b188a5c1"
   }
 }

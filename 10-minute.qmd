@@ -91,7 +91,7 @@ $font-family-monospace: "Space Mono", monospace;
 
 </iframe>
 
-See the fonts chapter for further considerations and options.
+See the [fonts chapter](fonts.qmd) for further considerations and options.
 
 ## Colors
 
@@ -121,7 +121,7 @@ $code-color: #89b4fa;
 
 </iframe>
 
-See the color chapter for further considerations and options.
+See the [colors chapter](colors.qmd) for further considerations and options.
 
 ## Sizes
 
@@ -159,4 +159,4 @@ $code-block-font-size: 0.9em;
 
 </iframe>
 
-See the sizes chapter for further considerations and options.
+See the [sizes chapter](sizes.qmd) for further considerations and options.

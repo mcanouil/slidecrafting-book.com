@@ -1,5 +1,5 @@
 ---
-title: asciicast
+title: Asciicast
 ---
 
 This chapter celebrates the [asciicast](https://github.com/r-lib/asciicast) R package to showcase rich output.

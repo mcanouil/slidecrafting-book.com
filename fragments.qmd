@@ -770,3 +770,98 @@ Reveal.on('fragmenthidden', event => {
 
 <a href="examples/fragments/fragment-advance.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 <a href="examples/fragments/advance.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
+
+## Fragment Extensions
+
+The following extensions provide additional fragment capabilities beyond what we've covered so far.
+
+### Roughnotation
+
+The [quarto-roughnotation](https://github.com/EmilHvitfeldt/quarto-roughnotation) extension uses the [Rough Notation](https://roughnotation.com/) JavaScript library to add hand-drawn styled annotations to your slides.
+These annotations can circle, underline, highlight, or strike-through text with an animated sketchy appearance.
+
+<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-roughnotation/examples/example.html">
+</iframe>
+
+To install:
+
+```bash
+quarto add EmilHvitfeldt/quarto-roughnotation
+```
+
+The extension provides several annotation types that can be triggered as fragments:
+
+- `rn-underline` - Underline text
+- `rn-circle` - Circle around text
+- `rn-highlight` - Highlight text
+- `rn-strike-through` - Strike through text
+- `rn-crossed-off` - X through text
+- `rn-bracket` - Bracket around text
+
+Usage is simple:
+
+```markdown
+[This text will be circled]{.rn-circle .fragment}
+
+[This will be highlighted]{.rn-highlight .fragment fragment-index=2}
+```
+
+You can customize colors and other properties using data attributes:
+
+```markdown
+[Important!]{.rn-underline data-rn-color="red" .fragment}
+```
+
+<div class="project-buttons">
+<a href="https://github.com/EmilHvitfeldt/quarto-roughnotation">
+  {{< fa brands github >}} Github
+</a>
+<a href="https://emilhvitfeldt.github.io/quarto-roughnotation/">
+  {{< fa door-open >}} Demo
+</a>
+</div>
+
+### More Fragments
+
+The [quarto-revealjs-more-fragments](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments) extension adds over 90 additional fragment animations to your presentations using the [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries.
+
+<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/examples/example.html">
+</iframe>
+
+To install:
+
+```bash
+quarto add EmilHvitfeldt/quarto-revealjs-more-fragments
+```
+
+Once installed, you can use any of the animation classes as fragments.
+Some popular options include:
+
+**Attention seekers:**
+- `bounce`, `flash`, `pulse`, `shake`, `swing`, `wobble`
+
+**Entrances:**
+- `bounceIn`, `fadeIn`, `flipInX`, `rotateIn`, `zoomIn`, `slideInUp`
+
+**Exits:**
+- `bounceOut`, `fadeOut`, `flipOutX`, `rotateOut`, `zoomOut`
+
+**Magic animations:**
+- `magic`, `twisterInDown`, `swap`, `puffIn`, `vanishIn`
+
+Usage:
+
+```markdown
+[This will bounce in]{.fragment .bounceIn}
+
+[This will fade in from the left]{.fragment .fadeInLeft}
+```
+
+<div class="project-buttons">
+<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments">
+  {{< fa brands github >}} Github
+</a>
+<a href="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/">
+  {{< fa door-open >}} Demo
+</a>
+</div>

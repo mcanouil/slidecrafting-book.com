@@ -169,6 +169,42 @@ On two lines
 
 <a href="examples/layout/r-fit-text.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
+## Loud Extension
+
+If you find yourself using `r-fit-text` frequently,
+the [quarto-revealjs-loud](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) extension automates this process.
+It automatically makes text big when there isn't much content on a slide.
+
+<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/">
+</iframe>
+
+To install:
+
+```bash
+quarto add EmilHvitfeldt/quarto-revealjs-loud
+```
+
+Once installed, add it to your YAML:
+
+```yaml
+format:
+  revealjs: default
+revealjs-plugins:
+  - loud
+```
+
+The extension will automatically detect slides with minimal content and scale the text to fill the available space.
+This is particularly useful for quote slides, section breaks, or emphasis slides where you want a single statement to have maximum impact.
+
+<div class="project-buttons">
+<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-loud">
+  {{< fa brands github >}} Github
+</a>
+<a href="https://emilhvitfeldt.github.io/quarto-revealjs-loud/">
+  {{< fa door-open >}} Demo
+</a>
+</div>
+
 ## Using images
 
 Using images for style is another thing you can do to change the layout.
@@ -415,6 +451,45 @@ I think this turned out well.
 There are endless ways to use this.
 It is quite CSS-heavy work, but I think it is worth it.
 Note that you are always free to copy an example and modify it to your wants.
+
+## Editable Extension
+
+The [quarto-revealjs-editable](https://github.com/EmilHvitfeldt/quarto-revealjs-editable) extension allows you to reposition and resize images and text directly in your browser while viewing your slides.
+This can be incredibly useful when fine-tuning the layout of complex slides without having to repeatedly edit code and re-render.
+
+::: {.callout-warning}
+This extension is still a little buggy.
+It works well for quick adjustments, but you may encounter some quirks.
+Use it as a helpful tool for prototyping layouts rather than a production feature.
+:::
+
+To install:
+
+```bash
+quarto add EmilHvitfeldt/quarto-revealjs-editable
+```
+
+Once installed, add it to your YAML:
+
+```yaml
+format:
+  revealjs: default
+revealjs-plugins:
+  - editable
+```
+
+When viewing your slides, you can click and drag elements to reposition them,
+or use handles to resize images.
+The extension will output the CSS values you need to make the changes permanent in your source code.
+
+This is particularly useful when working with absolute positioning,
+where getting pixel values exactly right can be tedious through trial and error.
+
+<div class="project-buttons">
+<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable">
+  {{< fa brands github >}} Github
+</a>
+</div>
 
 ## Vary the type of slides
 

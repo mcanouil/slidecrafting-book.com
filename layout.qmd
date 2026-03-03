@@ -173,7 +173,7 @@ On two lines
 
 Using images for style is another thing you can do to change the layout.
 If you don't have much content on your slides.
-e.i. just a sentence or two.
+i.e. just a sentence or two.
 You could pair that with an image that relays some of the same information.
 These images will typically not contain content themselves but rather reinforce the content on the slides.
 
@@ -337,7 +337,7 @@ try to think about how you can incorporate text positioning to maximize engageme
 
 When using background images,
 it can be hard to place text on top of it,
-in a way that that keeps the text readable.
+in a way that keeps the text readable.
 This is often an issue with images that are more busy or have colors that match.
 A simple fix is to overlay a box,
 and we then add text on you.

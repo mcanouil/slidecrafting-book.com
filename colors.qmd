@@ -19,18 +19,18 @@ You could stop right here and use other visual elements for directing the viewer
 
 If you want to use colors to draw the viewers eyes you can use colors, as long as that color isn't too close to the background and text colors.
 Something that looks good with both your background and text color.
-This color is a good oppotunity to introduce your brand identity into your slides.
+This color is a good opportunity to introduce your brand identity into your slides.
 you generally want 1 to 3 of these colors.
 Having at least 1 is perfectly sufficient and you can use it to great effect to direct the colors.
 3 colors are where I'm still comfortable that they don't get diluted.
 Using too many highlighting colors can confuse your viewers.
 Having a 3 color slide theme can lead to a very effective and clear set of slides.
 
-The important thing is that the background, highlight, and text colors are different enough from each others thats they legible.
+The important thing is that the background, highlight, and text colors are different enough from each others that they're legible.
 This is explored more in the contrasts sections.
 Theme colors on the other hand doesn't need to differentiable from the other colors,
 as they only purpose is to visual appeal to the slides.
-Having multiple shades of pink is perfectly acceptable as theme colors as long as they aren't too cose the blackgrund, text, or theme colors.
+Having multiple shades of pink is perfectly acceptable as theme colors as long as they aren't too close to the background, text, or theme colors.
 Likewise you could use rainbow colors to denote sections in the slides,
 starting with red followed by yellow and green to denote a "problem", "solution", "results" phase.
 These colors are simply there to spruce up the visuals.
@@ -43,7 +43,7 @@ This is what you get with the default themes that are provided in Quarto, and yo
 
 Which colors you choose will depend on what you are doing and who you are doing it for.
 Some of you will have to follow the corporate mandated style guide,
-and will thus have little to no inout in the selections.
+and will thus have little to no input in the selections.
 If you are free to decide for yourself I would suggest that you look around other peoples slides and themes,
 to see what you like about them and what to take inspiration off.
 Another personal favorite place of mine to go color theme hunting is on [pinterest](https://www.pinterest.com/).
@@ -71,7 +71,7 @@ I like the [https://colourcontrast.cc/](https://colourcontrast.cc/) and [Color C
 If possible I try to have a contrast of at least 12,
 but something like 10 will be okay from time to time.
 Which is quite a high contrast without being impossible to hit.
-Many browsers now have contrasts checkers when you open developer mode.
+Many browsers now have contrast checkers when you open developer mode.
 
 ![](media/contrast.webp)
 
@@ -224,7 +224,7 @@ One can set the `highlight-style` yaml argument to specify which of the preset c
 See the available options in the link above.
 
 Since we are working with html format we can change the styling using CSS.
-The highlighting is implemented using [skylighting](https://github.com/jgm/skylighting) which uses the following abbriviations for each type of code element.
+The highlighting is implemented using [skylighting](https://github.com/jgm/skylighting) which uses the following abbreviations for each type of code element.
 
 - ot: Other
 - at: Attribute
@@ -372,7 +372,7 @@ code {
 This lets up change the style of each type of code individually.
 Even so far as making the code italics, underlined, and animated.
 you will have to conform to the same rules regarding color contrasts,
-and changing the font sizes are not adviced as it will mess with the alignment too much.
+and changing the font sizes are not advised as it will mess with the alignment too much.
 
 You might have noticed that the above code contain a lot of duplicates.
 The below code chunk contained a compact version of the above expanded version.

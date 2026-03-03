@@ -12,7 +12,7 @@ This is also a perfect place to start looking for inspiration.
 Using these themes with one or two modifications might get you all the way where you want to go.
 It is in general a good idea to look for inspiration in other people's work.
 
-This chapter covers what I like to call **theme variants** and **slide themee**.
+This chapter covers what I like to call **theme variants** and **slide theme**.
 
 ## What is a variant?
 
@@ -36,7 +36,7 @@ I have in the past used themes that slowly changes colors as the slides progress
 Variants are useful in a lot of different ways:
 
 - section slides: gives a break in the slides
-- fuctional use: (exercise slides, demo slides, results slides)
+- functional use: (exercise slides, demo slides, results slides)
 - have different sections of the slides (introduction, problem, solution red/yellow/green) purely aesthetic
 
 ## The SCSS basics

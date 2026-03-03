@@ -64,7 +64,7 @@ These names are comma-separated.
 This is related to fallback fonts.
 If any font specified isn't available for whatever reason,
 because of a misspecification or slow internet connection, then the next font in line will be selected.
-In the above example, if `Manrope` isn't avaialble, then the system `sans-serif` font will be selected.
+In the above example, if `Manrope` isn't available, then the system `sans-serif` font will be selected.
 You can have as many fonts as you like in a specification.
 
 ## Embedding Fonts

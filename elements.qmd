@@ -16,7 +16,7 @@ background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg
 }
 ```
 
-Tthe color is specified by the `fill="rgb(42, 118, 221)"` part of the svg.
+The color is specified by the `fill="rgb(42, 118, 221)"` part of the svg.
 But since this is an image, we can use whatever image we want.
 
 ```scss
@@ -152,7 +152,7 @@ plt.axes().set_facecolor("#FFFFFF00")
 # your plot
 plt.scatter(x, y, c=colors)
 
-# sinde plotting area
+# inside plotting area
 fig.patch.set_facecolor("#FFFFFF00")
 ```
 

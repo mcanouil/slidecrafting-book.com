@@ -305,7 +305,7 @@ Giving us the following code.
 
 But there is still some amount of repetition,
 with that we use the fact that [`@mixin`](https://sass-lang.com/documentation/at-rules/mixin/) can have arguments.
-Combineing this lets us create 1 `@mixin` and 3 calls to `@include`.
+Combining this lets us create 1 `@mixin` and 3 calls to `@include`.
 One for each instance of the CSS class.
 
 ```scss

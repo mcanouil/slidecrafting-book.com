@@ -188,7 +188,7 @@ $theme-orange: #FFB81A;
 }
 ```
 
-This once is nice and flexible because it is easy to extend.
+This one is nice and flexible because it is easy to extend.
 
 ```scss
 $theme-orange: #FFB81A;

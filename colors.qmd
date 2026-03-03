@@ -95,7 +95,7 @@ I like to use the `check_color_blindness()` function from the [prismatic](https:
 
 As we see above, the green and red colors don't work well together because they are almost identical for people with Deuteranopia.
 
-:::::: {.callout-note}
+::: {.callout-note}
 These contrast calculations are a little harder to calculate when you are using images as they have uneven color.
 Is it thus recommended to go with very light whites for dark image backgrounds and very dark blacks on light backgrounds.
 It can also be helpful to include a small text background or outline to help it stand out from the background.

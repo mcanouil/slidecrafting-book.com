@@ -53,4 +53,4 @@ seperately highlights the code `method = "lm"` then `formula = "y ~ x"` in red a
 
 </iframe>
 
-<a href="examples/manual-code/tip-4.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/manual-code/tip-4.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>

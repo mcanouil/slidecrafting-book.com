@@ -101,7 +101,7 @@ Only right side
 
 </iframe>
 
-<a href="examples/layout/left-right.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/layout/left-right.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ## r-fit-text
 
@@ -167,7 +167,7 @@ On two lines
 
 </iframe>
 
-<a href="examples/layout/r-fit-text.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/layout/r-fit-text.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ## Using images
 
@@ -200,7 +200,7 @@ and it adheres to margins which I rarely want for tasks like this.
 
 Photo by <a href="https://unsplash.com/@hollymandarich?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Holly Mandarich</a> on <a href="https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-<a href="examples/layout/image-basics.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/layout/image-basics.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ### Absolute position
 
@@ -258,7 +258,7 @@ Notice that we are using negative locations to make this happen as `0` is inside
 
 Photo by <a href="https://unsplash.com/@noellerebekah?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Noelle Rebekah</a> on <a href="https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
  
-<a href="examples/layout/image-absolute.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/layout/image-absolute.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ::: callout-warning
 Since the way that positions are done in revealjs,
@@ -293,7 +293,7 @@ I like to use it with text in the following way:
 
 </iframe>
 
-<a href="examples/layout/tip-5.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/layout/tip-5.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ### Background image
 
@@ -327,7 +327,7 @@ I end up not setting a default title and use `.absolute` to place any content I 
 
 Photo by <a href="https://unsplash.com/@galen_crout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Galen Crout</a> on <a href="https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-<a href="examples/layout/image-background.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/layout/image-background.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 As we see here, the text positioning can change how the slides are perceived.
 Both in style and emotion,
@@ -409,7 +409,7 @@ Take Risks
 
 Photo by <a href="https://unsplash.com/@timmarshall?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tim Marshall</a> on <a href="https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-<a href="examples/layout/overlay-textbox.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/layout/overlay-textbox.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 I think this turned out well.
 There are endless ways to use this.

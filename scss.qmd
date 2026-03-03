@@ -413,8 +413,8 @@ advance them to see the other classes.
 
 </iframe>
 
-<a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/scss/tip-1.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss<a>
+<a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/scss/tip-1.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
 
 ::: {.callout-note}
 You don't need these compound classes for everything.
@@ -440,8 +440,8 @@ resulting in the effect you see below
 
 </iframe>
 
-<a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/scss/tip-2.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss<a>
+<a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/scss/tip-2.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
 
 since we are doing something interesting,
 we could also have used a separate `$colors` map just for this effect to not interfere with what else we are doing.

@@ -47,8 +47,8 @@ These together yield these slides:
 
 </iframe>
 
-<a href="../examples/fragments/tip-1.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="../examples/fragments/tip-1.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss<a>
+<a href="../examples/fragments/tip-1.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="../examples/fragments/tip-1.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
 
 ## Changing fragments with CSS
 
@@ -137,8 +137,8 @@ Advancing and de-advancing(?) the slides showcase how the different classes are 
 <iframe class="slide-deck" src="examples/fragments/fragment-rgb.html">
 </iframe>
 
-<a href="examples/fragments/fragment-rgb.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/fragments/rgb.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss<a>
+<a href="examples/fragments/fragment-rgb.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/fragments/rgb.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
 
 Worth noting that this single fragment could be rewritten as the following using SCSS nesting.
 
@@ -269,8 +269,8 @@ $colors: (
 <iframe class="slide-deck" src="examples/fragments/fragment-highlighter.html">
 </iframe>
 
-<a href="examples/fragments/fragment-highlighter.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/fragments/highlighter.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss<a>
+<a href="examples/fragments/fragment-highlighter.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/fragments/highlighter.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
 
 ## Example 3
 
@@ -549,8 +549,8 @@ Reveal.on('fragmenthidden', (event) => {
 <iframe class="slide-deck" src="examples/fragments/fragment-color.html">
 </iframe>
 
-<a href="examples/fragments/fragment-color.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/fragments/color.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js<a>
+<a href="examples/fragments/fragment-color.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/fragments/color.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
 
 ## Scroll output
 
@@ -631,8 +631,8 @@ You could implement them halfway without the `fragmenthidden` and you would just
 <iframe class="slide-deck" src="examples/fragments/fragment-scroll.html">
 </iframe>
 
-<a href="examples/fragments/fragment-scroll.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/fragments/scroll.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js<a>
+<a href="examples/fragments/fragment-scroll.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/fragments/scroll.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
 
 :::: {.callout-tip}
 We didn't do it here,
@@ -683,8 +683,8 @@ Reveal.on('fragmenthidden', (event) => {
 <iframe class="slide-deck" src="examples/fragments/fragment-tabset.html">
 </iframe>
 
-<a href="examples/fragments/fragment-tabset.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/fragments/tabset.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js<a>
+<a href="examples/fragments/fragment-tabset.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/fragments/tabset.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
 
 The above only works with 2 tabs, 
 since we are toggling between the first and last one with `first-of-type` and `last-of-type`.
@@ -713,8 +713,8 @@ For the reverse we do `currentIndex - 1` instead.
 <iframe class="slide-deck" src="examples/fragments/fragment-tabset-full.html">
 </iframe>
 
-<a href="examples/fragments/fragment-tabset-full.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/fragments/tabset-full.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js<a>
+<a href="examples/fragments/fragment-tabset-full.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/fragments/tabset-full.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
 
 ## advance embedded slides
 
@@ -768,5 +768,5 @@ Reveal.on('fragmenthidden', event => {
 <iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/">
 </iframe>
 
-<a href="examples/fragments/fragment-advance.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
-<a href="examples/fragments/advance.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js<a>
+<a href="examples/fragments/fragment-advance.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/fragments/advance.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>

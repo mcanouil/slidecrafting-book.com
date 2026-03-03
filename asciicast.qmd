@@ -13,7 +13,7 @@ they are typically lost when we write slides
 
 </iframe>
 
-<a href="examples/asciicast/no-asciicast.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/asciicast/no-asciicast.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ## Default asciicast
 
@@ -46,7 +46,7 @@ nicely styled with colors and everything.
 
 </iframe>
 
-<a href="examples/asciicast/asciicast-default.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/asciicast/asciicast-default.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ::: {.callout-note}
 The output of asciicast will by default fill the screen horizontally,
@@ -82,7 +82,7 @@ and gives the following results
 
 </iframe>
 
-<a href="examples/asciicast/asciicast-same_process.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/asciicast/asciicast-same_process.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 You will notice that the code that is being run is included in the asciicast output.
 This is happening because the default arguments `echo = FALSE` and `echo_input = TRUE`.
@@ -100,7 +100,7 @@ asciicast::init_knitr_engine(
 
 </iframe>
 
-<a href="examples/asciicast/asciicast-echos.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/asciicast/asciicast-echos.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 It wouldn't make much sense to set both of these to `TRUE` as you would have duplication,
 but there are certainly cases where you want both of these to be `FALSE` as you just want the output.
@@ -134,7 +134,7 @@ options(asciicast_theme = "solarized-light")
 
 </iframe>
 
-<a href="examples/asciicast/asciicast-solarized.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/asciicast/asciicast-solarized.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 If none of these is what you need,
 you can use a completely custom theme.
@@ -175,7 +175,7 @@ options(
 
 </iframe>
 
-<a href="examples/asciicast/asciicast-theme.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd<a>
+<a href="examples/asciicast/asciicast-theme.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 
 ## Roundup
 

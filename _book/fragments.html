@@ -233,13 +233,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./manual-code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Manual code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Manual Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./asciicast.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">asciicast</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asciicast</span></span></a>
   </div>
 </li>
       </ul>
@@ -273,7 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./letterbox.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">letterbox</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Letterbox</span></span></a>
   </div>
 </li>
       </ul>
@@ -281,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">miscellaneous</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Miscellaneous</span></span></a>
   </div>
 </li>
     </ul>
@@ -304,6 +304,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#scroll-output" id="toc-scroll-output" class="nav-link" data-scroll-target="#scroll-output"><span class="header-section-number">11.8</span> Scroll output</a></li>
   <li><a href="#tabset-advance" id="toc-tabset-advance" class="nav-link" data-scroll-target="#tabset-advance"><span class="header-section-number">11.9</span> Tabset advance</a></li>
   <li><a href="#advance-embedded-slides" id="toc-advance-embedded-slides" class="nav-link" data-scroll-target="#advance-embedded-slides"><span class="header-section-number">11.10</span> advance embedded slides</a></li>
+  <li><a href="#fragment-extensions" id="toc-fragment-extensions" class="nav-link" data-scroll-target="#fragment-extensions"><span class="header-section-number">11.11</span> Fragment Extensions</a>
+  <ul class="collapse">
+  <li><a href="#roughnotation" id="toc-roughnotation" class="nav-link" data-scroll-target="#roughnotation"><span class="header-section-number">11.11.1</span> Roughnotation</a></li>
+  <li><a href="#more-fragments" id="toc-more-fragments" class="nav-link" data-scroll-target="#more-fragments"><span class="header-section-number">11.11.2</span> More Fragments</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/edit/main/fragments.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/blob/main/fragments.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -350,11 +355,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>These together yield these slides:</p>
-<iframe class="slide-deck" src="../examples/fragments/tip-1.html">
+<iframe class="slide-deck" src="examples/fragments/tip-1.html">
 </iframe>
-<p><a href="../examples/fragments/tip-1.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="../examples/fragments/tip-1.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a><a></a></p><a>
-</a></section><a>
-</a><section id="changing-fragments-with-css" class="level2" data-number="11.2"><a>
+<p><a href="examples/fragments/tip-1.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/tip-1.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
+</section>
+<section id="changing-fragments-with-css" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="changing-fragments-with-css"><span class="header-section-number">11.2</span> Changing fragments with CSS</h2>
 <p>At the most fundamental level, a fragment can be split into 3 stages</p>
 <ul>
@@ -364,7 +369,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>determining which stage is handled completely by revealjs using the <code>fragment-index</code> attribute. The way we can make things happen is to apply a different style to each of the 3 stages.</p>
 <p>the maximal fragment signature is as follows, with <code>fragment-name</code> being the name of the fragment in question. For them to work properly you have to list them in the following order. Which corresponds to <code>before</code>, <code>after</code>, and <code>current</code>.</p>
-</a><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><a></a><pre class="sourceCode css code-with-copy"><a><code class="sourceCode css"><span id="cb4-1"></span></code></a><code class="sourceCode css"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section <span class="fu">.fragment.fragment-name</span> {
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section <span class="fu">.fragment.fragment-name</span> {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section <span class="fu">.fragment.fragment-name.visible</span> {</span>
@@ -423,9 +428,9 @@ Tip
 <p>Advancing and de-advancing(?) the slides showcase how the different classes are applied for fragments.</p>
 <iframe class="slide-deck" src="examples/fragments/fragment-rgb.html">
 </iframe>
-<p><a href="examples/fragments/fragment-rgb.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/fragments/rgb.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a><a></a></p><a>
+<p><a href="examples/fragments/fragment-rgb.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/rgb.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 <p>Worth noting that this single fragment could be rewritten as the following using SCSS nesting.</p>
-</a><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><a></a><pre class="sourceCode scss code-with-copy"><a><code class="sourceCode scss"><span id="cb7-1"></span></code></a><code class="sourceCode scss"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section <span class="fu">.fragment.rgb</span> {
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section <span class="fu">.fragment.rgb</span> {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">opacity</span>: <span class="bu">unset</span><span class="op">;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">visibility</span>: <span class="bu">unset</span><span class="op">;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">red</span><span class="op">;</span></span>
@@ -457,7 +462,7 @@ Tip
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span>: <span class="fu">darken(</span><span class="va">$theme-orange</span><span class="op">,</span> <span class="dv">10</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This once is nice and flexible because it is easy to extend.</p>
+<p>This one is nice and flexible because it is easy to extend.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="va">$theme-orange</span>: <span class="cn">#FFB81A</span><span class="op">;</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="va">$theme-yellow</span>: <span class="cn">#FFD571</span><span class="op">;</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="va">$theme-brown</span>: <span class="cn">#E2AE86</span><span class="op">;</span></span>
@@ -529,12 +534,12 @@ Tip
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <iframe class="slide-deck" src="examples/fragments/fragment-highlighter.html">
 </iframe>
-<p><a href="examples/fragments/fragment-highlighter.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/fragments/highlighter.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a><a></a></p><a>
-</a></section><a>
-</a><section id="example-3" class="level2" data-number="11.5"><a>
+<p><a href="examples/fragments/fragment-highlighter.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/highlighter.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
+</section>
+<section id="example-3" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="example-3"><span class="header-section-number">11.5</span> Example 3</h2>
 <p>The last example included a bit of flair by having the current fragment element be a slightly different color and then changing it after. We can simplify it a bit by not specifying the <code>.current-fragment</code> class.</p>
-</a><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><a></a><pre class="sourceCode scss code-with-copy"><a><code class="sourceCode scss"><span id="cb11-1"></span></code></a><code class="sourceCode scss"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">$theme-orange</span>: <span class="cn">#FFB81A</span><span class="op">;</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">$theme-orange</span>: <span class="cn">#FFB81A</span><span class="op">;</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section <span class="fu">.fragment.hl-orange</span> {</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">opacity</span>: <span class="bu">unset</span><span class="op">;</span></span>
@@ -712,9 +717,9 @@ Warning
 <span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <iframe class="slide-deck" src="examples/fragments/fragment-color.html">
 </iframe>
-<p><a href="examples/fragments/fragment-color.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/fragments/color.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a><a></a></p><a>
-</a></section><a>
-</a><section id="scroll-output" class="level2" data-number="11.8"><a>
+<p><a href="examples/fragments/fragment-color.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/color.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
+</section>
+<section id="scroll-output" class="level2" data-number="11.8">
 <h2 data-number="11.8" class="anchored" data-anchor-id="scroll-output"><span class="header-section-number">11.8</span> Scroll output</h2>
 <p>Sometimes you run into a situation where you want to interact with an element on a slide. This can happen when you need to scroll or toggle something. While that would be fine to do by hand, it can be hard to do casually, and impossible to do if you are using a clicker.</p>
 <p>Scrolling text in a window is one thing that isn’t that hard to do with JavaScript.</p>
@@ -724,7 +729,7 @@ Warning
 <li>Figure out how to scroll it</li>
 </ol>
 <p>The element can again be found using <code>.getCurrentSlide()</code> and <code>querySelector()</code> after a little digging.</p>
-</a><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><a></a><pre class="sourceCode js code-with-copy"><a><code class="sourceCode javascript"><span id="cb27-1"></span></code></a><code class="sourceCode javascript"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Reveal
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Reveal</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">getCurrentSlide</span>()</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">querySelector</span>(<span class="st">".cell-output code"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Next, we need to figure out how to scroll it. This can be done using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo">.scrollTo()</a> method. This function should be passed on to how much we want to scroll and how. As far as I know, this can only be set using pixel values so we have to try a couple of times to get it right. <code>1000</code> appears enough for this example to get us all the way to the bottom. Setting <code>behavior</code> to smooth for a little flair.</p>
@@ -771,7 +776,7 @@ Note
 </div>
 <iframe class="slide-deck" src="examples/fragments/fragment-scroll.html">
 </iframe>
-<p><a href="examples/fragments/fragment-scroll.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/fragments/scroll.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a><a></a></p><a>
+<p><a href="examples/fragments/fragment-scroll.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/scroll.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -785,10 +790,10 @@ Tip
 <p>We didn’t do it here, but you could use dataset values to help determine which elements should be scrolled and how much to scroll them by instead of hardcoding it all as we do here.</p>
 </div>
 </div>
-</a></section><a>
-</a><section id="tabset-advance" class="level2" data-number="11.9"><a>
+</section>
+<section id="tabset-advance" class="level2" data-number="11.9">
 <h2 data-number="11.9" class="anchored" data-anchor-id="tabset-advance"><span class="header-section-number">11.9</span> Tabset advance</h2>
-</a><p><a>Quarto also has </a><a href="https://quarto.org/docs/presentations/revealjs/index.html#tabsets">tabset</a> support for slides, which is again a very nice feature. It runs into the same clicker interaction we noted earlier. It requires a mouse to correctly toggle in the middle of a presentation.</p>
+<p>Quarto also has <a href="https://quarto.org/docs/presentations/revealjs/index.html#tabsets">tabset</a> support for slides, which is again a very nice feature. It runs into the same clicker interaction we noted earlier. It requires a mouse to correctly toggle in the middle of a presentation.</p>
 <p>We can deal with this as well. As always we need to find the elements and how to toggle them.</p>
 <p>We are again using <code>.getCurrentSlide()</code> and <code>querySelector()</code>, and with some trial and error, determine that the following two <a href="https://www.w3schools.com/cssref/css_selectors.php">CSS selectors</a> captures the two tabs.</p>
 <ul>
@@ -816,10 +821,10 @@ Tip
 <span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <iframe class="slide-deck" src="examples/fragments/fragment-tabset.html">
 </iframe>
-<p><a href="examples/fragments/fragment-tabset.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/fragments/tabset.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a><a></a></p><a>
+<p><a href="examples/fragments/fragment-tabset.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/tabset.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
 <p>The above only works with 2 tabs, since we are toggling between the first and last one with <code>first-of-type</code> and <code>last-of-type</code>.</p>
 <p>Let us now see how we can expand this to work with any number of tabs. The toggling code now looks like this:</p>
-</a><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><a></a><pre class="sourceCode js code-with-copy"><a><code class="sourceCode javascript"><span id="cb32-1"></span></code></a><code class="sourceCode javascript"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tabs <span class="op">=</span> Reveal<span class="op">.</span><span class="fu">getCurrentSlide</span>()<span class="op">.</span><span class="fu">querySelectorAll</span>(
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tabs <span class="op">=</span> Reveal<span class="op">.</span><span class="fu">getCurrentSlide</span>()<span class="op">.</span><span class="fu">querySelectorAll</span>(</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">".panel-tabset ul li a"</span></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -831,13 +836,13 @@ Tip
 <p>We have a slightly different strategy now. First we find all the tabs. next we identify the index of current tab that we are on. Lastly we select the next tab and <code>.click()</code> on it. For the reverse we do <code>currentIndex - 1</code> instead.</p>
 <iframe class="slide-deck" src="examples/fragments/fragment-tabset-full.html">
 </iframe>
-<p><a href="examples/fragments/fragment-tabset-full.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/fragments/tabset-full.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a><a></a></p><a>
-</a></section><a>
-</a><section id="advance-embedded-slides" class="level2" data-number="11.10"><a>
+<p><a href="examples/fragments/fragment-tabset-full.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/tabset-full.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
+</section>
+<section id="advance-embedded-slides" class="level2" data-number="11.10">
 <h2 data-number="11.10" class="anchored" data-anchor-id="advance-embedded-slides"><span class="header-section-number">11.10</span> advance embedded slides</h2>
 <p>The last example I’ll show for now is one you have seen me use already. I like to put quarto slides inside quarto slides. However, it becomes messy to advance the embedded slides, because they take focus of the mouse. I have used a fragment to advance these.</p>
 <p>We start by embedding a set of slides in our set of slides. We do thing with <code>&lt;iframe class="slide-deck" src="fragment-scroll.html" style="width:100%; height: 500px;" &gt;&lt;/iframe&gt;</code>.</p>
-</a><p><a>The <code>Reveal</code> object has a </a><a href="https://revealjs.com/api/">fairly extensive API</a> you can use. So we just need to fetch the right <code>Reveal</code> object so we can use the <code>.left()</code> and <code>.right()</code> methods to advance the slides. It took me a while to find the right code, but <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"><code>.contentWindow</code></a> was the missing piece. The following returns the embedded <code>Reveal</code> object.</p>
+<p>The <code>Reveal</code> object has a <a href="https://revealjs.com/api/">fairly extensive API</a> you can use. So we just need to fetch the right <code>Reveal</code> object so we can use the <code>.left()</code> and <code>.right()</code> methods to advance the slides. It took me a while to find the right code, but <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow"><code>.contentWindow</code></a> was the missing piece. The following returns the embedded <code>Reveal</code> object.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>Reveal</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">getCurrentSlide</span>()</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"iframe"</span>)</span>
@@ -866,12 +871,62 @@ Tip
 <span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/">
 </iframe>
-<p><a href="examples/fragments/fragment-advance.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/fragments/advance.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a><a></a></p><a>
+<p><a href="examples/fragments/fragment-advance.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/advance.html" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
+</section>
+<section id="fragment-extensions" class="level2" data-number="11.11">
+<h2 data-number="11.11" class="anchored" data-anchor-id="fragment-extensions"><span class="header-section-number">11.11</span> Fragment Extensions</h2>
+<p>The following extensions provide additional fragment capabilities beyond what we’ve covered so far.</p>
+<section id="roughnotation" class="level3" data-number="11.11.1">
+<h3 data-number="11.11.1" class="anchored" data-anchor-id="roughnotation"><span class="header-section-number">11.11.1</span> Roughnotation</h3>
+<p>The <a href="https://github.com/EmilHvitfeldt/quarto-roughnotation">quarto-roughnotation</a> extension uses the <a href="https://roughnotation.com/">Rough Notation</a> JavaScript library to add hand-drawn styled annotations to your slides. These annotations can circle, underline, highlight, or strike-through text with an animated sketchy appearance.</p>
+<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-roughnotation/examples/example.html">
+</iframe>
+<p>To install:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> add EmilHvitfeldt/quarto-roughnotation</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The extension provides several annotation types that can be triggered as fragments:</p>
+<ul>
+<li><code>rn-underline</code> - Underline text</li>
+<li><code>rn-circle</code> - Circle around text</li>
+<li><code>rn-highlight</code> - Highlight text</li>
+<li><code>rn-strike-through</code> - Strike through text</li>
+<li><code>rn-crossed-off</code> - X through text</li>
+<li><code>rn-bracket</code> - Bracket around text</li>
+</ul>
+<p>Usage is simple:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">This text will be circled</span><span class="co">]</span>{.rn-circle .fragment}</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">This will be highlighted</span><span class="co">]</span>{.rn-highlight .fragment fragment-index=2}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You can customize colors and other properties using data attributes:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Important!</span><span class="co">]</span>{.rn-underline data-rn-color="red" .fragment}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="project-buttons">
+<p><a href="https://github.com/EmilHvitfeldt/quarto-roughnotation"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a> <a href="https://emilhvitfeldt.github.io/quarto-roughnotation/"> <i class="fa-solid fa-door-open" aria-label="door-open"></i> Demo </a></p>
+</div>
+</section>
+<section id="more-fragments" class="level3" data-number="11.11.2">
+<h3 data-number="11.11.2" class="anchored" data-anchor-id="more-fragments"><span class="header-section-number">11.11.2</span> More Fragments</h3>
+<p>The <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments">quarto-revealjs-more-fragments</a> extension adds over 90 additional fragment animations to your presentations using the <a href="https://animate.style/">Animate.css</a> and <a href="https://www.minimamente.com/project/magic/">Magic.css</a> libraries.</p>
+<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/examples/example.html">
+</iframe>
+<p>To install:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> add EmilHvitfeldt/quarto-revealjs-more-fragments</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Once installed, you can use any of the animation classes as fragments. Some popular options include:</p>
+<p><strong>Attention seekers:</strong> - <code>bounce</code>, <code>flash</code>, <code>pulse</code>, <code>shake</code>, <code>swing</code>, <code>wobble</code></p>
+<p><strong>Entrances:</strong> - <code>bounceIn</code>, <code>fadeIn</code>, <code>flipInX</code>, <code>rotateIn</code>, <code>zoomIn</code>, <code>slideInUp</code></p>
+<p><strong>Exits:</strong> - <code>bounceOut</code>, <code>fadeOut</code>, <code>flipOutX</code>, <code>rotateOut</code>, <code>zoomOut</code></p>
+<p><strong>Magic animations:</strong> - <code>magic</code>, <code>twisterInDown</code>, <code>swap</code>, <code>puffIn</code>, <code>vanishIn</code></p>
+<p>Usage:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">This will bounce in</span><span class="co">]</span>{.fragment .bounceIn}</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">This will fade in from the left</span><span class="co">]</span>{.fragment .fadeInLeft}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="project-buttons">
+<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a> <a href="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/"> <i class="fa-solid fa-door-open" aria-label="door-open"></i> Demo </a></p>
+</div>
 
 
-</a></section><a>
+</section>
+</section>
 
-</a></main><a> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1272,15 +1327,15 @@ Tip
     }
   });
   </script>
-</a><nav class="page-navigation"><a>
-  </a><div class="nav-page nav-page-previous"><a>
-      </a><a href="./asciicast.html" class="pagination-link" aria-label="asciicast">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">asciicast</span></span>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./asciicast.html" class="pagination-link" aria-label="Asciicast">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asciicast</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./letterbox.html" class="pagination-link" aria-label="letterbox">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">letterbox</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./letterbox.html" class="pagination-link" aria-label="Letterbox">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Letterbox</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

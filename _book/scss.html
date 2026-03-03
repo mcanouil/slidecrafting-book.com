@@ -230,13 +230,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./manual-code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Manual code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Manual Code</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./asciicast.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">asciicast</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Asciicast</span></span></a>
   </div>
 </li>
       </ul>
@@ -270,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./letterbox.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">letterbox</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Letterbox</span></span></a>
   </div>
 </li>
       </ul>
@@ -278,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./miscellaneous.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">miscellaneous</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Miscellaneous</span></span></a>
   </div>
 </li>
     </ul>
@@ -531,7 +531,7 @@ Note
 <span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="im">@include</span> background-full<span class="op">;</span></span>
 <span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>But there is still some amount of repetition, with that we use the fact that <a href="https://sass-lang.com/documentation/at-rules/mixin/"><code>@mixin</code></a> can have arguments. Combineing this lets us create 1 <code>@mixin</code> and 3 calls to <code>@include</code>. One for each instance of the CSS class.</p>
+<p>But there is still some amount of repetition, with that we use the fact that <a href="https://sass-lang.com/documentation/at-rules/mixin/"><code>@mixin</code></a> can have arguments. Combining this lets us create 1 <code>@mixin</code> and 3 calls to <code>@include</code>. One for each instance of the CSS class.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">@mixin</span> <span class="fu">theme-slide</span>(<span class="va">$number</span>) {</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">.theme-slide</span><span class="op">#{</span><span class="va">$number</span><span class="op">}</span> {</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">&amp;</span><span class="in">:is(.slide-background)</span> {</span>
@@ -615,7 +615,7 @@ Important
 </div>
 <iframe class="slide-deck" src="examples/scss/tip-1.html">
 </iframe>
-<p><a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/scss/tip-1.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a><a></a></p><a>
+<p><a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/scss/tip-1.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -633,13 +633,13 @@ Note
 <p>I was able to create that effect, by layering 2 gradients on top of each other. The first gradient contained the two colors I was interested in, and the names of the class. The second layer, which I placed on top, goes from white to transparent. I set up the transition between those two colors to be super sharp, resulting in the effect you see below</p>
 <iframe class="slide-deck" src="examples/scss/tip-2.html">
 </iframe>
-</a><p><a></a><a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a><a> </a><a href="examples/scss/tip-2.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a><a></a></p><a>
+<p><a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/scss/tip-2.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 <p>since we are doing something interesting, we could also have used a separate <code>$colors</code> map just for this effect to not interfere with what else we are doing.</p>
 
 
-</a></section><a>
+</section>
 
-</a></main><a> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -1040,9 +1040,9 @@ Note
     }
   });
   </script>
-</a><nav class="page-navigation"><a>
-  </a><div class="nav-page nav-page-previous"><a>
-      </a><a href="./sizes.html" class="pagination-link" aria-label="Sizes">
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./sizes.html" class="pagination-link" aria-label="Sizes">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Sizes</span></span>
       </a>          
   </div>

@@ -1,7 +1,6 @@
 ---
 format:
-  revealjs:
-    self-contained: true
+  revealjs: {}
 ---
 
 ##

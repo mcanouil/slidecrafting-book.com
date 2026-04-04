@@ -1,7 +1,6 @@
 ---
 format:
-  revealjs:
-    self-contained: true
+  revealjs: {}
 ---
 
 ## using `echo` and `echo_input`

@@ -341,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-decoration</span>: <span class="dv">underline</span><span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And the changes have been applied.</p>
-<iframe class="slide-deck" src="examples/scss/links.html">
+<iframe class="slide-deck" loading="lazy" src="examples/scss/links.html">
 </iframe>
 </section>
 <section id="using-css-classes" class="level2" data-number="5.2">
@@ -364,7 +364,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now that we have our classes defined, we can apply these changes in the source editor by using the <code>[text]{.class}</code> syntax. I added (slightly excessive) highlighting to a couple of words. See below</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">]</span>{.blue} enables you to weave together <span class="co">[</span><span class="ot">content</span><span class="co">]</span>{.yellow} and <span class="co">[</span><span class="ot">executable code</span><span class="co">]</span>{.yellow} into a **finished presentation**. To learn more about <span class="co">[</span><span class="ot">Quarto</span><span class="co">]</span>{.blue} presentations see <span class="ot">&lt;https://quarto.org/docs/presentations/&gt;</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" src="examples/scss/css-classes.html">
+<iframe class="slide-deck" loading="lazy" src="examples/scss/css-classes.html">
 </iframe>
 <p>The idea behind CSS classes are quite powerful. We are essentially adding CSS attributes to specific elements of our slides, without needing to figure out how to target it with CSS selectors.</p>
 <p>You can also apply CSS classes to whole sections of the slide using fenced divs.</p>
@@ -619,7 +619,7 @@ Important
 <p>The slides in this post are interactive, advance them to see the other classes.</p>
 </div>
 </div>
-<iframe class="slide-deck" src="examples/scss/tip-1.html">
+<iframe class="slide-deck" loading="lazy" src="examples/scss/tip-1.html">
 </iframe>
 <p><a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/scss/tip-1.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -637,7 +637,7 @@ Note
 </div>
 <p>For our second example, we are continuing with the gradients, but instead trying to apply them to the background. My goal was to add a gradient line to the right side of the slide.</p>
 <p>I was able to create that effect, by layering 2 gradients on top of each other. The first gradient contained the two colors I was interested in, and the names of the class. The second layer, which I placed on top, goes from white to transparent. I set up the transition between those two colors to be super sharp, resulting in the effect you see below</p>
-<iframe class="slide-deck" src="examples/scss/tip-2.html">
+<iframe class="slide-deck" loading="lazy" src="examples/scss/tip-2.html">
 </iframe>
 <p><a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/scss/tip-2.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 <p>since we are doing something interesting, we could also have used a separate <code>$colors</code> map just for this effect to not interfere with what else we are doing.</p>

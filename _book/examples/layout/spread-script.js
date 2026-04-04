@@ -1,0 +1,10 @@
+function updateSpreads() {
+  document.querySelectorAll('.spread').forEach(el => {
+    const section = el.closest('section');
+    const paddingTop = parseFloat(getComputedStyle(el).paddingTop);
+    el.style.height = (section.offsetHeight - el.offsetTop - paddingTop) + 'px';
+  });
+}
+
+Reveal.on('ready', updateSpreads);
+Reveal.on('slidechanged', updateSpreads);

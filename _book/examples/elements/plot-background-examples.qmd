@@ -1,7 +1,6 @@
 ---
 format:
-  revealjs:
-    self-contained: true
+  revealjs: {}
 echo: fenced
 code-line-numbers: false
 auto-stretch: false

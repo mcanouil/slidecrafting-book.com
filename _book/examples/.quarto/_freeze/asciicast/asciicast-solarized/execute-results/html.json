@@ -1,10 +1,10 @@
 {
-  "hash": "1b30294ecb805ca06e18d4189447e61a",
+  "hash": "256822e5f2a5f8be3f40dd0f41ae7ffc",
   "result": {
     "engine": "knitr",
-    "markdown": "---\nformat:\n  revealjs:\n    self-contained: true\n---\n\n\n::: {.cell}\n\n:::\n\n\n## solarized-light\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](asciicast-solarized_files/figure-revealjs//unnamed-chunk-3.svg){width=960}\n:::\n:::\n\n",
+    "markdown": "---\nformat:\n  revealjs: {}\n---\n\n\n::: {.cell}\n\n:::\n\n\n## solarized-light\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](asciicast-solarized_files/figure-revealjs//unnamed-chunk-3.svg){width=960}\n:::\n:::\n\n",
     "supporting": [
-      "asciicast-solarized_files"
+      "asciicast-solarized_files/figure-revealjs"
     ],
     "filters": [
       "rmarkdown/pagebreak.lua"

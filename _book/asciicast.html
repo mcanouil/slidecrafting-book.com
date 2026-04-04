@@ -331,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="without-asciicast" class="level2" data-number="10.1">
 <h2 data-number="10.1" class="anchored" data-anchor-id="without-asciicast"><span class="header-section-number">10.1</span> Without asciicast</h2>
 <p>When R code produces messages with colors or styling, they are typically lost when we write slides</p>
-<iframe class="slide-deck" src="examples/asciicast/no-asciicast.html">
+<iframe class="slide-deck" loading="lazy" src="examples/asciicast/no-asciicast.html">
 </iframe>
 <p><a href="examples/asciicast/no-asciicast.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 </section>
@@ -351,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">library(tidymodels)</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>With this change, we get the following output, nicely styled with colors and everything.</p>
-<iframe class="slide-deck" src="examples/asciicast/asciicast-default.html">
+<iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-default.html">
 </iframe>
 <p><a href="examples/asciicast/asciicast-default.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -403,7 +403,7 @@ $interactive
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>and gives the following results</p>
-<iframe class="slide-deck" src="examples/asciicast/asciicast-same_process.html">
+<iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-same_process.html">
 </iframe>
 <p><a href="examples/asciicast/asciicast-same_process.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <p>You will notice that the code that is being run is included in the asciicast output. This is happening because the default arguments <code>echo = FALSE</code> and <code>echo_input = TRUE</code>. By swapping these options we get the code as normal quarto code, with the output as asciicast</p>
@@ -413,7 +413,7 @@ $interactive
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">echo_input =</span> <span class="cn">FALSE</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" src="examples/asciicast/asciicast-echos.html">
+<iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-echos.html">
 </iframe>
 <p><a href="examples/asciicast/asciicast-echos.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <p>It wouldn’t make much sense to set both of these to <code>TRUE</code> as you would have duplication, but there are certainly cases where you want both of these to be <code>FALSE</code> as you just want the output.</p>
@@ -437,7 +437,7 @@ $interactive
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">asciicast_theme =</span> <span class="st">"solarized-light"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" src="examples/asciicast/asciicast-solarized.html">
+<iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-solarized.html">
 </iframe>
 <p><a href="examples/asciicast/asciicast-solarized.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <p>If none of these is what you need, you can use a completely custom theme. I suggest that you modify one of the <a href="https://github.com/r-lib/asciicast/blob/4e6302182264a0fe7c58c427c9878b9135dac4fd/R/svg.R#L190">existing theme</a></p>
@@ -468,7 +468,7 @@ $interactive
 <span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" src="examples/asciicast/asciicast-theme.html">
+<iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-theme.html">
 </iframe>
 <p><a href="examples/asciicast/asciicast-theme.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 </section>

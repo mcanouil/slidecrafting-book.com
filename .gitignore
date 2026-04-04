@@ -3,3 +3,5 @@ _book/Slidecrafting-with-Quarto.pdf
 .Rproj.user
 
 **/*.quarto_ipynb
+
+.claude/settings.local.json

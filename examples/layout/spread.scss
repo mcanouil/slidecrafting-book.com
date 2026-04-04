@@ -1,0 +1,13 @@
+/*-- scss:rules --*/
+
+.spread {
+  --spread-padding: 0.5em;
+  padding-top: var(--spread-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.spread-evenly { justify-content: space-evenly; }
+.spread-around { justify-content: space-around; }

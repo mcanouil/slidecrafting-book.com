@@ -2,7 +2,7 @@
   "hash": "18f4460da36b9c019404c9c3319e0081",
   "result": {
     "engine": "knitr",
-    "markdown": "---\nformat:\n  revealjs:\n    self-contained: true\n---\n\n\n\n## using `echo` and `echo_input`\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidymodels)\n```\n\n\n::: {.cell-output-display}\n![](asciicast-echos_files/figure-revealjs//unnamed-chunk-2.svg){width=960}\n:::\n:::\n",
+    "markdown": "---\nformat:\n  revealjs:\n    self-contained: true\n---\n\n## using `echo` and `echo_input`\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidymodels)\n```\n\n\n::: {.cell-output-display}\n![](asciicast-echos_files/figure-revealjs//unnamed-chunk-2.svg){width=960}\n:::\n:::\n\n",
     "supporting": [
       "asciicast-echos_files"
     ],

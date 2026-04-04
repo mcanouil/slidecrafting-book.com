@@ -491,6 +491,107 @@ where getting pixel values exactly right can be tedious through trial and error.
 </a>
 </div>
 
+## Spread
+
+When you have a few short bullet points on a slide,
+they'll naturally clump together at the top.
+The `.spread` class distributes them evenly across the vertical space of the slide using flexbox,
+giving each item room to breathe.
+
+Add the following to your SCSS:
+
+```scss
+.spread {
+  --spread-padding: 0.5em;
+  padding-top: var(--spread-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.spread-evenly { justify-content: space-evenly; }
+.spread-around { justify-content: space-around; }
+```
+
+The height of `.spread` is set automatically by a small JavaScript snippet that measures the remaining space on the slide after the title.
+Now we need to add some javascript.
+The best way to do that is by using `include-after-body`.
+Add the following to a file called `spread-script.html`:
+
+```html
+<script type="text/javascript">
+function updateSpreads() {
+  document.querySelectorAll('.spread').forEach(el => {
+    const section = el.closest('section');
+    const paddingTop = parseFloat(getComputedStyle(el).paddingTop);
+    el.style.height = (section.offsetHeight - el.offsetTop - paddingTop) + 'px';
+  });
+}
+
+Reveal.on('ready', updateSpreads);
+Reveal.on('slidechanged', updateSpreads);
+</script>
+```
+
+Then reference it in your YAML:
+
+```yaml
+format:
+  revealjs:
+    include-after-body: spread-script.html
+```
+
+Then use it in your slides:
+
+```md
+::: {.spread}
+Think about how models are working
+
+Very valid for count data
+
+We rarely care whether a predictor is normal
+:::
+```
+
+::: callout-note
+`.spread` is designed to be the last element on a slide.
+The JavaScript sets its height to fill everything from where it starts to the bottom of the slide,
+so any content placed after it will be pushed out of view.
+:::
+
+You can still override the height with an inline style if you want less than the full remaining space:
+
+```md
+::: {.spread style="height:60%;"}
+:::
+```
+
+<iframe class="slide-deck" src="examples/layout/spread.html#/with-spread">
+
+</iframe>
+
+The default uses `justify-content: space-between`, which places the first item at the top and the last at the bottom.
+For more uniform spacing including around the edges, use `.spread-evenly`:
+
+```md
+::: {.spread .spread-md .spread-evenly}
+Think about how models are working
+
+Very valid for count data
+
+We rarely care whether a predictor is normal
+:::
+```
+
+<iframe class="slide-deck" src="examples/layout/spread.html#/space-evenly">
+
+</iframe>
+
+<a href="examples/layout/spread.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/layout/spread.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>
+<a href="examples/layout/spread-script.js" target="_blank" class="listing-slides btn-links">{{< fa file >}}js</a>
+
 ## Vary the type of slides
 
 This post has shown a number of ways to place content on your slides.

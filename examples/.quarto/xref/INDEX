@@ -170,5 +170,11 @@
   },
   "fragments/fragment-tabset-full.qmd": {
     "fragment-tabset-full.html": "b188a5c1"
+  },
+  "layout/spacer.qmd": {
+    "spacer.html": "35b04275"
+  },
+  "layout/spread.qmd": {
+    "spread.html": "d047229d"
   }
 }

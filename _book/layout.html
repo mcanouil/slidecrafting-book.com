@@ -312,7 +312,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overlayed-text-boxes" id="toc-overlayed-text-boxes" class="nav-link" data-scroll-target="#overlayed-text-boxes"><span class="header-section-number">8.6</span> Overlayed Text Boxes</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">8.7</span> </a></li>
   <li><a href="#editable-extension" id="toc-editable-extension" class="nav-link" data-scroll-target="#editable-extension"><span class="header-section-number">8.8</span> Editable Extension</a></li>
-  <li><a href="#vary-the-type-of-slides" id="toc-vary-the-type-of-slides" class="nav-link" data-scroll-target="#vary-the-type-of-slides"><span class="header-section-number">8.9</span> Vary the type of slides</a></li>
+  <li><a href="#spread" id="toc-spread" class="nav-link" data-scroll-target="#spread"><span class="header-section-number">8.9</span> Spread</a></li>
+  <li><a href="#vary-the-type-of-slides" id="toc-vary-the-type-of-slides" class="nav-link" data-scroll-target="#vary-the-type-of-slides"><span class="header-section-number">8.10</span> Vary the type of slides</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/edit/main/layout.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/blob/main/layout.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -642,8 +643,78 @@ Warning
 <p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a></p>
 </div>
 </section>
-<section id="vary-the-type-of-slides" class="level2" data-number="8.9">
-<h2 data-number="8.9" class="anchored" data-anchor-id="vary-the-type-of-slides"><span class="header-section-number">8.9</span> Vary the type of slides</h2>
+<section id="spread" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="spread"><span class="header-section-number">8.9</span> Spread</h2>
+<p>When you have a few short bullet points on a slide, they’ll naturally clump together at the top. The <code>.spread</code> class distributes them evenly across the vertical space of the slide using flexbox, giving each item room to breathe.</p>
+<p>Add the following to your SCSS:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.spread</span> {</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">--spread-padding</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding-top</span>: <span class="fu">var(</span><span class="va">--spread-padding</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">flex-direction</span>: <span class="dv">column</span><span class="op">;</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">justify-content</span>: <span class="dv">space-between</span><span class="op">;</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">align-items</span>: <span class="dv">flex-start</span><span class="op">;</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="fu">.spread-evenly</span> { <span class="kw">justify-content</span>: <span class="dv">space-evenly</span><span class="op">;</span> }</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="fu">.spread-around</span> { <span class="kw">justify-content</span>: <span class="dv">space-around</span><span class="op">;</span> }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The height of <code>.spread</code> is set automatically by a small JavaScript snippet that measures the remaining space on the slide after the title. Add the following to a <code>spread.html</code> file:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> type=</span><span class="st">"text/javascript"</span><span class="dt">&gt;</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">updateSpreads</span>() {</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">'.spread'</span>)<span class="op">.</span><span class="fu">forEach</span>(el <span class="kw">=&gt;</span> {</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> section <span class="op">=</span> el<span class="op">.</span><span class="fu">closest</span>(<span class="st">'section'</span>)<span class="op">;</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> paddingTop <span class="op">=</span> <span class="pp">parseFloat</span>(<span class="fu">getComputedStyle</span>(el)<span class="op">.</span><span class="at">paddingTop</span>)<span class="op">;</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    el<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">height</span> <span class="op">=</span> (section<span class="op">.</span><span class="at">offsetHeight</span> <span class="op">-</span> el<span class="op">.</span><span class="at">offsetTop</span> <span class="op">-</span> paddingTop) <span class="op">+</span> <span class="st">'px'</span><span class="op">;</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>Reveal<span class="op">.</span><span class="fu">on</span>(<span class="st">'ready'</span><span class="op">,</span> updateSpreads)<span class="op">;</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>Reveal<span class="op">.</span><span class="fu">on</span>(<span class="st">'slidechanged'</span><span class="op">,</span> updateSpreads)<span class="op">;</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then reference it in your YAML:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">include-after-body</span><span class="kw">:</span><span class="at"> spread-script.html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then use it in your slides:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>::: {.spread}</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>Think about how models are working</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>Very valid for count data</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>We rarely care whether a predictor is normal</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>.spread</code> is designed to be the last element on a slide. The JavaScript sets its height to fill everything from where it starts to the bottom of the slide, so any content placed after it will be pushed out of view.</p>
+</div>
+</div>
+<p>You can still override the height with an inline style if you want less than the full remaining space:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>::: {.spread style="height:60%;"}</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe class="slide-deck" src="examples/layout/spread.html#/with-spread">
+</iframe>
+<p>The default uses <code>justify-content: space-between</code>, which places the first item at the top and the last at the bottom. For more uniform spacing including around the edges, use <code>.spread-evenly</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>::: {.spread .spread-md .spread-evenly}</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>Think about how models are working</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>Very valid for count data</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>We rarely care whether a predictor is normal</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe class="slide-deck" src="examples/layout/spread.html#/space-evenly">
+</iframe>
+<p><a href="examples/layout/spread.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/spread.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a> <a href="examples/layout/spread-script.html" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>js</a></p>
+</section>
+<section id="vary-the-type-of-slides" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="vary-the-type-of-slides"><span class="header-section-number">8.10</span> Vary the type of slides</h2>
 <p>This post has shown a number of ways to place content on your slides. My final advice in this post is to use some of these tips to vary how the content is laid out. It doesn’t have to be over the top, but slight variations can help a slide deck feel fresh.</p>
 
 

@@ -1,0 +1,63 @@
+---
+format:
+  revealjs:
+    theme:
+      [default, spread.scss]
+    include-after-body: spread-script.html
+---
+
+## Without spread
+
+Think about how models are working
+
+Very valid for count data
+
+We rarely care whether a predictor is normal
+
+## With spread
+
+::: {.spread}
+Think about how models are working
+
+Very valid for count data
+
+We rarely care whether a predictor is normal
+:::
+
+## space-evenly
+
+::: {.spread .spread-evenly}
+Think about how models are working
+
+Very valid for count data
+
+We rarely care whether a predictor is normal
+:::
+
+## 5 items - spread
+
+::: {.spread}
+Think about how models are working
+
+Very valid for count data
+
+We rarely care whether a predictor is normal
+
+Distribution matters more than normality
+
+Always visualize your data first
+:::
+
+## 5 items - spread-evenly
+
+::: {.spread .spread-evenly}
+Think about how models are working
+
+Very valid for count data
+
+We rarely care whether a predictor is normal
+
+Distribution matters more than normality
+
+Always visualize your data first
+:::

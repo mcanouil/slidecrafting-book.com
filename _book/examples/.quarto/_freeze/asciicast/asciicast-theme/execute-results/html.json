@@ -2,7 +2,7 @@
   "hash": "61fce760f1379ae766d2860d5e42137f",
   "result": {
     "engine": "knitr",
-    "markdown": "---\nformat: revealjs\n---\n\n::: {.cell}\n\n:::\n\n\n\n## custom theme\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](asciicast-theme_files/figure-revealjs//unnamed-chunk-3.svg){width=960}\n:::\n:::\n",
+    "markdown": "---\nformat: revealjs\n---\n\n\n::: {.cell}\n\n:::\n\n\n## custom theme\n\n\n::: {.cell}\n\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](asciicast-theme_files/figure-revealjs//unnamed-chunk-3.svg){width=960}\n:::\n:::\n\n",
     "supporting": [
       "asciicast-theme_files"
     ],

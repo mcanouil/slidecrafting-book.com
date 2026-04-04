@@ -43,7 +43,7 @@ but it is a way to downplay the "not-current" items
 
 These together yield these slides:
 
-<iframe class="slide-deck" src="examples/fragments/tip-1.html">
+<iframe class="slide-deck" loading="lazy" src="examples/fragments/tip-1.html">
 
 </iframe>
 
@@ -134,7 +134,7 @@ This leaves us with the following fragment:
 
 Advancing and de-advancing(?) the slides showcase how the different classes are applied for fragments.
 
-<iframe class="slide-deck" src="examples/fragments/fragment-rgb.html">
+<iframe class="slide-deck" loading="lazy" src="examples/fragments/fragment-rgb.html">
 </iframe>
 
 <a href="examples/fragments/fragment-rgb.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -266,7 +266,7 @@ $colors: (
 }
 ```
 
-<iframe class="slide-deck" src="examples/fragments/fragment-highlighter.html">
+<iframe class="slide-deck" loading="lazy" src="examples/fragments/fragment-highlighter.html">
 </iframe>
 
 <a href="examples/fragments/fragment-highlighter.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -546,7 +546,7 @@ Reveal.on('fragmenthidden', (event) => {
 });
 ```
 
-<iframe class="slide-deck" src="examples/fragments/fragment-color.html">
+<iframe class="slide-deck" loading="lazy" src="examples/fragments/fragment-color.html">
 </iframe>
 
 <a href="examples/fragments/fragment-color.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -628,7 +628,7 @@ They would thus make for bad fragments.
 You could implement them halfway without the `fragmenthidden` and you would just need to be really confident that you never have to go backwards in your slides.
 :::
 
-<iframe class="slide-deck" src="examples/fragments/fragment-scroll.html">
+<iframe class="slide-deck" loading="lazy" src="examples/fragments/fragment-scroll.html">
 </iframe>
 
 <a href="examples/fragments/fragment-scroll.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -680,7 +680,7 @@ Reveal.on('fragmenthidden', (event) => {
 });
 ```
 
-<iframe class="slide-deck" src="examples/fragments/fragment-tabset.html">
+<iframe class="slide-deck" loading="lazy" src="examples/fragments/fragment-tabset.html">
 </iframe>
 
 <a href="examples/fragments/fragment-tabset.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -710,7 +710,7 @@ next we identify the index of current tab that we are on.
 Lastly we select the next tab and `.click()` on it.
 For the reverse we do `currentIndex - 1` instead.
 
-<iframe class="slide-deck" src="examples/fragments/fragment-tabset-full.html">
+<iframe class="slide-deck" loading="lazy" src="examples/fragments/fragment-tabset-full.html">
 </iframe>
 
 <a href="examples/fragments/fragment-tabset-full.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -724,7 +724,7 @@ However, it becomes messy to advance the embedded slides,
 because they take focus of the mouse. I have used a fragment to advance these.
 
 We start by embedding a set of slides in our set of slides.
-We do thing with `<iframe class="slide-deck" src="fragment-scroll.html" style="width:100%; height: 500px;" ></iframe>`.
+We do thing with `<iframe class="slide-deck" loading="lazy" src="fragment-scroll.html" style="width:100%; height: 500px;" ></iframe>`.
 
 The `Reveal` object has a [fairly extensive API](https://revealjs.com/api/) you can use.
 So we just need to fetch the right `Reveal` object so we can use the `.left()` and `.right()` methods to advance the slides.
@@ -765,7 +765,7 @@ Reveal.on('fragmenthidden', event => {
 });
 ```
 
-<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/">
+<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/">
 </iframe>
 
 <a href="examples/fragments/fragment-advance.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -780,7 +780,7 @@ The following extensions provide additional fragment capabilities beyond what we
 The [quarto-roughnotation](https://github.com/EmilHvitfeldt/quarto-roughnotation) extension uses the [Rough Notation](https://roughnotation.com/) JavaScript library to add hand-drawn styled annotations to your slides.
 These annotations can circle, underline, highlight, or strike-through text with an animated sketchy appearance.
 
-<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-roughnotation/examples/example.html">
+<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-roughnotation/examples/example.html">
 </iframe>
 
 To install:
@@ -825,7 +825,7 @@ You can customize colors and other properties using data attributes:
 
 The [quarto-revealjs-more-fragments](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments) extension adds over 90 additional fragment animations to your presentations using the [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries.
 
-<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/examples/example.html">
+<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/examples/example.html">
 </iframe>
 
 To install:

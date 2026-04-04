@@ -15,7 +15,7 @@ and I have a disclaimer or other seasonally important slides.
 Instead of removing and reinserting the information each time,
 I just changed the attribute.
 
-<iframe class="slide-deck" src="examples/miscellaneous/tip-3.html">
+<iframe class="slide-deck" loading="lazy" src="examples/miscellaneous/tip-3.html">
 
 </iframe>
 

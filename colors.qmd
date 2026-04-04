@@ -37,7 +37,7 @@ These colors are simply there to spruce up the visuals.
 
 This is what you get with the default themes that are provided in Quarto, and you can see them here in this gif:
 
-<iframe class="slide-deck" src="examples/all-themes/index.html">
+<iframe class="slide-deck" loading="lazy" src="examples/all-themes/index.html">
 
 </iframe>
 
@@ -180,7 +180,7 @@ All done with minimal effort.
 Using one of the highlight colors here to color the links,
 which also affects the hamburger menu and the progress bar at the bottom.
 
-<iframe class="slide-deck" src="examples/colors/colors.html">
+<iframe class="slide-deck" loading="lazy" src="examples/colors/colors.html">
 
 </iframe>
 
@@ -213,7 +213,7 @@ $presentation-heading-color: lighten($theme-yellow, 35%);
 
 ````
 
-<iframe class="slide-deck" src="examples/colors/colors-headers.html">
+<iframe class="slide-deck" loading="lazy" src="examples/colors/colors-headers.html">
 
 </iframe>
 
@@ -618,14 +618,14 @@ code {
 
 Below is some before and after using the theme we have developed in the chapter so far:
 
-<iframe class="slide-deck" src="examples/colors/no-syntax-highlighting.html">
+<iframe class="slide-deck" loading="lazy" src="examples/colors/no-syntax-highlighting.html">
 
 </iframe>
 
 <a href="examples/colors/no-syntax-highlighting.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 <a href="examples/colors/no-syntax-highlighting.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
 
-<iframe class="slide-deck" src="examples/colors/syntax-highlighting.html">
+<iframe class="slide-deck" loading="lazy" src="examples/colors/syntax-highlighting.html">
 
 </iframe>
 

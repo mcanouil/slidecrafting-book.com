@@ -10,7 +10,7 @@ Letterbox is a presentation style that adds colored bars at the top and bottom o
 creating a cinematic feel while also providing a consistent visual anchor for your content.
 This style became popular through the xaringan R package and many presenters found it helpful for branding and visual consistency.
 
-<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/">
+<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/">
 </iframe>
 
 ## Installation

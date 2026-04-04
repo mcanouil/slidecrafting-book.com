@@ -4,7 +4,7 @@ title: "Theme"
 
 The built in themes are a great place to look for inspiration.
 
-<iframe class="slide-deck" src="examples/all-themes/index.html">
+<iframe class="slide-deck" loading="lazy" src="examples/all-themes/index.html">
 
 </iframe>
 
@@ -167,13 +167,13 @@ I have taken the liberty to create two themes to show case how this is done in p
 
 <https://github.com/EmilHvitfeldt/quarto-revealjs-inverse>
 
-<iframe class="slide-deck" src="examples/theme/inverse.html">
+<iframe class="slide-deck" loading="lazy" src="examples/theme/inverse.html">
 
 </iframe>
 
 <https://github.com/EmilHvitfeldt/quarto-revealjs-seasons>
 
-<iframe class="slide-deck" src="examples/theme/seasons.html">
+<iframe class="slide-deck" loading="lazy" src="examples/theme/seasons.html">
 
 </iframe>
 
@@ -190,7 +190,7 @@ I find that for some presentations that I all I need.
 
 Below is one such theme I created
 
-<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/"></iframe>
+<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/"></iframe>
 
 <div class="project-buttons">
 <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-earth">
@@ -367,7 +367,7 @@ The style sheet for the above example can be [found here](https://github.com/Emi
 Below is another theme,
 following very closely the construction of the previous
 
-<iframe class="slide-deck" src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/"></iframe>
+<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/"></iframe>
 
 <div class="project-buttons">
 <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo">
@@ -383,7 +383,7 @@ following very closely the construction of the previous
 
 Another approach to creating these styles of themes is to use Lua to further expand the capabilities of the slides
 
-<iframe class="slide-deck" src="https://katie.quarto.pub/positconf2023/"></iframe>
+<iframe class="slide-deck" loading="lazy" src="https://katie.quarto.pub/positconf2023/"></iframe>
 
 <div class="project-buttons">
 <a href="https://github.com/kmasiello/positconfslides">

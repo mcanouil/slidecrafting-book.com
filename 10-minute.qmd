@@ -7,7 +7,7 @@ This chapter will guide you through setting up a fully functional theme in appro
 These slides will be used as the basis to show off each step of the way.
 First, here they are with no additional styling.
 
-<iframe class="slide-deck" src="examples/10-minutes/10min-0.html">
+<iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-0.html">
 
 </iframe>
 
@@ -87,7 +87,7 @@ $font-family-sans-serif: "Lato", sans-serif;
 $font-family-monospace: "Space Mono", monospace;
 ```
 
-<iframe class="slide-deck" src="examples/10-minutes/10min-1.html">
+<iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-1.html">
 
 </iframe>
 
@@ -117,7 +117,7 @@ $link-color: #fab387;
 $code-color: #89b4fa;
 ```
 
-<iframe class="slide-deck" src="examples/10-minutes/10min-2.html">
+<iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-2.html">
 
 </iframe>
 
@@ -155,7 +155,7 @@ $presentation-h2-font-size: 60px;
 $code-block-font-size: 0.9em;
 ```
 
-<iframe class="slide-deck" src="examples/10-minutes/10min-3.html">
+<iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-3.html">
 
 </iframe>
 

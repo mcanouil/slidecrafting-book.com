@@ -49,7 +49,7 @@ geom_smooth([method = "lm"]{.fragment .highlight-red}, [formula = "y ~ x"]{.frag
 
 seperately highlights the code `method = "lm"` then `formula = "y ~ x"` in red and blue.
 
-<iframe class="slide-deck" src="examples/manual-code/tip-4.html">
+<iframe class="slide-deck" loading="lazy" src="examples/manual-code/tip-4.html">
 
 </iframe>
 

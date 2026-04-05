@@ -4,7 +4,7 @@ title: "Theme"
 
 The built in themes are a great place to look for inspiration.
 
-<iframe class="slide-deck" loading="lazy" title="Interactive demo of all 11 built-in Quarto Reveal.js themes" src="examples/all-themes/index.html">
+<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Interactive demo of all 11 built-in Quarto Reveal.js themes" src="examples/all-themes/index.html">
 Interactive demo cycling through all 11 built-in Quarto Reveal.js themes for comparison and inspiration.
 </iframe>
 
@@ -167,13 +167,13 @@ I have taken the liberty to create two themes to show case how this is done in p
 
 <https://github.com/EmilHvitfeldt/quarto-revealjs-inverse>
 
-<iframe class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-inverse theme" src="examples/theme/inverse.html">
+<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-inverse theme" src="examples/theme/inverse.html">
 Demo of the quarto-revealjs-inverse theme: a dark grey "inverse" variant slide alongside the default white-background slides, used for section breaks and quotes.
 </iframe>
 
 <https://github.com/EmilHvitfeldt/quarto-revealjs-seasons>
 
-<iframe class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-seasons theme" src="examples/theme/seasons.html">
+<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-seasons theme" src="examples/theme/seasons.html">
 Demo of the quarto-revealjs-seasons theme: multiple color variants representing seasons (spring, summer, autumn, winter) used to visually distinguish sections of the presentation.
 </iframe>
 
@@ -190,7 +190,7 @@ I find that for some presentations that I all I need.
 
 Below is one such theme I created
 
-<iframe class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-earth slide theme" src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/">
+<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-earth slide theme" src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/">
 Demo of the quarto-revealjs-earth slide theme: SVG earth imagery as backgrounds with custom text regions per slide class (`.theme-title1`, `.theme-section3`, `.theme-slide1`, etc.), controlling colors, sizes, and text positioning.
 </iframe>
 
@@ -369,7 +369,7 @@ The style sheet for the above example can be [found here](https://github.com/Emi
 Below is another theme,
 following very closely the construction of the previous
 
-<iframe class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-cinco-de-mayo slide theme" src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/">
+<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-cinco-de-mayo slide theme" src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/">
 Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG background images applied via CSS slide classes, following the same construction pattern as the earth theme.
 </iframe>
 
@@ -387,7 +387,7 @@ Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG ba
 
 Another approach to creating these styles of themes is to use Lua to further expand the capabilities of the slides
 
-<iframe class="slide-deck" loading="lazy" title="Demo of a PositConf 2023 slide theme using a Lua extension" src="https://katie.quarto.pub/positconf2023/">
+<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of a PositConf 2023 slide theme using a Lua extension" src="https://katie.quarto.pub/positconf2023/">
 Demo of a PositConf 2023 slide theme by Katie Masiello using a Lua extension for advanced theming capabilities beyond what CSS alone provides.
 </iframe>
 

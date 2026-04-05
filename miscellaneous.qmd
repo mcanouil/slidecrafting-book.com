@@ -15,7 +15,7 @@ and I have a disclaimer or other seasonally important slides.
 Instead of removing and reinserting the information each time,
 I just changed the attribute.
 
-<iframe class="slide-deck" loading="lazy" title="Demo of hidden slides using visibility=hidden" src="examples/miscellaneous/tip-3.html">
+<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of hidden slides using visibility=hidden" src="examples/miscellaneous/tip-3.html">
 Slide deck demonstrating hidden slides: a slide marked with `visibility="hidden"` is skipped entirely during the presentation but remains in the source file.
 </iframe>
 

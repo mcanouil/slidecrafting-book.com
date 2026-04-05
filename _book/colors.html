@@ -341,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you want to use colors to draw the viewers eyes you can use colors, as long as that color isn’t too close to the background and text colors. Something that looks good with both your background and text color. This color is a good opportunity to introduce your brand identity into your slides. you generally want 1 to 3 of these colors. Having at least 1 is perfectly sufficient and you can use it to great effect to direct the colors. 3 colors are where I’m still comfortable that they don’t get diluted. Using too many highlighting colors can confuse your viewers. Having a 3 color slide theme can lead to a very effective and clear set of slides.</p>
 <p>The important thing is that the background, highlight, and text colors are different enough from each others that they’re legible. This is explored more in the contrasts sections. Theme colors on the other hand doesn’t need to differentiable from the other colors, as they only purpose is to visual appeal to the slides. Having multiple shades of pink is perfectly acceptable as theme colors as long as they aren’t too close to the background, text, or theme colors. Likewise you could use rainbow colors to denote sections in the slides, starting with red followed by yellow and green to denote a “problem”, “solution”, “results” phase. These colors are simply there to spruce up the visuals.</p>
 <p>This is what you get with the default themes that are provided in Quarto, and you can see them here in this gif:</p>
-<iframe class="slide-deck" loading="lazy" src="examples/all-themes/index.html">
+<iframe class="slide-deck" loading="lazy" title="Interactive demo of all 11 built-in Quarto Reveal.js themes" src="examples/all-themes/index.html">
 Interactive demo cycling through all 11 built-in Quarto Reveal.js themes (default, beige, blood, dark, league, moon, night, serif, simple, sky, solarized), showing the color and font differences between each.
 </iframe>
 <p>Which colors you choose will depend on what you are doing and who you are doing it for. Some of you will have to follow the corporate mandated style guide, and will thus have little to no input in the selections. If you are free to decide for yourself I would suggest that you look around other peoples slides and themes, to see what you like about them and what to take inspiration off. Another personal favorite place of mine to go color theme hunting is on <a href="https://www.pinterest.com/">pinterest</a>. I do a google search for “Pinterest color palettes” and go wild.</p>
@@ -428,7 +428,7 @@ Note
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This is more code, but now I can read at a glance what is happening. This gives us the following colors on our slides. All done with minimal effort. Using one of the highlight colors here to color the links, which also affects the hamburger menu and the progress bar at the bottom.</p>
-<iframe class="slide-deck" loading="lazy" src="examples/colors/colors.html">
+<iframe class="slide-deck" loading="lazy" title="Slides with custom color palette via Sass variables" src="examples/colors/colors.html">
 Slides with a blue and yellow palette applied via Sass variables: dark blue background (#01364C), white body text, teal links (#99D9DD). Setting <code>$body-bg</code>, <code>$body-color</code>, and <code>$link-color</code> also automatically styles the hamburger menu and progress bar.
 </iframe>
 <p>There are <a href="https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables">several sass variables</a> that are used to control how our slides look. Notice how many of the values are defined as transformations of other values. So by setting <code>$body-bg</code>, <code>$body-color</code>, and <code>$link-color</code> we automatically gets things like <code>$text-muted</code>, <code>$selection-bg</code>, <code>$border-color</code> with values that works pretty well.</p>
@@ -446,7 +446,7 @@ Slides with a blue and yellow palette applied via Sass variables: dark blue back
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="va">$presentation-heading-color</span>: <span class="fu">lighten(</span><span class="va">$theme-yellow</span><span class="op">,</span> <span class="dv">35</span><span class="dt">%</span><span class="fu">)</span><span class="op">;</span></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" src="examples/colors/colors-headers.html">
+<iframe class="slide-deck" loading="lazy" title="Slides with heading color set via lighten() Sass function" src="examples/colors/colors-headers.html">
 Same blue and yellow palette as before, but with <code>$presentation-heading-color</code> set to a lightened yellow using <code>lighten($theme-yellow, 35%)</code>, making headings stand out more from the body text.
 </iframe>
 </section>
@@ -826,11 +826,11 @@ Expanded with comments
 <span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <p>Below is some before and after using the theme we have developed in the chapter so far:</p>
-<iframe class="slide-deck" loading="lazy" src="examples/colors/no-syntax-highlighting.html">
+<iframe class="slide-deck" loading="lazy" title="Code slides without custom syntax highlighting" src="examples/colors/no-syntax-highlighting.html">
 Code slides without custom syntax highlighting: all code tokens appear in the same default color.
 </iframe>
 <p><a href="examples/colors/no-syntax-highlighting.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/colors/no-syntax-highlighting.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
-<iframe class="slide-deck" loading="lazy" src="examples/colors/syntax-highlighting.html">
+<iframe class="slide-deck" loading="lazy" title="Code slides with custom CSS syntax highlighting" src="examples/colors/syntax-highlighting.html">
 Same code slides with custom CSS syntax highlighting applied: keywords, strings, functions, and other token types each colored individually using the skylighting CSS class system.
 </iframe>
 <p><a href="examples/colors/syntax-highlighting.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/colors/syntax-highlighting.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>

@@ -25,7 +25,7 @@ Right column
 ::::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/left-right.html#/standard-columns">
+<iframe class="slide-deck" loading="lazy" title="Standard two-column layout (40% left, 60% right)" src="examples/layout/left-right.html#/standard-columns">
 Standard two-column layout: 40% left column and 60% right column using the `.columns` / `.column` div syntax.
 </iframe>
 
@@ -47,7 +47,7 @@ Right column
 ::::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/left-right.html#/justified-columns">
+<iframe class="slide-deck" loading="lazy" title="Two equal columns with right-justified text in the right column" src="examples/layout/left-right.html#/justified-columns">
 Two equal columns where the right column has `style="text-align: right;"` applied directly to the column div for right-justified text.
 </iframe>
 
@@ -77,7 +77,7 @@ but generally, you will have a hard time using more than 4.
 ::::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/left-right.html#/many-columns">
+<iframe class="slide-deck" loading="lazy" title="Four equal-width columns (25% each)" src="examples/layout/left-right.html#/many-columns">
 Four equal-width columns (25% each) demonstrating that the `.columns` syntax is not limited to two columns.
 </iframe>
 
@@ -97,7 +97,7 @@ Only right side
 ::::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/left-right.html#/one-sided--column">
+<iframe class="slide-deck" loading="lazy" title="Empty 30% left column pushing content into the 70% right column" src="examples/layout/left-right.html#/one-sided--column">
 Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.
 </iframe>
 
@@ -115,7 +115,7 @@ Big Text
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/r-fit-text.html#/section">
+<iframe class="slide-deck" loading="lazy" title="Single line of text stretched to full slide width with r-fit-text" src="examples/layout/r-fit-text.html#/section">
 Single line of text inside `::: r-fit-text` stretched to fill the full horizontal width of the slide.
 </iframe>
 
@@ -130,7 +130,7 @@ This fits perfectly!
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/r-fit-text.html#/section-1">
+<iframe class="slide-deck" loading="lazy" title="r-fit-text combined with .center class for vertical and horizontal centering" src="examples/layout/r-fit-text.html#/section-1">
 `r-fit-text` combined with the `.center` slide class: the oversized text is centered both horizontally and vertically on the slide.
 </iframe>
 
@@ -146,7 +146,7 @@ On two lines
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/r-fit-text.html#/section-2">
+<iframe class="slide-deck" loading="lazy" title="Two lines in one r-fit-text block forced to the same font size" src="examples/layout/r-fit-text.html#/section-2">
 Two lines of text in a single `r-fit-text` block: both lines are forced to the same smaller font size determined by the longer line, rather than each filling the slide independently.
 </iframe>
 
@@ -163,7 +163,7 @@ On two lines
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/r-fit-text.html#/section-3">
+<iframe class="slide-deck" loading="lazy" title="Two separate r-fit-text blocks each filling the full slide width" src="examples/layout/r-fit-text.html#/section-3">
 Two separate `r-fit-text` blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.
 </iframe>
 
@@ -175,7 +175,7 @@ If you find yourself using `r-fit-text` frequently,
 the [quarto-revealjs-loud](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) extension automates this process.
 It automatically makes text big when there isn't much content on a slide.
 
-<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/">
+<iframe class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-loud extension" src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/">
 Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
 </iframe>
 
@@ -231,7 +231,7 @@ But I end up not using this style that much because it is added as content,
 so it will push other content around,
 and it adheres to margins which I rarely want for tasks like this.
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/image-basics.html">
+<iframe class="slide-deck" loading="lazy" title="Basic figure added with standard Markdown syntax" src="examples/layout/image-basics.html">
 Basic figure added with standard Markdown syntax `![](image.jpg)`: image is inserted as content, respects slide margins, and pushes other content around.
 </iframe>
 
@@ -266,7 +266,7 @@ I find that just using one of `width` or `height` is easier as it doesn't distor
 All of these attributes accept all known CSS values, such as pixels, inches, and percentages.
 [All about CSS length](https://developer.mozilla.org/en-US/docs/Web/CSS/length) for more information.
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/image-absolute.html">
+<iframe class="slide-deck" loading="lazy" title="Image placed with .absolute positioning at top-right corner" src="examples/layout/image-absolute.html">
 Image placed with `.absolute` positioning: `{.absolute top=0 right=0 height="100%"}` places the image flush against the top-right corner at full slide height, independent of content flow.
 </iframe>
 
@@ -289,7 +289,7 @@ Notice that we are using negative locations to make this happen as `0` is inside
 ![](noelle-rebekah.jpg){.absolute top="-10%" right="-10%" height="120%" style="max-height: unset;"}
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/image-absolute.html#/no-restrictions">
+<iframe class="slide-deck" loading="lazy" title="Image with max-height unset overflowing slide edges at 120% height" src="examples/layout/image-absolute.html#/no-restrictions">
 Image with `max-height: unset; max-width: unset;` and negative position values: the image overflows the slide edges at 120% height, filling beyond the frame for a bleed effect.
 </iframe>
 
@@ -326,7 +326,7 @@ I like to use it with text in the following way:
 [and so is R]{.absolute bottom="0%" right="0%"}
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/tip-5.html">
+<iframe class="slide-deck" loading="lazy" title="Text elements placed at specific coordinates using .absolute" src="examples/layout/tip-5.html">
 Slide with text elements placed using `.absolute`: "python is great" and "and so is R" positioned at specific percentage coordinates on the slide using `bottom` and `left`/`right` attributes.
 </iframe>
 
@@ -344,7 +344,7 @@ you specify it on the slide level in the following way:
 ## Slide Title {background-image="galen-crout.jpg"}
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/image-background.html">
+<iframe class="slide-deck" loading="lazy" title="Slide using background-image to fill the full viewport" src="examples/layout/image-background.html">
 Slide using `{background-image="photo.jpg"}` on the slide header: the image fills the entire slide viewport behind all content.
 </iframe>
 
@@ -358,7 +358,7 @@ I end up not setting a default title and use `.absolute` to place any content I 
 [always explore]{.absolute left="50%" top="20%" style="rotate: -10deg;"}
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/image-background.html#/section">
+<iframe class="slide-deck" loading="lazy" title="Background image with absolutely positioned rotated text overlay" src="examples/layout/image-background.html#/section">
 Background image slide with absolutely positioned text overlay: the word "always explore" placed at 50% left / 20% top with a slight rotation using `style="rotate: -10deg;"`.
 </iframe>
 
@@ -384,7 +384,7 @@ If we take the first slide here as an example.
 ## {background-image="tim-marshall.jpg"}
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/overlay-textbox.html">
+<iframe class="slide-deck" loading="lazy" title="Background image slide with no text overlay" src="examples/layout/overlay-textbox.html">
 Background image slide with no text overlay, showing how busy or high-contrast images make text placement difficult.
 </iframe>
 
@@ -401,7 +401,7 @@ Take Risks
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/overlay-textbox.html#/section-1">
+<iframe class="slide-deck" loading="lazy" title="Background image with absolutely positioned text (low contrast)" src="examples/layout/overlay-textbox.html#/section-1">
 Background image with absolutely positioned text "Be Brave / Take Risks" at 55% left, 55% top: text is present but hard to read due to insufficient contrast with the image.
 </iframe>
 
@@ -418,7 +418,7 @@ Take Risks
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/overlay-textbox.html#/section-2">
+<iframe class="slide-deck" loading="lazy" title="Text box with semi-transparent white background for readability" src="examples/layout/overlay-textbox.html#/section-2">
 Text box with semi-transparent white `background-color: rgba(255,255,255,.5)` and padding: text is now clearly readable against the busy background image.
 </iframe>
 
@@ -438,7 +438,7 @@ Take Risks
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/overlay-textbox.html#/section-3">
+<iframe class="slide-deck" loading="lazy" title="Polished glass-effect text box with backdrop-filter and box-shadow" src="examples/layout/overlay-textbox.html#/section-3">
 Polished glass-effect text box: `backdrop-filter: blur(5px)`, `box-shadow`, and `border-radius` added to the semi-transparent overlay for a refined frosted-glass appearance.
 </iframe>
 
@@ -566,7 +566,7 @@ You can still override the height with an inline style if you want less than the
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/spread.html#/with-spread">
+<iframe class="slide-deck" loading="lazy" title="Bullet points distributed evenly with .spread class" src="examples/layout/spread.html#/with-spread">
 Three bullet points inside a `.spread` div: the items are distributed evenly from the top to the bottom of the remaining slide space using `justify-content: space-between`.
 </iframe>
 
@@ -583,7 +583,7 @@ We rarely care whether a predictor is normal
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/spread.html#/space-evenly">
+<iframe class="slide-deck" loading="lazy" title="Bullet points distributed with .spread-evenly (equal spacing including edges)" src="examples/layout/spread.html#/space-evenly">
 Same three bullet points using `.spread.spread-evenly`: items are distributed with equal spacing including above the first and below the last item using `justify-content: space-evenly`.
 </iframe>
 
@@ -632,7 +632,7 @@ and it fills the full viewport behind the card, not over the content.
 Content goes here, cleanly inside the card.
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card.html#/colored-background">
+<iframe class="slide-deck" loading="lazy" title=".paper slide with colored background filling the viewport behind the card" src="examples/layout/paper-card.html#/colored-background">
 A slide using `.paper` with `background-color="#ffe83e"`: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.
 </iframe>
 
@@ -642,7 +642,7 @@ The same works with `background-image`:
 ## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card.html#/background-image">
+<iframe class="slide-deck" loading="lazy" title=".paper slide with full-cover background image behind the content card" src="examples/layout/paper-card.html#/background-image">
 A slide using `.paper` with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.
 </iframe>
 
@@ -680,7 +680,7 @@ The `.paperless` class then becomes the opt-out for slides that shouldn't have t
 }
 ```
 
-<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card-default.html#/every-slide-is-a-card">
+<iframe class="slide-deck" loading="lazy" title="Every slide rendered as a card by default, with .paperless opt-out" src="examples/layout/paper-card-default.html#/every-slide-is-a-card">
 Every slide rendered as a card by default, with the `.paperless` class used on one slide to opt out of the effect and fill the full viewport.
 </iframe>
 

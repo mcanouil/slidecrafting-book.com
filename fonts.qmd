@@ -47,7 +47,7 @@ $presentation-heading-font: 'IBM Plex Serif', serif;
 
 Which, when rendered, results in the following slides.
 
-<iframe class="slide-deck" loading="lazy" src="examples/fonts/google-fonts.html">
+<iframe class="slide-deck" loading="lazy" title="Slides with Google Fonts applied (Manrope body, IBM Plex Serif headings)" src="examples/fonts/google-fonts.html">
 Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for headings, demonstrating bold and italic font weights in use.
 </iframe>
 
@@ -82,7 +82,7 @@ supplying the fonts instead of downloading them will reduce the load time for yo
 
 I just added some new code to a slide.
 
-<iframe class="slide-deck" loading="lazy" src="examples/fonts/before-fira.html">
+<iframe class="slide-deck" loading="lazy" title="Code slides before embedding FiraCode (no ligatures)" src="examples/fonts/before-fira.html">
 Code slides before embedding FiraCode: multi-character operators like `!=` and `|>` appear as plain separate characters without ligatures.
 </iframe>
 
@@ -119,6 +119,6 @@ An [issue has been filed](https://github.com/quarto-dev/quarto-cli/issues/5712) 
 
 With all of that, we now have beautiful ligatures.
 
-<iframe class="slide-deck" loading="lazy" src="examples/fonts/after-fira.html">
+<iframe class="slide-deck" loading="lazy" title="Code slides after embedding FiraCode (with ligatures)" src="examples/fonts/after-fira.html">
 Same code slides after embedding FiraCode via `@font-face`: operators like `!=` and `|>` are rendered as beautiful single-glyph ligatures.
 </iframe>

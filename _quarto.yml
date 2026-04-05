@@ -2,11 +2,19 @@ project:
   type: book
   resources:
     - /examples
+    - favicon.ico
+    - favicon.svg
+    - favicon-96x96.png
+    - apple-touch-icon.png
+    - web-app-manifest-192x192.png
+    - web-app-manifest-512x512.png
+    - site.webmanifest
 
 website:
   llms-txt: true
 
 book:
+  favicon: favicon.ico
   title: "Slidecrafting"
   subtitle: "Making beautiful slides with reveal.js and Quarto"
   author: "Emil Hvitfeldt"
@@ -47,3 +55,4 @@ format:
     theme:
       - cosmo
       - styles.scss
+    include-in-header: favicon-head.html

@@ -452,9 +452,13 @@ Once the card is set up, you can set a `background-color` (or `background-image`
 
     Content goes here, cleanly inside the card.
 
+A slide using `.paper` with `background-color="#ffe83e"`: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.
+
 The same works with `background-image`:
 
     ## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}
+
+A slide using `.paper` with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.
 
 Because the card shrinks the content area, elements placed via JavaScript into the slide background (`.slide-background`) can extend freely outside the card bounds. This is the technique the [quarto-revealjs-highlighter-theme](https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme) extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.
 
@@ -481,6 +485,8 @@ If you want every slide to be a card without adding `.paper` each time, just cha
   box-shadow: none !important;
 }
 ```
+
+Every slide rendered as a card by default, with the `.paperless` class used on one slide to opt out of the effect and fill the full viewport.
 
 [qmd](examples/layout/paper-card-default.qmd) [scss](examples/layout/paper-card-default.scss)
 

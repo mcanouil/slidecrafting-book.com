@@ -632,12 +632,19 @@ and it fills the full viewport behind the card, not over the content.
 Content goes here, cleanly inside the card.
 ```
 
+<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card.html#/colored-background">
+A slide using `.paper` with `background-color="#ffe83e"`: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.
+</iframe>
+
 The same works with `background-image`:
 
 ```md
 ## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}
 ```
 
+<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card.html#/background-image">
+A slide using `.paper` with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.
+</iframe>
 
 Because the card shrinks the content area,
 elements placed via JavaScript into the slide background (`.slide-background`)
@@ -672,6 +679,10 @@ The `.paperless` class then becomes the opt-out for slides that shouldn't have t
   box-shadow: none !important;
 }
 ```
+
+<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card-default.html#/every-slide-is-a-card">
+Every slide rendered as a card by default, with the `.paperless` class used on one slide to opt out of the effect and fill the full viewport.
+</iframe>
 
 <a href="examples/layout/paper-card-default.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
 <a href="examples/layout/paper-card-default.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>

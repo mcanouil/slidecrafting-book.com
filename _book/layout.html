@@ -761,8 +761,14 @@ Same three bullet points using <code>.spread.spread-evenly</code>: items are dis
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Slide {.paper background-color="#ffe83e"}</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>Content goes here, cleanly inside the card.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card.html#/colored-background">
+A slide using <code>.paper</code> with <code>background-color="#ffe83e"</code>: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.
+</iframe>
 <p>The same works with <code>background-image</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card.html#/background-image">
+A slide using <code>.paper</code> with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.
+</iframe>
 <p>Because the card shrinks the content area, elements placed via JavaScript into the slide background (<code>.slide-background</code>) can extend freely outside the card bounds. This is the technique the <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme">quarto-revealjs-highlighter-theme</a> extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.</p>
 <p><a href="examples/layout/paper-card.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
 <section id="paper-card-as-the-default" class="level3" data-number="8.9.1">
@@ -783,6 +789,9 @@ Same three bullet points using <code>.spread.spread-evenly</code>: items are dis
 <span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="dv">transparent</span> <span class="at">!important</span><span class="op">;</span></span>
 <span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span>: <span class="dv">none</span> <span class="at">!important</span><span class="op">;</span></span>
 <span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<iframe class="slide-deck" loading="lazy" src="examples/layout/paper-card-default.html#/every-slide-is-a-card">
+Every slide rendered as a card by default, with the <code>.paperless</code> class used on one slide to opt out of the effect and fill the full viewport.
+</iframe>
 <p><a href="examples/layout/paper-card-default.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card-default.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
 </section>
 </section>

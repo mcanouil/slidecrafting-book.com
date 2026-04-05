@@ -270,6 +270,28 @@ Reveal.on('fragmenthidden', (event) => {
 });
 ```
 
+> **IMPORTANT:**
+>
+> Every JavaScript fragment **must** handle both `fragmentshown` (forward) and `fragmenthidden` (reverse). Presenters routinely go backwards through slides. A fragment that only implements `fragmentshown` will leave the slide in a broken state when navigated in reverse.
+>
+> The canonical pattern is:
+>
+> ``` js
+> Reveal.on('fragmentshown', (event) => {
+>   if (event.fragment.classList.contains("my-class")) {
+>     // apply the change
+>   }
+> });
+>
+> Reveal.on('fragmenthidden', (event) => {
+>   if (event.fragment.classList.contains("my-class")) {
+>     // undo the change
+>   }
+> });
+> ```
+>
+> The `fragmenthidden` handler should be the exact inverse of `fragmentshown`: if you set a color, reset it; if you scroll down, scroll back up; if you switch a tab, switch it back.
+
 `Reveal` is the javascript object that powers the whole presentation. To have fun things happening when we use fragments, we need to write some code inside these curly brackets. The first chunk of code runs whenever a fragment appears, and the second runs whenever a fragment disappears. In in this environment, we have access to the `event` which is the DOM element of fragment div itself as created in our slides. We can take advantage of that in different ways as you will see.
 
 ``` js

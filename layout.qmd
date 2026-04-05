@@ -409,8 +409,6 @@ adding a `background-color` to make it stand out.
 We also added some `padding`,
 otherwise the background would just be slightly bigger than the text itself.
 
-## {background-image="tim-marshall.jpg"}
-
 ```md
 ::: {.absolute left="55%" top="55%" style="font-size:1.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5);"}
 Be Brave

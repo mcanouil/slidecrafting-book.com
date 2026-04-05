@@ -310,14 +310,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#background-image" id="toc-background-image" class="nav-link" data-scroll-target="#background-image"><span class="header-section-number">8.5.1</span> Background image</a></li>
   </ul></li>
   <li><a href="#overlayed-text-boxes" id="toc-overlayed-text-boxes" class="nav-link" data-scroll-target="#overlayed-text-boxes"><span class="header-section-number">8.6</span> Overlayed Text Boxes</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">8.7</span> </a></li>
-  <li><a href="#editable-extension" id="toc-editable-extension" class="nav-link" data-scroll-target="#editable-extension"><span class="header-section-number">8.8</span> Editable Extension</a></li>
-  <li><a href="#spread" id="toc-spread" class="nav-link" data-scroll-target="#spread"><span class="header-section-number">8.9</span> Spread</a></li>
-  <li><a href="#paper-card-effect" id="toc-paper-card-effect" class="nav-link" data-scroll-target="#paper-card-effect"><span class="header-section-number">8.10</span> Paper Card Effect</a>
+  <li><a href="#editable-extension" id="toc-editable-extension" class="nav-link" data-scroll-target="#editable-extension"><span class="header-section-number">8.7</span> Editable Extension</a></li>
+  <li><a href="#spread" id="toc-spread" class="nav-link" data-scroll-target="#spread"><span class="header-section-number">8.8</span> Spread</a></li>
+  <li><a href="#paper-card-effect" id="toc-paper-card-effect" class="nav-link" data-scroll-target="#paper-card-effect"><span class="header-section-number">8.9</span> Paper Card Effect</a>
   <ul class="collapse">
-  <li><a href="#paper-card-as-the-default" id="toc-paper-card-as-the-default" class="nav-link" data-scroll-target="#paper-card-as-the-default"><span class="header-section-number">8.10.1</span> Paper card as the default</a></li>
+  <li><a href="#paper-card-as-the-default" id="toc-paper-card-as-the-default" class="nav-link" data-scroll-target="#paper-card-as-the-default"><span class="header-section-number">8.9.1</span> Paper card as the default</a></li>
   </ul></li>
-  <li><a href="#vary-the-type-of-slides" id="toc-vary-the-type-of-slides" class="nav-link" data-scroll-target="#vary-the-type-of-slides"><span class="header-section-number">8.11</span> Vary the type of slides</a></li>
+  <li><a href="#vary-the-type-of-slides" id="toc-vary-the-type-of-slides" class="nav-link" data-scroll-target="#vary-the-type-of-slides"><span class="header-section-number">8.10</span> Vary the type of slides</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/edit/main/layout.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/blob/main/layout.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -594,9 +593,6 @@ Warning
 <iframe class="slide-deck" loading="lazy" src="examples/layout/overlay-textbox.html#/section-1">
 </iframe>
 <p>But we can expand on this idea, adding a <code>background-color</code> to make it stand out. We also added some <code>padding</code>, otherwise the background would just be slightly bigger than the text itself.</p>
-</section>
-<section id="section" class="level2" data-background-image="tim-marshall.jpg" data-number="8.7">
-<h2 data-background-image="tim-marshall.jpg" data-number="8.7" class="anchored" data-anchor-id="section"><span class="header-section-number">8.7</span> </h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>::: {.absolute left="55%" top="55%" style="font-size:1.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5);"}</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>Be Brave</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -618,8 +614,8 @@ Warning
 <p><a href="examples/layout/overlay-textbox.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <p>I think this turned out well. There are endless ways to use this. It is quite CSS-heavy work, but I think it is worth it. Note that you are always free to copy an example and modify it to your wants.</p>
 </section>
-<section id="editable-extension" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="editable-extension"><span class="header-section-number">8.8</span> Editable Extension</h2>
+<section id="editable-extension" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="editable-extension"><span class="header-section-number">8.7</span> Editable Extension</h2>
 <p>The <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable">quarto-revealjs-editable</a> extension allows you to reposition and resize images and text directly in your browser while viewing your slides. This can be incredibly useful when fine-tuning the layout of complex slides without having to repeatedly edit code and re-render.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -647,8 +643,8 @@ Warning
 <p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a></p>
 </div>
 </section>
-<section id="spread" class="level2" data-number="8.9">
-<h2 data-number="8.9" class="anchored" data-anchor-id="spread"><span class="header-section-number">8.9</span> Spread</h2>
+<section id="spread" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="spread"><span class="header-section-number">8.8</span> Spread</h2>
 <p>When you have a few short bullet points on a slide, they’ll naturally clump together at the top. The <code>.spread</code> class distributes them evenly across the vertical space of the slide using flexbox, giving each item room to breathe.</p>
 <p>Add the following to your SCSS:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.spread</span> {</span>
@@ -717,8 +713,8 @@ Note
 </iframe>
 <p><a href="examples/layout/spread.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/spread.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a> <a href="examples/layout/spread-script.js" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>js</a></p>
 </section>
-<section id="paper-card-effect" class="level2" data-number="8.10">
-<h2 data-number="8.10" class="anchored" data-anchor-id="paper-card-effect"><span class="header-section-number">8.10</span> Paper Card Effect</h2>
+<section id="paper-card-effect" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="paper-card-effect"><span class="header-section-number">8.9</span> Paper Card Effect</h2>
 <p>One underused layout trick in slidecrafting is making each slide appear as a floating paper card. By elevating the content area of the slides “above” the background elements, you can now have a clean slidecrafting experience as you are guaranteed to not have any background elements interfere with the content.</p>
 <p>The effect is achieved with a few CSS rules on <code>.paper</code> slides:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
@@ -748,8 +744,8 @@ Note
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Because the card shrinks the content area, elements placed via JavaScript into the slide background (<code>.slide-background</code>) can extend freely outside the card bounds. This is the technique the <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme">quarto-revealjs-highlighter-theme</a> extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.</p>
 <p><a href="examples/layout/paper-card.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
-<section id="paper-card-as-the-default" class="level3" data-number="8.10.1">
-<h3 data-number="8.10.1" class="anchored" data-anchor-id="paper-card-as-the-default"><span class="header-section-number">8.10.1</span> Paper card as the default</h3>
+<section id="paper-card-as-the-default" class="level3" data-number="8.9.1">
+<h3 data-number="8.9.1" class="anchored" data-anchor-id="paper-card-as-the-default"><span class="header-section-number">8.9.1</span> Paper card as the default</h3>
 <p>If you want every slide to be a card without adding <code>.paper</code> each time, just change the selector from <code>section.paper</code> to <code>section</code>. The <code>.paperless</code> class then becomes the opt-out for slides that shouldn’t have the effect.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -769,8 +765,8 @@ Note
 <p><a href="examples/layout/paper-card-default.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card-default.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
 </section>
 </section>
-<section id="vary-the-type-of-slides" class="level2" data-number="8.11">
-<h2 data-number="8.11" class="anchored" data-anchor-id="vary-the-type-of-slides"><span class="header-section-number">8.11</span> Vary the type of slides</h2>
+<section id="vary-the-type-of-slides" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="vary-the-type-of-slides"><span class="header-section-number">8.10</span> Vary the type of slides</h2>
 <p>This post has shown a number of ways to place content on your slides. My final advice in this post is to use some of these tips to vary how the content is laid out. It doesn’t have to be over the top, but slight variations can help a slide deck feel fresh.</p>
 
 

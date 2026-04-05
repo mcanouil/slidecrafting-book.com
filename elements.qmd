@@ -26,7 +26,7 @@ background-image: url('https://cdn-icons-png.flaticon.com/512/2163/2163350.png')
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/styling/tip-2.html">
-
+Slide showing a custom hamburger menu icon: the default three-bar icon is replaced with a custom image via CSS background-image on `.reveal .slide-menu-button .fa-bars::before`.
 </iframe>
 
 <a href="examples/styling/tip-2.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -56,7 +56,7 @@ This is **Quarto** code
 `````
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/tip-6.html">
-
+Slide demonstrating how to display Quarto/R code as literal unexecuted source using double curly brackets (`{{{python}}}`), so the code block appears verbatim rather than being run.
 </iframe>
 
 <a href="examples/elements/tip-6.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -209,11 +209,11 @@ We see how they affect sizing in the following slides first with the default,
 and second with `.nostretch`.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/auto-stretch">
-
+Plot slide with `auto-stretch: true` (default): the figure is automatically scaled down to fit within the slide boundaries.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/no-auto-stretch">
-
+Same plot slide with `.nostretch` class: the figure is shown at its natural size, potentially overflowing the slide.
 </iframe>
 
 By themselves, they look pretty similar.
@@ -221,11 +221,11 @@ One occasion where you really notice the difference is when there are other elem
 `auto-stretch` makes sure the image fits by making the image smaller as seen below.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/auto-stretch-1">
-
+Plot and title text on the same slide with `auto-stretch` enabled: image is shrunk to fit alongside the other content.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/no-auto-stretch-1">
-
+Same slide with `.nostretch`: image renders at full natural size and may overlap or push other content off the slide.
 </iframe>
 
 ### Sizing Options
@@ -251,11 +251,11 @@ we get an image that doesn't take up the whole screen.
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section">
-
+Plot with `out-width: 6in, out-height: 3.5in`: the saved image file is small, resulting in a figure that does not fill the slide.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-1">
-
+Comparison slide for the small `out-width`/`out-height` example, shown alongside a default-sized chart.
 </iframe>
 
 
@@ -273,19 +273,19 @@ Below is the same chart 4 times with different value pairs for `fig-width` and `
 Notice how the default values appear to be around `fig-width: 9` and `fig-height: 5`.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-2">
-
+Chart with `fig-width: 9, fig-height: 5` (Reveal.js defaults): text labels on the chart appear small and may be hard to read for an audience.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-3">
-
+Chart with reduced `fig-width` and `fig-height`: larger text relative to the plot area, improving readability for live audiences.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-4">
-
+Another `fig-width`/`fig-height` combination showing how the ratio between dimensions affects text and element sizes on the chart.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-5">
-
+Fourth `fig-width`/`fig-height` variant in the comparison series, demonstrating that smaller values produce larger, more legible chart text.
 </iframe>
 
 
@@ -294,7 +294,7 @@ but if you want others you just specify different values.
 Like this square chart below.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-6">
-
+Square chart using equal `fig-width` and `fig-height` values, demonstrating how aspect ratio is controlled independently of the slide dimensions.
 </iframe>
 
 
@@ -310,11 +310,11 @@ Is it too small? increase `fig-height` and keep `fig-asp` the same.
 is it too big? decrease `fig-height` and keep `fig-asp` the same.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-7">
-
+Chart using `fig-asp` to fix the aspect ratio: changing `fig-height` scales the chart proportionally without needing to update both dimensions.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-8">
-
+Same `fig-asp` ratio at a different `fig-height`, showing how the chart scales up or down while maintaining consistent proportions.
 </iframe>
 
 ### fig-align
@@ -324,15 +324,15 @@ you can change that with `fig-align`,
 setting it to `left`, `center` or `right`.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-9">
-
+Chart with `fig-align: left`: the figure is positioned against the left edge of the slide content area.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-10">
-
+Chart with `fig-align: center`: the figure is centered horizontally on the slide.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-11">
-
+Chart with `fig-align: right`: the figure is positioned against the right edge of the slide content area.
 </iframe>
 
 
@@ -346,11 +346,11 @@ Note that dpi will result in larger file sizes,
 so only change if you have to.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-12">
-
+Chart at standard DPI: text and elements may appear slightly soft at high display resolutions.
 </iframe>
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-13">
-
+Same chart at higher `fig-dpi`: text and lines are crisp and sharp, at the cost of a larger file size.
 </iframe>
 
 ### Make work with columns
@@ -361,7 +361,7 @@ such as with charts in `.columns`.
 Below is one example of how we can modify the `fig-asp` to make it look decent in a column layout.
 
 <iframe class="slide-deck" loading="lazy" src="examples/elements/plot-sizing-examples.html#/section-14">
-
+Chart inside a two-column layout with `fig-asp` adjusted to fit the narrower column width, preventing the figure from overflowing its column.
 </iframe>
 
 ### Source Document

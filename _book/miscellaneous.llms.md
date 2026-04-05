@@ -1,58 +1,40 @@
----
-title: Miscellaneous
----
+# 14  Miscellaneous
 
-## Hiding slides
+## 14.1 Hiding slides
 
 changing the [slide visibility](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-visibility) is as simple as setting `visibility="hidden"` attribute to the header of a slide
 
-```markdown
+``` markdown
 ## Slide Title {visibility="hidden"}
 ```
 
-I find this useful when I have to give the same presentation multiple times,
-and I have a disclaimer or other seasonally important slides.
-Instead of removing and reinserting the information each time,
-I just changed the attribute.
+I find this useful when I have to give the same presentation multiple times, and I have a disclaimer or other seasonally important slides. Instead of removing and reinserting the information each time, I just changed the attribute.
 
-<iframe class="slide-deck" loading="lazy" src="examples/miscellaneous/tip-3.html">
 Slide deck demonstrating hidden slides: a slide marked with `visibility="hidden"` is skipped entirely during the presentation but remains in the source file.
-</iframe>
 
-<a href="examples/miscellaneous/tip-3.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+[qmd](examples/miscellaneous/tip-3.qmd)
 
-## Avoid duplication using Includes
+## 14.2 Avoid duplication using Includes
 
-This last tip doesn't come with an example,
-as it doesn't get useful before you start working with multiple files.
-We are talking about the [includes](https://quarto.org/docs/authoring/includes.html) short code.
+This last tip doesn’t come with an example, as it doesn’t get useful before you start working with multiple files. We are talking about the [includes](https://quarto.org/docs/authoring/includes.html) short code.
 
-Using the following short code;
-`{{< include _content.qmd >}}` includes the content of `_content.qmd` into the document in a "copy-paste" manner before the rendering of the document.
+Using the following short code; `{{< include _content.qmd >}}` includes the content of `_content.qmd` into the document in a “copy-paste” manner before the rendering of the document.
 
-This has proved useful for me when I want the same slides to appear at the start or end of multiple decks.
-And you are not limited to .qmd files!
-you can embed html files or svg too.
+This has proved useful for me when I want the same slides to appear at the start or end of multiple decks. And you are not limited to .qmd files! you can embed html files or svg too.
 
-## VS Code & Positron code snippets
+## 14.3 VS Code & Positron code snippets
 
 I find it hard to remember all the [Sass variables](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables) that are available.
 
-I figured out we can get something working pretty well by using [code snippets](https://code.visualstudio.com/docs/editing/userdefinedsnippets) in VS Code or Positron.
-The following collapsed code chunk contains snippets for all the revealjs sass variables that are compatible.
-They should all trigger inside `.scss` files once you start with `$`.
-The snippets also default to contain the default value, which can help you figure out how you want to adjust it.
+I figured out we can get something working pretty well by using [code snippets](https://code.visualstudio.com/docs/editing/userdefinedsnippets) in VS Code or Positron. The following collapsed code chunk contains snippets for all the revealjs sass variables that are compatible. They should all trigger inside `.scss` files once you start with `$`. The snippets also default to contain the default value, which can help you figure out how you want to adjust it.
 
 ![](media/code-snippets.png)
 
-Since these are specific to presentations,
-I suggest that they are used as project-specific snippets.
-Add them in a `name.code-snippets` file inside `.vscode` folder at the base of your directory, and it should work right away.
+Since these are specific to presentations, I suggest that they are used as project-specific snippets. Add them in a `name.code-snippets` file inside `.vscode` folder at the base of your directory, and it should work right away.
 
-<details>
-<summary>All Sass Variables Code Snippets</summary>
+All Sass Variables Code Snippets
 
-```json
+``` json
 {
   "colors - background": {
     "scope": "scss",
@@ -413,5 +395,3 @@ Add them in a `name.code-snippets` file inside `.vscode` folder at the base of y
   }
 }
 ```
-
-</details>

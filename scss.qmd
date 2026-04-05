@@ -28,7 +28,7 @@ Note that CSS rules that target Reveal content generally need to use the `.revea
 And the changes have been applied.
 
 <iframe class="slide-deck" loading="lazy" src="examples/scss/links.html">
-
+Slide showing links styled with an underline via `.reveal .slide a { text-decoration: underline; }`, demonstrating that the `.reveal .slide` prefix is required to override Reveal.js default specificity.
 </iframe>
 
 ## Using CSS Classes
@@ -69,7 +69,7 @@ See below
 ````
 
 <iframe class="slide-deck" loading="lazy" src="examples/scss/css-classes.html">
-
+Slide with custom `.blue` and `.yellow` CSS classes applied inline to individual words: "Quarto" appears in bold blue and "content" / "executable code" in bold yellow using the `[text]{.class}` syntax.
 </iframe>
 
 The idea behind CSS classes are quite powerful. 
@@ -410,7 +410,7 @@ advance them to see the other classes.
 :::
 
 <iframe class="slide-deck" loading="lazy" src="examples/scss/tip-1.html">
-
+Interactive demo of compound gradient highlight classes (e.g. `.hl-red-blue`, `.hl-yellow-purple`) auto-generated via nested SCSS `@each` loops over a color map. Advance the slide to see each combination.
 </iframe>
 
 <a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -437,7 +437,7 @@ I set up the transition between those two colors to be super sharp,
 resulting in the effect you see below
 
 <iframe class="slide-deck" loading="lazy" src="examples/scss/tip-2.html">
-
+Slide with a decorative gradient stripe along the right edge: created by layering two CSS gradients — a colored gradient underneath and a sharp white-to-transparent gradient on top.
 </iframe>
 
 <a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>

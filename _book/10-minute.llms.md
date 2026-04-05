@@ -1,0 +1,133 @@
+# 1  10 Minute Theme
+
+This chapter will guide you through setting up a fully functional theme in approximately 10 minutes. The remaining chapters of this section delve into greater detail, showcasing tips and tricks along the way.
+
+These slides will be used as the basis to show off each step of the way. First, here they are with no additional styling.
+
+Example slide deck with no custom styling applied, using Reveal.js defaults. Serves as the before state for the 10-minute theme walkthrough.
+
+## 1.1 What we need
+
+- fonts
+- colors
+- sizes
+
+Adding these things alone goes a long way. Each of the following subsections has a corresponding chapter associated with it.
+
+## 1.2 Setup
+
+Before we get started, we need to set up the right files. For the best ease of use and flexibility, we are going to add an `SCSS` file to [customize our theme](https://quarto.org/docs/presentations/revealjs/themes.html#customizing-themes).
+
+Do this by setting the `theme` field in the YAML and specifying the name of the style sheet you will be using.
+
+``` yaml
+format:
+  revealjs:
+    theme: [default, styles.scss]
+```
+
+> **TIP:**
+>
+> You can combine an optional [built-in theme](https://quarto.org/docs/presentations/revealjs/themes.html#using-themes) with one or more style sheets. This can be useful if one of the themes contains most of what you want. Setting `theme: [solarized, styles.scss]` lets you take the parts of `solarized` you like and overwrite the parts you don’t. Likewise, you don’t even need to specify a theme and could instead just set a style sheet with `theme: styles.scss`.
+
+The insides of the style sheet should look like this:
+
+``` scss
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+```
+
+The `scss:defaults` section is where we specify [sass variables](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables), which we will see in a bit.
+
+The `scss:rules` section is where we write CSS or SCSS code to specify what we want to change.
+
+The sass variables are able to handle most of the general changes we are going to make. And what can’t be changed with the sass variables will be done using CSS. This chapter only uses `scss:defaults`.
+
+## 1.3 Fonts
+
+We are going to control the fonts of the slides using 3 different sass variables.
+
+- `presentation-heading-font`
+- `font-family-sans-serif`
+- `font-family-monospace`
+
+The `presentation-heading-font` variable handles the headings of each page, `font-family-sans-serif` handles the body of the text, and `font-family-monospace` handles the monospaced text will be inline code and code blocks.
+
+If you don’t set `presentation-heading-font`, it will use `font-family-sans-serif` for headings as well.
+
+The easiest place to find non-local fonts is by using [Google Fonts](https://fonts.google.com/). Select the fonts you want to use, click “Get embed code”, find the `@import` code, and include it at the beginning of the `scss:defaults` section.
+
+The below example uses [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans), [Lato](https://fonts.google.com/specimen/Lato), and [Space Mono](https://fonts.google.com/specimen/Space+Mono).
+
+``` scss
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+```
+
+Below that, we can set the sass variables.
+
+``` scss
+$presentation-heading-font: "Josefin Sans", sans-serif;
+$font-family-sans-serif: "Lato", sans-serif;
+$font-family-monospace: "Space Mono", monospace;
+```
+
+Slides after adding custom fonts: Josefin Sans for headings, Lato for body text, and Space Mono for code. Still using default colors.
+
+See the [fonts chapter](fonts.llms.md) for further considerations and options.
+
+## 1.4 Colors
+
+With regards to colors we have a number of things we can change. There are 5 main sass variables you should consider setting.
+
+- `body-bg`
+- `body-color`
+- `presentation-heading-color`
+- `link-color`
+- `code-color`
+
+The `body-bg` changes the background color of the slides, the `body-color` changes the text color, `presentation-heading-color` changes the heading text color, `link-color` changes the colors of the links, which also affects the hamburger menu and progress bar colors, and `code-color` modifies the inline code text color.
+
+These are all set in the `scss:defaults` section as well. We will try to create a dark theme right now.
+
+``` scss
+$body-bg: #1C1C2B;
+$body-color: #bac2de;
+$presentation-heading-color: #cba6f7;
+$link-color: #fab387;
+$code-color: #89b4fa;
+```
+
+Slides after adding dark theme colors: dark navy background (#1C1C2B), light lavender body text, purple headings, and orange links.
+
+See the [colors chapter](colors.llms.md) for further considerations and options.
+
+## 1.5 Sizes
+
+There are 5 main sass variables for changing the sizes of things in our slides, I end up mostly using 2 or 3 of them.
+
+- `presentation-font-size-root`
+- `presentation-h1-font-size`
+- `presentation-h2-font-size`
+- `presentation-h3-font-size`
+- `presentation-h4-font-size`
+- `code-block-font-size`
+
+The `presentation-font-size-root` variable changes basically everything, most sizes are calculated based on this value, so if you increase it, Then everything else will increase with it.
+
+The `code-block-font-size` changes the sizing of the code block and the code output.
+
+The remaining sass variables change the size of the different headers used in slides. I mostly use `h1` and `h2` headers and will thus mostly only set those, but the principle is the same for all of them.
+
+I find that most people end up using too small text, I’m thus increasing my font sizes quite a bit.
+
+``` scss
+$presentation-font-size-root: 40px;
+$presentation-h1-font-size: 80px;
+$presentation-h2-font-size: 60px;
+$code-block-font-size: 0.9em;
+```
+
+Completed 10-minute theme with fonts, colors, and increased sizes: 40px root font size, 80px h1, 60px h2, and 0.9em code blocks.
+
+See the [sizes chapter](sizes.llms.md) for further considerations and options.

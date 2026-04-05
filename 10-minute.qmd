@@ -8,7 +8,7 @@ These slides will be used as the basis to show off each step of the way.
 First, here they are with no additional styling.
 
 <iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-0.html">
-
+Example slide deck with no custom styling applied, using Reveal.js defaults. Serves as the before state for the 10-minute theme walkthrough.
 </iframe>
 
 ## What we need
@@ -88,7 +88,7 @@ $font-family-monospace: "Space Mono", monospace;
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-1.html">
-
+Slides after adding custom fonts: Josefin Sans for headings, Lato for body text, and Space Mono for code. Still using default colors.
 </iframe>
 
 See the [fonts chapter](fonts.qmd) for further considerations and options.
@@ -118,7 +118,7 @@ $code-color: #89b4fa;
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-2.html">
-
+Slides after adding dark theme colors: dark navy background (#1C1C2B), light lavender body text, purple headings, and orange links.
 </iframe>
 
 See the [colors chapter](colors.qmd) for further considerations and options.
@@ -156,7 +156,7 @@ $code-block-font-size: 0.9em;
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/10-minutes/10min-3.html">
-
+Completed 10-minute theme with fonts, colors, and increased sizes: 40px root font size, 80px h1, 60px h2, and 0.9em code blocks.
 </iframe>
 
 See the [sizes chapter](sizes.qmd) for further considerations and options.

@@ -343,6 +343,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Which, when rendered, results in the following slides.</p>
 <iframe class="slide-deck" loading="lazy" src="examples/fonts/google-fonts.html">
+Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for headings, demonstrating bold and italic font weights in use.
 </iframe>
 <p>Notice how the fonts we used allow us to bold the words “finished presentation” and italicize “content and executable code”. If you don’t see those working, it is because you either didn’t select those high font weights to allow for boldness, or italic versions to allow for italics.</p>
 <p>You can also change the code font; this should ideally be a monospaced font. This is done using the <code>$font-family-monospace</code> sass variable.</p>
@@ -359,6 +360,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You might even have your own special font you wanna use. While it isn’t that important in slides compared to websites, supplying the fonts instead of downloading them will reduce the load time for your slides.</p>
 <p>I just added some new code to a slide.</p>
 <iframe class="slide-deck" loading="lazy" src="examples/fonts/before-fira.html">
+Code slides before embedding FiraCode: multi-character operators like <code>!=</code> and <code>|&gt;</code> appear as plain separate characters without ligatures.
 </iframe>
 <p>And this code uses some multi-character symbols like <code>!=</code> and <code>|&gt;</code>. These and many like them are common to all the different programming languages, so much so that people have created special fonts with ligatures to make them prettier.</p>
 <p>One such font is <a href="https://github.com/tonsky/FiraCode">FiraCode</a>.</p>
@@ -374,6 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You might have noticed some ugliness with the <code>../../../../../</code>s. To my knowledge, this is the best way of using a local font-face from a file. You might want to add or remove <code>../</code> depending on your folder structure. I found that 5 sets were what was needed when the <code>.qmd</code> file and the <code>woff</code> files were located in the same folder. An <a href="https://github.com/quarto-dev/quarto-cli/issues/5712">issue has been filed</a> regarding this problem.</p>
 <p>With all of that, we now have beautiful ligatures.</p>
 <iframe class="slide-deck" loading="lazy" src="examples/fonts/after-fira.html">
+Same code slides after embedding FiraCode via <code>@font-face</code>: operators like <code>!=</code> and <code>|&gt;</code> are rendered as beautiful single-glyph ligatures.
 </iframe>
 
 

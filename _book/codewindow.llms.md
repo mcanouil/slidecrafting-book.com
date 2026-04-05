@@ -1,28 +1,24 @@
----
-title: Codewindow
----
+# 13  Codewindow
 
 The [quarto-revealjs-codewindow](https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow) extension adds styled codeblock windows to your Quarto reveal.js presentations, giving your code chunks a polished, IDE-like appearance.
 
-## What is Codewindow?
+## 13.1 What is Codewindow?
 
 Codewindow wraps your code chunks in a styled window frame with a file tab, similar to how code appears in modern code editors. This visual treatment makes code stand out on slides and provides helpful context through language-specific icons.
 
-<iframe class="slide-deck" loading="lazy" src="https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/">
 Demo of the codewindow extension: code blocks styled as IDE-like windows with a title bar, file tab with language icon, and polished appearance resembling a modern code editor.
-</iframe>
 
-## Installation
+## 13.2 Installation
 
 To use this extension, run the following command in your terminal:
 
-```bash
+``` bash
 quarto add emilhvitfeldt/quarto-revealjs-codewindow
 ```
 
 Once installed, add the extension to your YAML header:
 
-```yaml
+``` yaml
 ---
 title: "My Presentation"
 format: revealjs
@@ -31,11 +27,11 @@ revealjs-plugins:
 ---
 ```
 
-## Basic Usage
+## 13.3 Basic Usage
 
 Wrap any code chunk in a `::: {.codewindow}` fenced div to apply the window styling. Add plain text before the code chunk to create a file tab label:
 
-````markdown
+```` markdown
 ::: {.codewindow}
 script.R
 
@@ -48,7 +44,7 @@ ggplot(mtcars, aes(mpg, wt)) +
 :::
 ````
 
-## Language Icons
+## 13.4 Language Icons
 
 Add a language class to display an icon in the file tab. The following languages are supported:
 
@@ -63,7 +59,7 @@ Add a language class to display an icon in the file tab. The following languages
 
 Example with an R icon:
 
-````markdown
+```` markdown
 ::: {.codewindow .r}
 analysis.R
 
@@ -75,11 +71,11 @@ mtcars |>
 :::
 ````
 
-## Customizing Width
+## 13.5 Customizing Width
 
 You can control the width of the codewindow using the `width` argument directly in the fenced div:
 
-````markdown
+```` markdown
 ::: {.codewindow .r width="80%"}
 script.R
 
@@ -89,11 +85,4 @@ print("Hello, world!")
 :::
 ````
 
-<div class="project-buttons">
-<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow">
-  {{< fa brands github >}} Github
-</a>
-<a href="https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/">
-  {{< fa door-open >}} Demo
-</a>
-</div>
+[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow) [ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/)

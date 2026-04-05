@@ -1,0 +1,19 @@
+# Slidecrafting
+
+## Pages
+
+- [Slidecrafting](https://slidecrafting-book.com/index.llms.md)
+- [[1]{.chapter-number}  [10 Minute Theme]{.chapter-title}](https://slidecrafting-book.com/10-minute.llms.md)
+- [[2]{.chapter-number}  [Colors]{.chapter-title}](https://slidecrafting-book.com/colors.llms.md)
+- [[3]{.chapter-number}  [Fonts]{.chapter-title}](https://slidecrafting-book.com/fonts.llms.md)
+- [[4]{.chapter-number}  [Sizes]{.chapter-title}](https://slidecrafting-book.com/sizes.llms.md)
+- [[5]{.chapter-number}  [CSS/SCSS]{.chapter-title}](https://slidecrafting-book.com/scss.llms.md)
+- [[6]{.chapter-number}  [Theme]{.chapter-title}](https://slidecrafting-book.com/theme.llms.md)
+- [[7]{.chapter-number}  [Elements]{.chapter-title}](https://slidecrafting-book.com/elements.llms.md)
+- [[8]{.chapter-number}  [Layout]{.chapter-title}](https://slidecrafting-book.com/layout.llms.md)
+- [[9]{.chapter-number}  [Manual Code]{.chapter-title}](https://slidecrafting-book.com/manual-code.llms.md)
+- [[10]{.chapter-number}  [Asciicast]{.chapter-title}](https://slidecrafting-book.com/asciicast.llms.md)
+- [[11]{.chapter-number}  [Fragments]{.chapter-title}](https://slidecrafting-book.com/fragments.llms.md)
+- [[12]{.chapter-number}  [Letterbox]{.chapter-title}](https://slidecrafting-book.com/letterbox.llms.md)
+- [[13]{.chapter-number}  [Codewindow]{.chapter-title}](https://slidecrafting-book.com/codewindow.llms.md)
+- [[14]{.chapter-number}  [Miscellaneous]{.chapter-title}](https://slidecrafting-book.com/miscellaneous.llms.md)

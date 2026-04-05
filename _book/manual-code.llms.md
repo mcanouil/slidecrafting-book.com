@@ -1,0 +1,40 @@
+# 9  Manual Code
+
+## 9.1 Hand-styled code chunks
+
+With a little extra effort, you can create highlighted code chunks. This is different than the code highlighting that comes naturally. In this instance, we are creating an unstyled code chunk, and styling part of the code manually with css classes.
+
+First, we write a new css class that I like to call `.mono`. The important thing is that we set `font-family: monospace;`, but we can do other things, like setting the `font-size`.
+
+``` scss
+.mono {
+  font-family: monospace;
+  font-size: 0.9em;
+}
+```
+
+Next, we add our code in a fenced div, with the mono class. you need to use `\` to add leading spaces, and each line ends with 2 spaces to denote newlines
+
+``` markdown
+::: mono
+library(ggplot2)
+mtcars |> 
+\ \ ggplot(aes(mpg, disp)) + 
+\ \ geom_point() + 
+\ \ geom_smooth(method = "lm", formula = "y ~ x")
+:::
+```
+
+Taking it to the next step, you can manually change the formatting of functions using css or css classes, `library([ggplot2]{style="color:purple;"})` would make `ggplot2` purple. This is also a great place to use [css classes](https://emilhvitfeldt.com/post/slidecraft-colors-fonts/#using-css-classes).
+
+We can take it a step further and use [fragments](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments) to have the code highlighted one bit at a time. Changing the last line to the following
+
+``` markdown
+geom_smooth([method = "lm"]{.fragment .highlight-red}, [formula = "y ~ x"]{.fragment .highlight-blue})
+```
+
+seperately highlights the code `method = "lm"` then `formula = "y ~ x"` in red and blue.
+
+Slide deck showing hand-styled code with incremental fragment highlighting: a ggplot2 code block where `method = "lm"` is highlighted in red on the first fragment advance, then `formula = "y ~ x"` in blue on the second.
+
+[qmd](examples/manual-code/tip-4.qmd)

@@ -10,7 +10,7 @@ When R code produces messages with colors or styling,
 they are typically lost when we write slides
 
 <iframe class="slide-deck" loading="lazy" src="examples/asciicast/no-asciicast.html">
-
+Slide showing R code output without asciicast: terminal colors and styling are stripped, producing plain unstyled text output.
 </iframe>
 
 <a href="examples/asciicast/no-asciicast.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -43,7 +43,7 @@ With this change, we get the following output,
 nicely styled with colors and everything.
 
 <iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-default.html">
-
+Slides using the asciicast knitr engine with default settings: `library(tidymodels)` output is rendered as a colorized animated terminal recording, preserving the original ANSI colors.
 </iframe>
 
 <a href="examples/asciicast/asciicast-default.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -79,7 +79,7 @@ asciicast::init_knitr_engine(
 and gives the following results
 
 <iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-same_process.html">
-
+Asciicast with `same_process = FALSE`: each chunk runs in a fresh R process, so startup messages (like package loading) are shown fresh each time.
 </iframe>
 
 <a href="examples/asciicast/asciicast-same_process.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -97,7 +97,7 @@ asciicast::init_knitr_engine(
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-echos.html">
-
+Asciicast with `echo = TRUE, echo_input = FALSE`: the code is shown as a normal Quarto code block while only the output is rendered as an asciicast terminal recording.
 </iframe>
 
 <a href="examples/asciicast/asciicast-echos.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -131,7 +131,7 @@ options(asciicast_theme = "solarized-light")
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-solarized.html">
-
+Asciicast output styled with the `solarized-light` theme: warm beige background with muted colors typical of the Solarized palette.
 </iframe>
 
 <a href="examples/asciicast/asciicast-solarized.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
@@ -172,7 +172,7 @@ options(
 ```
 
 <iframe class="slide-deck" loading="lazy" src="examples/asciicast/asciicast-theme.html">
-
+Asciicast with a fully custom theme based on github-light but with a pure white background, making the terminal output blend seamlessly into the white slide background.
 </iframe>
 
 <a href="examples/asciicast/asciicast-theme.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>

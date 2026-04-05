@@ -1,0 +1,74 @@
+# 3  Fonts
+
+## 3.1 Finding Fonts
+
+We find fonts the same way we find color, using our favorites from lots of googling. I always gravitate towards [fonts.google.com](https://fonts.google.com/). Generally, it is nice to use these online fonts because they are free, and you don’t have to embed/ship them if you want to share your slides with others.
+
+Once we are in here, we can search around, looking for a font you like. For these slides, I’m going with [Manrope](https://fonts.google.com/specimen/Manrope) for the text, and [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif) for the headers. I find it useful to look at [font pairing](https://www.figma.com/google-fonts/) websites for inspiration.
+
+The most important thing is that you find a legible font. Additionally, you want the main font that you use to come in different font weights and have italics if you are going to be using them in your slides.
+
+Once you have selected the fonts you are happy with, go to the “Selected families” page. From there, you click “Get embed code”, and there should be a button that lets you select `@import`. And you want to copy the code inside the `<style>` tags. We are now ready to apply these fonts to our slides!
+
+## 3.2 Applying Fonts
+
+Start by adding the `@import` calls we found in the previous section. This should again go into the `scss:defaults` section of the `.scss` file. To modify the font, we have 2 Sass variables. First, we have `$font-family-sans-serif` to modify the general text, and `$presentation-heading-font` to modify the headers. Applying these changes gives us the following `.scss` file.
+
+``` scss
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+$font-family-sans-serif: 'Manrope', sans-serif;
+$presentation-heading-font: 'IBM Plex Serif', serif;
+
+/*-- scss:rules --*/
+```
+
+Which, when rendered, results in the following slides.
+
+Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for headings, demonstrating bold and italic font weights in use.
+
+Notice how the fonts we used allow us to bold the words “finished presentation” and italicize “content and executable code”. If you don’t see those working, it is because you either didn’t select those high font weights to allow for boldness, or italic versions to allow for italics.
+
+You can also change the code font; this should ideally be a monospaced font. This is done using the `$font-family-monospace` sass variable.
+
+You might have noticed that when we specify fonts there are multiple names listed. These names are comma-separated. This is related to fallback fonts. If any font specified isn’t available for whatever reason, because of a misspecification or slow internet connection, then the next font in line will be selected. In the above example, if `Manrope` isn’t available, then the system `sans-serif` font will be selected. You can have as many fonts as you like in a specification.
+
+## 3.3 Embedding Fonts
+
+There are times when you don’t want to use a web font like how we showed above. And there are many equally valid reasons.
+
+- You are dealing with choppy internet
+- You want to be able to use the slides with no internet
+- You want to use a font that isn’t available as a web font
+
+You might even have your own special font you wanna use. While it isn’t that important in slides compared to websites, supplying the fonts instead of downloading them will reduce the load time for your slides.
+
+I just added some new code to a slide.
+
+Code slides before embedding FiraCode: multi-character operators like `!=` and `|>` appear as plain separate characters without ligatures.
+
+And this code uses some multi-character symbols like `!=` and `|>`. These and many like them are common to all the different programming languages, so much so that people have created special fonts with ligatures to make them prettier.
+
+One such font is [FiraCode](https://github.com/tonsky/FiraCode).
+
+And we can add these types of fonts to our slides as well! Start by downloading the font from the site, and copy over a `.woff` and `.woff2` file to your slide directory. I selected `FiraCode-Regular.woff` and `FiraCode-Regular.woff2`.
+
+In the `/*-- scss:defaults --*/` part of our `.scss` file, we are going to add the following code. This is done to register the font family from the files we have included and to have it selected for use for monospace fonts.
+
+``` scss
+@font-face {
+    font-family: 'FiraCode';
+    src: url('../../../../../FiraCode-Regular.woff2') format('woff2'),
+         url('../../../../../FiraCode-Regular.woff') format('woff');
+}
+
+$font-family-monospace: 'FiraCode';
+```
+
+You might have noticed some ugliness with the `../../../../../`s. To my knowledge, this is the best way of using a local font-face from a file. You might want to add or remove `../` depending on your folder structure. I found that 5 sets were what was needed when the `.qmd` file and the `woff` files were located in the same folder. An [issue has been filed](https://github.com/quarto-dev/quarto-cli/issues/5712) regarding this problem.
+
+With all of that, we now have beautiful ligatures.
+
+Same code slides after embedding FiraCode via `@font-face`: operators like `!=` and `|>` are rendered as beautiful single-glyph ligatures.

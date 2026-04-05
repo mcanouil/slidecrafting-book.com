@@ -3,6 +3,9 @@ project:
   resources:
     - /examples
 
+website:
+  llms-txt: true
+
 book:
   title: "Slidecrafting"
   subtitle: "Making beautiful slides with reveal.js and Quarto"

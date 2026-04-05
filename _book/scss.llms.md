@@ -1,0 +1,371 @@
+# 5  CSS/SCSS
+
+## 5.1 General CSS
+
+There are also changes where you just want to modify the CSS directly, these changes should be applied in the `scss:rules` section. For example, we might want to add a good underline to links in the slides themselves.
+
+Generally this would be done like so:
+
+``` scss
+a {
+  text-decoration: underline;
+}
+```
+
+but it won’t work because there are other attributes with higher specificity. Note that CSS rules that target Reveal content generally need to use the `.reveal .slide` prefix to successfully override the theme’s default styles.
+
+``` scss
+.reveal .slide a {
+  text-decoration: underline;
+}
+```
+
+And the changes have been applied.
+
+Slide showing links styled with an underline via `.reveal .slide a { text-decoration: underline; }`, demonstrating that the `.reveal .slide` prefix is required to override Reveal.js default specificity.
+
+## 5.2 Using CSS Classes
+
+CSS classes are a quick and powerful way to add styling to your slides.
+
+remember how we set up theme colors in [applying colors](colors.llms.md#applying-colors)? We should have a way to apply these colors in our slides. For starters let us add a way to turn text these colors. Below are two CSS classes, named `.blue` and `.yellow`, that change the `color` and make the text bold with `font-weight: bold;`. Note that we need to put these classes into the `scss:rules` section.
+
+``` scss
+/*-- scss:rules --*/
+
+$theme-blue: #219ea7ff;
+$theme-yellow: #F4BA02;
+
+.blue {
+  color: $theme-blue;
+  font-weight: bold;
+}
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
+```
+
+Now that we have our classes defined, we can apply these changes in the source editor by using the `[text]{.class}` syntax. I added (slightly excessive) highlighting to a couple of words. See below
+
+``` markdown
+[Quarto]{.blue} enables you to weave together [content]{.yellow} and [executable code]{.yellow} into a **finished presentation**. To learn more about [Quarto]{.blue} presentations see <https://quarto.org/docs/presentations/>.
+```
+
+Slide with custom `.blue` and `.yellow` CSS classes applied inline to individual words: “Quarto” appears in bold blue and “content” / “executable code” in bold yellow using the `[text]{.class}` syntax.
+
+The idea behind CSS classes are quite powerful. We are essentially adding CSS attributes to specific elements of our slides, without needing to figure out how to target it with CSS selectors.
+
+You can also apply CSS classes to whole sections of the slide using fenced divs.
+
+``` markdown
+::: blue
+Some paragraph.
+:::
+
+or
+
+::: {.blue}
+Some paragraph.
+:::
+```
+
+## 5.3 Using `Maps` to store theme colors
+
+Before [Maps](https://sass-lang.com/documentation/values/maps/) I would have specified a color palette theme as
+
+``` scss
+$theme-red: #FA5F5C;
+$theme-blue: #394D85;
+$theme-darkblue: #13234B;
+$theme-yellow: #FFF7C7;
+$theme-white: #FEFEFE;
+```
+
+But using a map it turns into the following
+
+``` scss
+$colors: (
+  "red": #FA5F5C,
+  "blue": #394D85,
+  "darkblue": #13234B,
+  "yellow": #FFF7C7,
+  "white": #FEFEFE
+);
+```
+
+> **NOTE:**
+>
+> There is a difference between `(key: value)` and `("key": value)` in SASS. For consistency, I also use quoted strings as the keys in a map.
+
+Instead of having multiple values representing our colors we now just have one `$colors`. By themselves, maps aren’t valid CSS and don’t do anything once the SASS compiles. The next sections will show how we can use these maps more efficiently than my previous approach.
+
+## 5.4 Using `Functions` to pull out theme colors
+
+We where using these colors to change a lot of things, including the major [Sass Variables](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables) revealjs sass variables. Before we used a map, it would look something like this:
+
+``` scss
+$body-bg: $theme-yellow;
+$link-color: $theme-blue;
+$code-color: $theme-blue;
+$body-color: $theme-darkblue;
+```
+
+but we can’t do that directly with a map. There are built-in functions to extract values from a map, namely the function [map-get()](https://sass-lang.com/documentation/values/maps/#look-up-a-value). Using that we can rewrite the above as
+
+``` scss
+$body-bg: map-get($colors, "yellow");
+$link-color: map-get($colors, "blue");
+$code-color: map-get($colors, "blue");
+$body-color: map-get($colors, "darkblue");
+```
+
+And while that is all good, I find it a little nicer to have a helper [function](https://sass-lang.com/documentation/at-rules/function/) to do this.
+
+Functions in SASS are written as below. You can use as many arguments as you want.
+
+``` scss
+@function name($arg1, $arg2) {
+  @return $arg1 + $arg2;
+}
+```
+
+The helper function I wrote is a light wrapper around `map-get()` to avoid having to write `$colors`.
+
+``` scss
+@function theme-color($color) {
+  @return map-get($colors, $color);
+}
+```
+
+And we now have the final rewrite.
+
+``` scss
+$body-bg: theme-color("yellow");
+$link-color: theme-color("blue");
+$code-color: theme-color("blue");
+$body-color: theme-color("darkblue");
+```
+
+> **NOTE:**
+>
+> Note that we are using `theme-color("yellow")` instead of `theme-color(yellow)` because we used quoted strings in the map. Using unquoted strings all around gave me false positives in my IDE as it interpreted `yellow` inside `theme-color()` as `#FFFF00` instead of my theme value.
+
+## 5.5 Using `@each` to automatically create CSS classes
+
+To add a splash of color or as used in highlighting, I would create a lot of CSS classes like so:
+
+``` scss
+.text-red {
+  color: $theme-red;
+}
+.text-yellow {
+  color: $theme-yellow;
+}
+.text-blue {
+  color: $theme-blue;
+}
+
+.bg-red {
+  background-color: $theme-red;
+}
+.bg-yellow {
+  background-color: $theme-yellow;
+}
+.bg-blue {
+  background-color: $theme-blue;
+}
+```
+
+Which is all fine and dandy until you also want a class for underlining. It becomes a lot of copy-pasting and changing a couple of names. And that is not to mention the trouble you run into when you decide to add a new color into the mix halfway through your slides.
+
+This is where SASS [interpolation](https://sass-lang.com/documentation/interpolation/) comes into place and the moment I realized maps were worth it. Interpolation is done by using `#{}` in some code, meaning that if `$favorite-color: "blue"` then `.text-#{$favorite-color} {}` turns into `.text-blue {}`. SASS provides the action [`@each`](https://sass-lang.com/documentation/at-rules/control/each/) to loop over all the key and value pairs of our map. So we can rewrite the creation of the above classes as this:
+
+``` scss
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+```
+
+And this is the beauty of maps. If I want to add a new color to my slides, I just have to add it to the `$colors` map. If I want to add a new set of classes, I just have to write it once inside the `@each` statement.
+
+## 5.6 Using `@mixin` to avoid repeating code
+
+There are times where you end up needing to write almost the same CSS over and over again. If this happens to use it is a sign that you should try using [mixins](https://sass-lang.com/documentation/at-rules/mixin/).
+
+Take the following CSS code.
+
+``` scss
+.theme-slide1 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/slide1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.theme-slide2 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/slide2.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.theme-slide3 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/slide3.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+```
+
+In each of of the chunks we are having the same values of `background-size`, `background-position`, and `background-repeat`. We can use a `@mixin` as a sort of macro. When the SCSS compiles each instance of `@include background-full;` will be replaced by what is listed inside `@mixin background-full {}`. Giving us the following code.
+
+``` scss
+@mixin background-full {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.theme-slide1 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/slide1.svg');
+    @include background-full;
+  }
+}
+.theme-slide2 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/slide2.svg');
+    @include background-full;
+  }
+}
+.theme-slide3 {
+  &:is(.slide-background) {
+    background-image: url('../../../../../assets/slide3.svg');
+    @include background-full;
+  }
+}
+```
+
+But there is still some amount of repetition, with that we use the fact that [`@mixin`](https://sass-lang.com/documentation/at-rules/mixin/) can have arguments. Combining this lets us create 1 `@mixin` and 3 calls to `@include`. One for each instance of the CSS class.
+
+``` scss
+@mixin theme-slide($number) {
+  .theme-slide#{$number} {
+    &:is(.slide-background) {
+      background-image: url('../../../../../assets/slide#{$number}.svg');
+      @include background-full;
+    }
+  }
+}
+
+@include theme-slide(1);
+@include theme-slide(2);
+@include theme-slide(3);
+```
+
+It becomes quite a bit tighter! But we can do better because SASS also has [`@for`](https://sass-lang.com/documentation/at-rules/control/for/) loops.
+
+``` scss
+@mixin theme-slide($number) {
+  .theme-slide#{$number} {
+    &:is(.slide-background) {
+      background-image: url('../../../../../assets/slide#{$number}.svg');
+      @include background-full;
+    }
+  }
+}
+
+@for $i from 1 through 3 {
+  @include theme-slide($i);
+}
+```
+
+you can now add more background images with ease as long as you are careful when naming them.
+
+## 5.7 Using nested loops to create classes
+
+In our first example, I want a fun gradient shadow/highlight effect for text. We can get that effect using something like following
+
+``` css
+background-image: linear-gradient(90deg, yellow, blue);
+background-size: 100% 42%;
+background-repeat: no-repeat;
+background-position: 0 85%;
+width: fit-content;
+```
+
+I want it to work on both inline text and as a way to handle the header, the selectors for that would be `span.my-class` and `.my-class > h2` respectively.
+
+``` css
+span.my-class, .my-class > h2 {
+  background-image: linear-gradient(90deg, yellow, blue);
+  background-size: 100% 42%;
+  background-repeat: no-repeat;
+  background-position: 0 85%;
+  width: fit-content;
+}
+```
+
+And them we fill in the rest, using the [`@each`](https://sass-lang.com/documentation/at-rules/control/each/#with-maps) command twice nestedly over a map of colors.
+
+``` scss
+/*-- scss:defaults --*/
+
+$colors: (
+  "red": #FFADAD,
+  "orange": #FFD6A5,
+  "yellow": #FDFFB6,
+  "blue": #aad2e7,
+  "purple":#b4addd
+);
+
+/*-- scss:rules --*/
+
+@each $name1, $col1 in $colors {
+  @each $name2, $col2 in $colors {
+    span.hl-#{$name1}-#{$name2}, .hl-#{$name1}-#{$name2} > h2 {
+      background-image: linear-gradient(90deg, $col1, $col2);
+      background-size: 100% 42%;
+      background-repeat: no-repeat;
+      background-position: 0 85%;
+      width: fit-content;
+    }
+  }
+}
+```
+
+I know we are creating some non-interesting classes such as `.hl-yellow-yellow` but for what we are doing, the tradeoff between avoiding them and how little it impacts us to have them. I think it is a worthwhile tradeoff.
+
+> **IMPORTANT:**
+>
+> The slides in this post are interactive, advance them to see the other classes.
+
+Interactive demo of compound gradient highlight classes (e.g. `.hl-red-blue`, `.hl-yellow-purple`) auto-generated via nested SCSS `@each` loops over a color map. Advance the slide to see each combination.
+
+[qmd](examples/scss/tip-1.qmd) [scss](examples/scss/tip-1.scss)
+
+> **NOTE:**
+>
+> You don’t need these compound classes for everything. For example, the class `.hl-green-bold` isn’t going to be useful as you could just as easily create `.hl-green` and `.bold` separately. This trick works best when two elements are used together in a tightly coupled way, such as in gradients.
+
+For our second example, we are continuing with the gradients, but instead trying to apply them to the background. My goal was to add a gradient line to the right side of the slide.
+
+I was able to create that effect, by layering 2 gradients on top of each other. The first gradient contained the two colors I was interested in, and the names of the class. The second layer, which I placed on top, goes from white to transparent. I set up the transition between those two colors to be super sharp, resulting in the effect you see below
+
+Slide with a decorative gradient stripe along the right edge: created by layering two CSS gradients — a colored gradient underneath and a sharp white-to-transparent gradient on top.
+
+[qmd](examples/scss/tip-2.qmd) [scss](examples/scss/tip-2.scss)
+
+since we are doing something interesting, we could also have used a separate `$colors` map just for this effect to not interfere with what else we are doing.

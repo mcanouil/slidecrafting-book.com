@@ -1,0 +1,489 @@
+# 8  Layout
+
+## 8.1 Pulling things left and right
+
+Using [multiple columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns) is a nice way to split up the content of your slides. I use it so much that I have a [snippet](https://rstudio.github.io/rstudio-extensions/rstudio_snippets.html) to save time since I use it so much. It works great for side-by-side comparisons as well. This is done using the following syntax. We use the `width` attribute to determine the width of each of the columns.
+
+    :::: {.columns}
+
+    ::: {.column width="40%"}
+    Left column
+    :::
+
+    ::: {.column width="60%"}
+    Right column
+    :::
+
+    ::::
+
+Standard two-column layout: 40% left column and 60% right column using the `.columns` / `.column` div syntax.
+
+but you can use it in quite a few ways beyond this! Firstly, each column is by itself a div, so you can style it directly. Such as making the right column have the right aligned text.
+
+    :::: {.columns}
+
+    ::: {.column width="50%"}
+    Left column
+    :::
+
+    ::: {.column width="50%" style="text-align: right;"}
+    Right column
+    :::
+
+    ::::
+
+Two equal columns where the right column has `style="text-align: right;"` applied directly to the column div for right-justified text.
+
+The structure of columns doesn’t require that we just use 2 columns. You can do as many columns as you want, but generally, you will have a hard time using more than 4.
+
+    :::: {.columns}
+
+    ::: {.column width="25%"}
+    1st column
+    :::
+
+    ::: {.column width="25%"}
+    2nd column
+    :::
+
+    ::: {.column width="25%"}
+    3rd column
+    :::
+
+    ::: {.column width="25%"}
+    4th column
+    :::
+
+    ::::
+
+Four equal-width columns (25% each) demonstrating that the `.columns` syntax is not limited to two columns.
+
+Another way I like to use columns is by keeping one of them empty. This way provides a fast and easy way to add space or put text in specific locations.
+
+    :::: {.columns}
+
+    ::: {.column width="30%"}
+    :::
+
+    ::: {.column width="70%"}
+    Only right side
+    :::
+
+    ::::
+
+Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.
+
+[qmd](examples/layout/left-right.qmd)
+
+## 8.2 r-fit-text
+
+Another quick way to change the layout of your slide is to let the text take up the entire slide real estate. We can do this using the [r-fit-text](https://quarto.org/docs/presentations/revealjs/advanced.html#fit-text) class using the following syntax. This will make the text so big that it takes up all the horizontal space on the slide.
+
+    ::: r-fit-text
+    Big Text
+    :::
+
+Single line of text inside `::: r-fit-text` stretched to fill the full horizontal width of the slide.
+
+This works well combined with the [center](https://quarto.org/docs/presentations/revealjs/advanced.html#center) class, which makes sure the text appears in the center vertically on the slide.
+
+    ## {.center}
+
+    ::: r-fit-text
+    This fits perfectly!
+    :::
+
+`r-fit-text` combined with the `.center` slide class: the oversized text is centered both horizontally and vertically on the slide.
+
+One thing about using `r-fit-text` is that it applies the same text size to all the text inside it, so when you use it across multiple lines, you won’t get the same effect.
+
+    ::: r-fit-text
+    This fits perfectly!
+
+    On two lines
+    :::
+
+Two lines of text in a single `r-fit-text` block: both lines are forced to the same smaller font size determined by the longer line, rather than each filling the slide independently.
+
+This can however be fixed, by using a `r-fit-text` for each line of text.
+
+    ::: r-fit-text
+    This fits perfectly!
+    :::
+
+    ::: r-fit-text
+    On two lines
+    :::
+
+Two separate `r-fit-text` blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.
+
+[qmd](examples/layout/r-fit-text.qmd)
+
+## 8.3 Loud Extension
+
+If you find yourself using `r-fit-text` frequently, the [quarto-revealjs-loud](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) extension automates this process. It automatically makes text big when there isn’t much content on a slide.
+
+Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
+
+To install:
+
+``` bash
+quarto add EmilHvitfeldt/quarto-revealjs-loud
+```
+
+Once installed, add it to your YAML:
+
+``` yaml
+format:
+  revealjs: default
+revealjs-plugins:
+  - loud
+```
+
+The extension will automatically detect slides with minimal content and scale the text to fill the available space. This is particularly useful for quote slides, section breaks, or emphasis slides where you want a single statement to have maximum impact.
+
+[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) [ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-loud/)
+
+## 8.4 Using images
+
+Using images for style is another thing you can do to change the layout. If you don’t have much content on your slides. i.e. just a sentence or two. You could pair that with an image that relays some of the same information. These images will typically not contain content themselves but rather reinforce the content on the slides.
+
+There are 3 main ways to include images. Using the [basics](https://quarto.org/docs/authoring/figures.html), using [absolute position](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position) or as [background images](https://quarto.org/docs/presentations/revealjs/#image-backgrounds).
+
+### 8.4.1 Basic figures
+
+The basic way of adding figures is using the following syntax
+
+    ![](holly-mandarich.jpg)
+
+where `holly-mandarich.jpg` is the path to the image. We can change some options such as adding `{fig-align="right"}` to the end to change the alignment. But I end up not using this style that much because it is added as content, so it will push other content around, and it adheres to margins which I rarely want for tasks like this.
+
+Basic figure added with standard Markdown syntax `![](image.jpg)`: image is inserted as content, respects slide margins, and pushes other content around.
+
+Photo by [Holly Mandarich](https://unsplash.com/@hollymandarich?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+[qmd](examples/layout/image-basics.qmd)
+
+### 8.4.2 Absolute position
+
+Absolute is my favorite way of adding images. It gives me much more control over where the image is located and its size.
+
+You use the following syntax:
+
+    ![](noelle-rebekah.jpg){.absolute top=0 right=0 height="100%"}
+
+Where you can use the following attributes:
+
+| Attribute | Description                   |
+|-----------|-------------------------------|
+| `width`   | Width of element              |
+| `height`  | Height of element             |
+| `top`     | Distance from top of slide    |
+| `left`    | Distance from left of slide   |
+| `bottom`  | Distance from bottom of slide |
+| `right`   | Distance from right of slide  |
+
+you need one of `left` and `right` and one of `bottom` and `top` to give the correct location. I find that just using one of `width` or `height` is easier as it doesn’t distort the image. All of these attributes accept all known CSS values, such as pixels, inches, and percentages. [All about CSS length](https://developer.mozilla.org/en-US/docs/Web/CSS/length) for more information.
+
+Image placed with `.absolute` positioning: `{.absolute top=0 right=0 height="100%"}` places the image flush against the top-right corner at full slide height, independent of content flow.
+
+All images in revealjs default to the following maximum sizes:
+
+``` css
+max-width: 95%;
+max-height: 95%;
+```
+
+No matter how large we set `width` or `height` we are overruled by `max-width` and `max-height`. We can make the image any size by overruling those. Specifically, we can unset them with `style="max-height: unset; max-width: unset;"`.
+
+With some experimentation, we can size the image such that it is where we want it. Notice that we are using negative locations to make this happen as `0` is inside the slide.
+
+    ![](noelle-rebekah.jpg){.absolute top="-10%" right="-10%" height="120%" style="max-height: unset;"}
+
+Image with `max-height: unset; max-width: unset;` and negative position values: the image overflows the slide edges at 120% height, filling beyond the frame for a bleed effect.
+
+Photo by [Noelle Rebekah](https://unsplash.com/@noellerebekah?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+[qmd](examples/layout/image-absolute.qmd)
+
+> **WARNING:**
+>
+> Since the way that positions are done in revealjs, it can be almost impossible to have the above effect for all aspect ratios. Make it work for the aspect ratio you use, and have peace.
+
+## 8.5 Absolute position everything
+
+It took me too long to realize, but the [absolute](https://quarto.org/docs/presentations/revealjs/advanced.html#absolute-position) class can be used on anything!
+
+You might have seen the following syntax to place an image anywhere
+
+``` markdown
+![](image1.png){.absolute top=200 left=0 width="350" height="300"}
+```
+
+But you are not restricted in using it with images. The following results in the image you see attached:
+
+I like to use it with text in the following way:
+
+``` markdown
+[python is great]{.absolute bottom="45%" left="20%"}
+
+[and so is R]{.absolute bottom="0%" right="0%"}
+```
+
+Slide with text elements placed using `.absolute`: “python is great” and “and so is R” positioned at specific percentage coordinates on the slide using `bottom` and `left`/`right` attributes.
+
+[qmd](examples/layout/tip-5.qmd)
+
+### 8.5.1 Background image
+
+The last way to add images, which I highly recommend is the use of background images. And in many ways, it is the simplest one.
+
+you specify it on the slide level in the following way:
+
+    ## Slide Title {background-image="galen-crout.jpg"}
+
+Slide using `{background-image="photo.jpg"}` on the slide header: the image fills the entire slide viewport behind all content.
+
+you can set other options such as [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) and [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) but I rarely end up using them.
+
+I end up not setting a default title and use `.absolute` to place any content I want where I want it.
+
+    ## {background-image="galen-crout.jpg"}
+
+    [always explore]{.absolute left="50%" top="20%" style="rotate: -10deg;"}
+
+Background image slide with absolutely positioned text overlay: the word “always explore” placed at 50% left / 20% top with a slight rotation using `style="rotate: -10deg;"`.
+
+Photo by [Galen Crout](https://unsplash.com/@galen_crout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+[qmd](examples/layout/image-background.qmd)
+
+As we see here, the text positioning can change how the slides are perceived. Both in style and emotion, try to think about how you can incorporate text positioning to maximize engagement.
+
+## 8.6 Overlayed Text Boxes
+
+When using background images, it can be hard to place text on top of it, in a way that keeps the text readable. This is often an issue with images that are more busy or have colors that match. A simple fix is to overlay a box, and we then add text on you. If we take the first slide here as an example.
+
+    ## {background-image="tim-marshall.jpg"}
+
+Background image slide with no text overlay, showing how busy or high-contrast images make text placement difficult.
+
+First, we try to use `.absolute` to add some inspiring text. It adds text, but it is not easy to read at all!!
+
+    ## {background-image="tim-marshall.jpg"}
+
+    ::: {.absolute left="55%" top="55%" style="font-size:1.8em;"}
+    Be Brave
+
+    Take Risks
+    :::
+
+Background image with absolutely positioned text “Be Brave / Take Risks” at 55% left, 55% top: text is present but hard to read due to insufficient contrast with the image.
+
+But we can expand on this idea, adding a `background-color` to make it stand out. We also added some `padding`, otherwise the background would just be slightly bigger than the text itself.
+
+    ::: {.absolute left="55%" top="55%" style="font-size:1.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5);"}
+    Be Brave
+
+    Take Risks
+    :::
+
+Text box with semi-transparent white `background-color: rgba(255,255,255,.5)` and padding: text is now clearly readable against the busy background image.
+
+it already looks quite good! We can make it pop just a little bit more, by adding a `backdrop-filter` to make it look a little glass-like, adding a `box-shadow` to make it look a little 3-dimensional, and adding a small `border-radius` to stop the sharp corners.
+
+    ## {background-image="tim-marshall.jpg"}
+
+    ::: {.absolute left="55%" top="55%" style="font-size:1.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5); backdrop-filter: blur(5px); box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); border-radius: 5px;"}
+    Be Brave
+
+    Take Risks
+    :::
+
+Polished glass-effect text box: `backdrop-filter: blur(5px)`, `box-shadow`, and `border-radius` added to the semi-transparent overlay for a refined frosted-glass appearance.
+
+Photo by [Tim Marshall](https://unsplash.com/@timmarshall?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+[qmd](examples/layout/overlay-textbox.qmd)
+
+I think this turned out well. There are endless ways to use this. It is quite CSS-heavy work, but I think it is worth it. Note that you are always free to copy an example and modify it to your wants.
+
+## 8.7 Editable Extension
+
+The [quarto-revealjs-editable](https://github.com/EmilHvitfeldt/quarto-revealjs-editable) extension allows you to reposition and resize images and text directly in your browser while viewing your slides. This can be incredibly useful when fine-tuning the layout of complex slides without having to repeatedly edit code and re-render.
+
+> **WARNING:**
+>
+> This extension is still a little buggy. It works well for quick adjustments, but you may encounter some quirks. Use it as a helpful tool for prototyping layouts rather than a production feature.
+
+To install:
+
+``` bash
+quarto add EmilHvitfeldt/quarto-revealjs-editable
+```
+
+Once installed, add it to your YAML:
+
+``` yaml
+format:
+  revealjs: default
+revealjs-plugins:
+  - editable
+```
+
+When viewing your slides, you can click and drag elements to reposition them, or use handles to resize images. The extension will output the CSS values you need to make the changes permanent in your source code.
+
+This is particularly useful when working with absolute positioning, where getting pixel values exactly right can be tedious through trial and error.
+
+[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
+
+## 8.8 Spread
+
+When you have a few short bullet points on a slide, they’ll naturally clump together at the top. The `.spread` class distributes them evenly across the vertical space of the slide using flexbox, giving each item room to breathe.
+
+Add the following to your SCSS:
+
+``` scss
+.spread {
+  --spread-padding: 0.5em;
+  padding-top: var(--spread-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.spread-evenly { justify-content: space-evenly; }
+.spread-around { justify-content: space-around; }
+```
+
+The height of `.spread` is set automatically by a small JavaScript snippet that measures the remaining space on the slide after the title. Now we need to add some javascript. The best way to do that is by using `include-after-body`. Add the following to a file called `spread-script.html`:
+
+``` html
+<script type="text/javascript">
+function updateSpreads() {
+  document.querySelectorAll('.spread').forEach(el => {
+    const section = el.closest('section');
+    const paddingTop = parseFloat(getComputedStyle(el).paddingTop);
+    el.style.height = (section.offsetHeight - el.offsetTop - paddingTop) + 'px';
+  });
+}
+
+Reveal.on('ready', updateSpreads);
+Reveal.on('slidechanged', updateSpreads);
+</script>
+```
+
+Then reference it in your YAML:
+
+``` yaml
+format:
+  revealjs:
+    include-after-body: spread-script.html
+```
+
+Then use it in your slides:
+
+    ::: {.spread}
+    Think about how models are working
+
+    Very valid for count data
+
+    We rarely care whether a predictor is normal
+    :::
+
+> **NOTE:**
+>
+> `.spread` is designed to be the last element on a slide. The JavaScript sets its height to fill everything from where it starts to the bottom of the slide, so any content placed after it will be pushed out of view.
+
+You can still override the height with an inline style if you want less than the full remaining space:
+
+    ::: {.spread style="height:60%;"}
+    :::
+
+Three bullet points inside a `.spread` div: the items are distributed evenly from the top to the bottom of the remaining slide space using `justify-content: space-between`.
+
+The default uses `justify-content: space-between`, which places the first item at the top and the last at the bottom. For more uniform spacing including around the edges, use `.spread-evenly`:
+
+    ::: {.spread .spread-md .spread-evenly}
+    Think about how models are working
+
+    Very valid for count data
+
+    We rarely care whether a predictor is normal
+    :::
+
+Same three bullet points using `.spread.spread-evenly`: items are distributed with equal spacing including above the first and below the last item using `justify-content: space-evenly`.
+
+[qmd](examples/layout/spread.qmd) [scss](examples/layout/spread.scss) [js](examples/layout/spread-script.js)
+
+## 8.9 Paper Card Effect
+
+One underused layout trick in slidecrafting is making each slide appear as a floating paper card. By elevating the content area of the slides “above” the background elements, you can now have a clean slidecrafting experience as you are guaranteed to not have any background elements interfere with the content.
+
+The effect is achieved with a few CSS rules on `.paper` slides:
+
+``` scss
+/*-- scss:rules --*/
+
+.reveal .slides section.paper {
+  width: 92%;
+  height: 86% !important;
+  max-height: 86% !important;
+  left: 4% !important;
+  top: 6% !important;
+  border-radius: 4px;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fdfcfa;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 16px 48px rgba(0, 0, 0, 0.1);
+}
+```
+
+The `!important` overrides are needed because Reveal.js positions slides with inline styles.
+
+Once the card is set up, you can set a `background-color` (or `background-image`) on the slide and it fills the full viewport behind the card, not over the content.
+
+    ## My Slide {.paper background-color="#ffe83e"}
+
+    Content goes here, cleanly inside the card.
+
+The same works with `background-image`:
+
+    ## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}
+
+Because the card shrinks the content area, elements placed via JavaScript into the slide background (`.slide-background`) can extend freely outside the card bounds. This is the technique the [quarto-revealjs-highlighter-theme](https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme) extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.
+
+[qmd](examples/layout/paper-card.qmd) [scss](examples/layout/paper-card.scss)
+
+### 8.9.1 Paper card as the default
+
+If you want every slide to be a card without adding `.paper` each time, just change the selector from `section.paper` to `section`. The `.paperless` class then becomes the opt-out for slides that shouldn’t have the effect.
+
+``` scss
+/*-- scss:rules --*/
+
+.reveal .slides section {
+  /* ... same card styles ... */
+}
+
+.reveal .slides section.paperless {
+  width: 100%;
+  height: 100% !important;
+  max-height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+```
+
+[qmd](examples/layout/paper-card-default.qmd) [scss](examples/layout/paper-card-default.scss)
+
+## 8.10 Vary the type of slides
+
+This post has shown a number of ways to place content on your slides. My final advice in this post is to use some of these tips to vary how the content is laid out. It doesn’t have to be over the top, but slight variations can help a slide deck feel fresh.

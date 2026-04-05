@@ -1,5 +1,6 @@
 ---
 title: Asciicast
+description: "How to use the asciicast R package in Quarto reveal.js slides to display colorized, animated terminal recordings of R code output."
 ---
 
 This chapter celebrates the [asciicast](https://github.com/r-lib/asciicast) R package to showcase rich output.

@@ -1,5 +1,6 @@
 ---
 title: Codewindow
+description: "The quarto-revealjs-codewindow extension styles code blocks as IDE-like windows with a title bar and language icon in Quarto reveal.js presentations."
 ---
 
 The [quarto-revealjs-codewindow](https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow) extension adds styled codeblock windows to your Quarto reveal.js presentations, giving your code chunks a polished, IDE-like appearance.

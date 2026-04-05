@@ -1,5 +1,6 @@
 ---
 title: Elements
+description: "Tips for styling slide elements in Quarto reveal.js: custom menu icons, transparent plot backgrounds, and controlling figure sizing with fig-width, fig-asp, and fig-dpi."
 ---
 
 ## Style menu button

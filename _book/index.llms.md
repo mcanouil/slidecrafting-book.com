@@ -2,6 +2,8 @@
 
 Making beautiful slides with reveal.js and Quarto
 
+A practical guide to slidecrafting — creating functional and beautiful Quarto reveal.js presentations through theming, layout, interactivity, and extensions.
+
 Author
 
 Emil Hvitfeldt

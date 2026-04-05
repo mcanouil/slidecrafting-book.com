@@ -1,5 +1,6 @@
 ---
 title: "Colors"
+description: "How to choose, apply, and customize color palettes in Quarto reveal.js slides using Sass variables, contrast checking, and custom syntax highlighting."
 ---
 
 ## Finding Colors

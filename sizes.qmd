@@ -1,5 +1,6 @@
 ---
 title: "Sizes"
+description: "How to control font sizes and layout proportions in Quarto reveal.js slides using Sass variables for headings, body text, and code blocks."
 ---
 
 WIP

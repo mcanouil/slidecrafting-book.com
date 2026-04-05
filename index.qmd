@@ -1,3 +1,7 @@
+---
+description: "A practical guide to slidecrafting — creating functional and beautiful Quarto reveal.js presentations through theming, layout, interactivity, and extensions."
+---
+
 # Preface {.unnumbered}
 
 Hello! This book is about what I like to call **slidecrafting**; The art of putting together slides that are functional and aesthetically pleasing. I will be using [quarto presentations](https://quarto.org/) throughout the whole book. Some of the advice will transcend Quarto presentations and apply to all kinds of slide technologies, but the book is written with Quarto in mind. There will thus inherently be some overlap with quarto documentation. It is suggested to read all the [quarto revealjs](https://quarto.org/docs/presentations/revealjs/index.html) documentation alongside this book for optimal learning.

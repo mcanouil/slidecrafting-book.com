@@ -1,5 +1,6 @@
 ---
 title: "Theme"
+description: "How to build slide theme variants and full slide themes in Quarto reveal.js using CSS classes, SCSS, and SVG backgrounds for consistent, branded presentations."
 ---
 
 The built in themes are a great place to look for inspiration.

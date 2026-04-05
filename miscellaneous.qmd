@@ -1,5 +1,6 @@
 ---
 title: Miscellaneous
+description: "Miscellaneous Quarto reveal.js tips: hiding slides with visibility=hidden, avoiding duplication with includes, and other tricks that don't fit elsewhere."
 ---
 
 ## Hiding slides

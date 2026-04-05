@@ -1,5 +1,6 @@
 ---
 title: "10 Minute Theme"
+description: "A step-by-step walkthrough for setting up a complete Quarto reveal.js theme in under 10 minutes using custom fonts, colors, and sizes."
 ---
 
 This chapter will guide you through setting up a fully functional theme in approximately 10 minutes. The remaining chapters of this section delve into greater detail, showcasing tips and tricks along the way.

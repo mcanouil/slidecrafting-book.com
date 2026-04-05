@@ -1,5 +1,6 @@
 ---
 title: "Manual Code"
+description: "How to hand-style code blocks in Quarto reveal.js slides using custom CSS classes and fragments to incrementally highlight specific parts of code."
 ---
 
 ## Hand-styled code chunks

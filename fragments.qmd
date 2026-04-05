@@ -1,5 +1,6 @@
 ---
 title: "Fragments"
+description: "How to use Quarto reveal.js fragments for incremental reveals, custom highlight animations, tab switching, scrolling, and embedded slide advancement via JavaScript."
 ---
 
 ## Highlight incremental lists

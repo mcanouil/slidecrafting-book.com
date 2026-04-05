@@ -1,5 +1,6 @@
 ---
 title: Letterbox
+description: "The quarto-revealjs-letterbox extension adds cinematic colored bars to the top and bottom of Quarto reveal.js slides, inspired by the xaringan letterbox style."
 ---
 
 The [quarto-revealjs-letterbox](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox) extension brings the beloved letterbox style from [xaringan](https://github.com/yihui/xaringan) to Quarto reveal.js presentations.

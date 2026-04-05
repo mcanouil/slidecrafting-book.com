@@ -1,5 +1,6 @@
 ---
 title: "CSS/SCSS"
+description: "Advanced SCSS techniques for Quarto reveal.js slides: CSS classes, Sass maps, functions, @each loops, mixins, and nested rules for maintainable slide themes."
 ---
 
 ## General CSS

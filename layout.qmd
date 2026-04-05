@@ -1,5 +1,6 @@
 ---
 title: Layout
+description: "Layout techniques for Quarto reveal.js slides: multi-column layouts, r-fit-text, absolute positioning, background images, text overlays, and the paper card effect."
 ---
 
 

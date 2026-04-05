@@ -1,5 +1,6 @@
 ---
 title: "Fonts"
+description: "How to find, apply, and embed fonts in Quarto reveal.js slides using Google Fonts, Sass variables, and local font files with @font-face."
 ---
 
 ## Finding Fonts

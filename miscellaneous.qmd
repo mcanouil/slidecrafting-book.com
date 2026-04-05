@@ -44,7 +44,7 @@ The following collapsed code chunk contains snippets for all the revealjs sass v
 They should all trigger inside `.scss` files once you start with `$`.
 The snippets also default to contain the default value, which can help you figure out how you want to adjust it.
 
-![](media/code-snippets.png)
+![](media/code-snippets.webp)
 
 Since these are specific to presentations,
 I suggest that they are used as project-specific snippets.

@@ -75,9 +75,9 @@ knitr:
     dev.args: { bg: "transparent" }
 ```
 
-![](media/base-before.png)
+![](media/base-before.webp)
 
-![](media/base-after.png)
+![](media/base-after.webp)
 
 ### 7.3.3 ggplot2
 
@@ -102,9 +102,9 @@ knitr:
     dev.args: { bg: "transparent" }
 ```
 
-![](media/ggplot2-before.png)
+![](media/ggplot2-before.webp)
 
-![](media/ggplot2-after.png)
+![](media/ggplot2-after.webp)
 
 ### 7.3.4 matplotlib
 
@@ -122,9 +122,9 @@ plt.scatter(x, y, c=colors)
 fig.patch.set_facecolor("#FFFFFF00")
 ```
 
-![](media/matplotlib-before.png)
+![](media/matplotlib-before.webp)
 
-![](media/matplotlib-after.png)
+![](media/matplotlib-after.webp)
 
 ### 7.3.5 seaborn
 
@@ -135,9 +135,9 @@ sns.set_style(rc={'axes.facecolor':'#FFFFFF00',
                   'figure.facecolor':'#FFFFFF00'})
 ```
 
-![](media/seaborn-before.png)
+![](media/seaborn-before.webp)
 
-![](media/seaborn-after.png)
+![](media/seaborn-after.webp)
 
 ### 7.3.6 Source Document
 

@@ -389,7 +389,7 @@ Note
 <section id="applying-colors" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="applying-colors"><span class="header-section-number">2.3</span> Applying Colors</h2>
 <p>Let us try all of that in practice. I found this nice <a href="https://www.pinterest.com/pin/281123201723784541/">blue and yellow</a> color palette on Pinterest.</p>
-<p><img src="media/example-theme.jpeg" class="img-fluid"></p>
+<p><img src="media/example-theme.webp" class="img-fluid"></p>
 <p>using a color picking tool. I love <a href="https://colorslurp.com/">ColorSlurp</a> I can extract the colors to be</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Orient<span class="sc">*</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">02577</span>B</span>
@@ -406,9 +406,9 @@ Note
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="sc">*</span>Selective Yellow<span class="sc">*</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>F4BA02</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>I’m thinking I want to use dark blue as my background colors, and the lightest color as my text color. Before I do any modification I get the following</p>
-<p><img src="media/theme-before.png" class="img-fluid"></p>
+<p><img src="media/theme-before.webp" class="img-fluid"></p>
 <p>And by playing the sliders a little bit I have a contrast and some colors I’m happy with</p>
-<p><img src="media/theme-after.png" class="img-fluid"></p>
+<p><img src="media/theme-after.webp" class="img-fluid"></p>
 <p>We now open up our <code>.scss</code> file and fill in a couple of values. Many of the colorings are done by relations, so we can get a lot done by setting <code>$body-bg</code>, <code>$body-color</code>, and <code>$link-color</code>. This needs to be done inside <code>scss:defaults</code>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:defaults --*/</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">$body-bg</span>: <span class="cn">#01364C</span><span class="op">;</span></span>

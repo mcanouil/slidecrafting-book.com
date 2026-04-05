@@ -105,9 +105,9 @@ knitr:
 ```
 
 ::: {layout-ncol=2}
-![](media/base-before.png)
+![](media/base-before.webp)
 
-![](media/base-after.png)
+![](media/base-after.webp)
 :::
 
 ### ggplot2
@@ -134,9 +134,9 @@ knitr:
 ```
 
 ::: {layout-ncol=2}
-![](media/ggplot2-before.png)
+![](media/ggplot2-before.webp)
 
-![](media/ggplot2-after.png)
+![](media/ggplot2-after.webp)
 :::
 
 ### matplotlib
@@ -158,9 +158,9 @@ fig.patch.set_facecolor("#FFFFFF00")
 ```
 
 ::: {layout-ncol=2}
-![](media/matplotlib-before.png)
+![](media/matplotlib-before.webp)
 
-![](media/matplotlib-after.png)
+![](media/matplotlib-after.webp)
 :::
 
 ### seaborn
@@ -173,9 +173,9 @@ sns.set_style(rc={'axes.facecolor':'#FFFFFF00',
 ```
 
 ::: {layout-ncol=2}
-![](media/seaborn-before.png)
+![](media/seaborn-before.webp)
 
-![](media/seaborn-after.png)
+![](media/seaborn-after.webp)
 :::
 
 ### Source Document

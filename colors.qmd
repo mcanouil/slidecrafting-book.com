@@ -107,7 +107,7 @@ It can also be helpful to include a small text background or outline to help it 
 Let us try all of that in practice.
 I found this nice [blue and yellow](https://www.pinterest.com/pin/281123201723784541/) color palette on Pinterest.
 
-![](media/example-theme.jpeg)
+![](media/example-theme.webp)
 
 using a color picking tool.
 I love [ColorSlurp](https://colorslurp.com/) I can extract the colors to be
@@ -133,11 +133,11 @@ I'm thinking I want to use dark blue as my background colors,
 and the lightest color as my text color.
 Before I do any modification I get the following
 
-![](media/theme-before.png)
+![](media/theme-before.webp)
 
 And by playing the sliders a little bit I have a contrast and some colors I'm happy with
 
-![](media/theme-after.png)
+![](media/theme-after.webp)
 
 We now open up our `.scss` file and fill in a couple of values.
 Many of the colorings are done by relations,

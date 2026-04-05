@@ -142,7 +142,7 @@ Demo of the quarto-revealjs-seasons theme: multiple color variants representing 
 
 The inspiration for this style of slidecraft isn’t anything new. If you have used conventional slide-making tools you have seen a dropdown menu before
 
-![](media/google-slides.png)
+![](media/google-slides.webp)
 
 With these menus, you can swiftly select the style of slide you intend to write and fill in the content. I find that for some presentations that I all I need.
 

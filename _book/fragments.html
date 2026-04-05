@@ -114,10 +114,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="11&nbsp; Fragments – Slidecrafting">
 <meta property="og:description" content="How to use Quarto reveal.js fragments for incremental reveals, custom highlight animations, tab switching, scrolling, and embedded slide advancement via JavaScript.">
-<meta property="og:image" content="https://slidecrafting-book.com/media/developer-tools-fragments.png">
+<meta property="og:image" content="https://slidecrafting-book.com/media/developer-tools-fragments.webp">
 <meta property="og:site_name" content="Slidecrafting">
-<meta property="og:image:height" content="1128">
-<meta property="og:image:width" content="1940">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -566,7 +564,7 @@ Background highlight fragment demo: text items are highlighted with colored back
 <h2 data-number="11.6" class="anchored" data-anchor-id="fragments-201"><span class="header-section-number">11.6</span> Fragments 201</h2>
 <p>When a fragment is either shown or hidden <code>reveal.js</code> (the engine that powers our slides) will dispatch an event. This event can be picked up using JavaScript.</p>
 <p>You will need a little bit of Javascript knowledge, but I found that you don’t need a lot of knowledge to produce useful things for slides. Once your slides are rendered in your browser, you can toggle the developer tools, where you can find a javascript console. This is where I do the work needed.</p>
-<p><img src="media/developer-tools-fragments.png" class="img-fluid"></p>
+<p><img src="media/developer-tools-fragments.webp" class="img-fluid"></p>
 <p>We can capture the event using the following snippets of code</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Reveal<span class="op">.</span><span class="fu">on</span>(<span class="st">'fragmentshown'</span><span class="op">,</span> (<span class="bu">event</span>) <span class="kw">=&gt;</span> {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// event.fragment = the fragment DOM element</span></span>

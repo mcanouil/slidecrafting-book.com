@@ -28,7 +28,7 @@ I find it hard to remember all the [Sass variables](https://quarto.org/docs/pres
 
 I figured out we can get something working pretty well by using [code snippets](https://code.visualstudio.com/docs/editing/userdefinedsnippets) in VS Code or Positron. The following collapsed code chunk contains snippets for all the revealjs sass variables that are compatible. They should all trigger inside `.scss` files once you start with `$`. The snippets also default to contain the default value, which can help you figure out how you want to adjust it.
 
-![](media/code-snippets.png)
+![](media/code-snippets.webp)
 
 Since these are specific to presentations, I suggest that they are used as project-specific snippets. Add them in a `name.code-snippets` file inside `.vscode` folder at the base of your directory, and it should work right away.
 

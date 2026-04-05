@@ -257,7 +257,7 @@ When a fragment is either shown or hidden `reveal.js` (the engine that powers ou
 
 You will need a little bit of Javascript knowledge, but I found that you don’t need a lot of knowledge to produce useful things for slides. Once your slides are rendered in your browser, you can toggle the developer tools, where you can find a javascript console. This is where I do the work needed.
 
-![](media/developer-tools-fragments.png)
+![](media/developer-tools-fragments.webp)
 
 We can capture the event using the following snippets of code
 

@@ -113,10 +113,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="14&nbsp; Miscellaneous – Slidecrafting">
 <meta property="og:description" content="Miscellaneous Quarto reveal.js tips: hiding slides with visibility=hidden, avoiding duplication with includes, and other tricks that don’t fit elsewhere.">
-<meta property="og:image" content="https://slidecrafting-book.com/media/code-snippets.png">
+<meta property="og:image" content="https://slidecrafting-book.com/media/code-snippets.webp">
 <meta property="og:site_name" content="Slidecrafting">
-<meta property="og:image:height" content="622">
-<meta property="og:image:width" content="1242">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -348,7 +346,7 @@ Slide deck demonstrating hidden slides: a slide marked with <code>visibility="hi
 <h2 data-number="14.3" class="anchored" data-anchor-id="vs-code-positron-code-snippets"><span class="header-section-number">14.3</span> VS Code &amp; Positron code snippets</h2>
 <p>I find it hard to remember all the <a href="https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables">Sass variables</a> that are available.</p>
 <p>I figured out we can get something working pretty well by using <a href="https://code.visualstudio.com/docs/editing/userdefinedsnippets">code snippets</a> in VS Code or Positron. The following collapsed code chunk contains snippets for all the revealjs sass variables that are compatible. They should all trigger inside <code>.scss</code> files once you start with <code>$</code>. The snippets also default to contain the default value, which can help you figure out how you want to adjust it.</p>
-<p><img src="media/code-snippets.png" class="img-fluid"></p>
+<p><img src="media/code-snippets.webp" class="img-fluid"></p>
 <p>Since these are specific to presentations, I suggest that they are used as project-specific snippets. Add them in a <code>name.code-snippets</code> file inside <code>.vscode</code> folder at the base of your directory, and it should work right away.</p>
 <details>
 <summary>

@@ -313,7 +313,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">8.7</span> </a></li>
   <li><a href="#editable-extension" id="toc-editable-extension" class="nav-link" data-scroll-target="#editable-extension"><span class="header-section-number">8.8</span> Editable Extension</a></li>
   <li><a href="#spread" id="toc-spread" class="nav-link" data-scroll-target="#spread"><span class="header-section-number">8.9</span> Spread</a></li>
-  <li><a href="#vary-the-type-of-slides" id="toc-vary-the-type-of-slides" class="nav-link" data-scroll-target="#vary-the-type-of-slides"><span class="header-section-number">8.10</span> Vary the type of slides</a></li>
+  <li><a href="#paper-card-effect" id="toc-paper-card-effect" class="nav-link" data-scroll-target="#paper-card-effect"><span class="header-section-number">8.10</span> Paper Card Effect</a>
+  <ul class="collapse">
+  <li><a href="#paper-card-as-the-default" id="toc-paper-card-as-the-default" class="nav-link" data-scroll-target="#paper-card-as-the-default"><span class="header-section-number">8.10.1</span> Paper card as the default</a></li>
+  </ul></li>
+  <li><a href="#vary-the-type-of-slides" id="toc-vary-the-type-of-slides" class="nav-link" data-scroll-target="#vary-the-type-of-slides"><span class="header-section-number">8.11</span> Vary the type of slides</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/edit/main/layout.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/EmilHvitfeldt/slidecrafting-book.com/blob/main/layout.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -713,8 +717,60 @@ Note
 </iframe>
 <p><a href="examples/layout/spread.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/spread.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a> <a href="examples/layout/spread-script.js" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>js</a></p>
 </section>
-<section id="vary-the-type-of-slides" class="level2" data-number="8.10">
-<h2 data-number="8.10" class="anchored" data-anchor-id="vary-the-type-of-slides"><span class="header-section-number">8.10</span> Vary the type of slides</h2>
+<section id="paper-card-effect" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="paper-card-effect"><span class="header-section-number">8.10</span> Paper Card Effect</h2>
+<p>One underused layout trick in slidecrafting is making each slide appear as a floating paper card. By elevating the content area of the slides “above” the background elements, you can now have a clean slidecrafting experience as you are guaranteed to not have any background elements interfere with the content.</p>
+<p>The effect is achieved with a few CSS rules on <code>.paper</code> slides:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section<span class="fu">.paper</span> {</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">92</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">86</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-height</span>: <span class="dv">86</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">left</span>: <span class="dv">4</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">top</span>: <span class="dv">6</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">40</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-sizing</span>: <span class="dv">border-box</span><span class="op">;</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">overflow</span>: <span class="dv">hidden</span><span class="op">;</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#fdfcfa</span><span class="op">;</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span>:</span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span> <span class="dv">2</span><span class="dt">px</span> <span class="dv">4</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.1</span><span class="fu">)</span><span class="op">,</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span> <span class="dv">8</span><span class="dt">px</span> <span class="dv">24</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.15</span><span class="fu">)</span><span class="op">,</span></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span> <span class="dv">16</span><span class="dt">px</span> <span class="dv">48</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <code>!important</code> overrides are needed because Reveal.js positions slides with inline styles.</p>
+<p>Once the card is set up, you can set a <code>background-color</code> (or <code>background-image</code>) on the slide and it fills the full viewport behind the card, not over the content.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Slide {.paper background-color="#ffe83e"}</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>Content goes here, cleanly inside the card.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The same works with <code>background-image</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Because the card shrinks the content area, elements placed via JavaScript into the slide background (<code>.slide-background</code>) can extend freely outside the card bounds. This is the technique the <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme">quarto-revealjs-highlighter-theme</a> extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.</p>
+<p><a href="examples/layout/paper-card.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
+<section id="paper-card-as-the-default" class="level3" data-number="8.10.1">
+<h3 data-number="8.10.1" class="anchored" data-anchor-id="paper-card-as-the-default"><span class="header-section-number">8.10.1</span> Paper card as the default</h3>
+<p>If you want every slide to be a card without adding <code>.paper</code> each time, just change the selector from <code>section.paper</code> to <code>section</code>. The <code>.paperless</code> class then becomes the opt-out for slides that shouldn’t have the effect.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section {</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* ... same card styles ... */</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section<span class="fu">.paperless</span> {</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">100</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">max-height</span>: <span class="dv">100</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">left</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">top</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="dv">transparent</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span>: <span class="dv">none</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><a href="examples/layout/paper-card-default.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card-default.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
+</section>
+</section>
+<section id="vary-the-type-of-slides" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="vary-the-type-of-slides"><span class="header-section-number">8.11</span> Vary the type of slides</h2>
 <p>This post has shown a number of ways to place content on your slides. My final advice in this post is to use some of these tips to vary how the content is laid out. It doesn’t have to be over the top, but slight variations can help a slide deck feel fresh.</p>
 
 

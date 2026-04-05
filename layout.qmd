@@ -592,6 +592,91 @@ We rarely care whether a predictor is normal
 <a href="examples/layout/spread.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>
 <a href="examples/layout/spread-script.js" target="_blank" class="listing-slides btn-links">{{< fa file >}}js</a>
 
+## Paper Card Effect
+
+One underused layout trick in slidecrafting is making each slide appear as a floating paper card.
+By elevating the content area of the slides "above" the background elements,
+you can now have a clean slidecrafting experience as you are guaranteed to not have any background elements interfere with the content.
+
+The effect is achieved with a few CSS rules on `.paper` slides:
+
+```scss
+/*-- scss:rules --*/
+
+.reveal .slides section.paper {
+  width: 92%;
+  height: 86% !important;
+  max-height: 86% !important;
+  left: 4% !important;
+  top: 6% !important;
+  border-radius: 4px;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fdfcfa;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    0 16px 48px rgba(0, 0, 0, 0.1);
+}
+```
+
+The `!important` overrides are needed because Reveal.js positions slides with inline styles.
+
+Once the card is set up,
+you can set a `background-color` (or `background-image`) on the slide
+and it fills the full viewport behind the card, not over the content.
+
+```md
+## My Slide {.paper background-color="#ffe83e"}
+
+Content goes here, cleanly inside the card.
+```
+
+The same works with `background-image`:
+
+```md
+## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}
+```
+
+
+Because the card shrinks the content area,
+elements placed via JavaScript into the slide background (`.slide-background`)
+can extend freely outside the card bounds.
+This is the technique the [quarto-revealjs-highlighter-theme](https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme)
+extension uses to scatter decorative dashes and shapes around the edges of each slide
+without them ever overlapping the text.
+
+<a href="examples/layout/paper-card.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/layout/paper-card.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>
+
+### Paper card as the default
+
+If you want every slide to be a card without adding `.paper` each time,
+just change the selector from `section.paper` to `section`.
+The `.paperless` class then becomes the opt-out for slides that shouldn't have the effect.
+
+```scss
+/*-- scss:rules --*/
+
+.reveal .slides section {
+  /* ... same card styles ... */
+}
+
+.reveal .slides section.paperless {
+  width: 100%;
+  height: 100% !important;
+  max-height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+```
+
+<a href="examples/layout/paper-card-default.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+<a href="examples/layout/paper-card-default.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>
+
 ## Vary the type of slides
 
 This post has shown a number of ways to place content on your slides.

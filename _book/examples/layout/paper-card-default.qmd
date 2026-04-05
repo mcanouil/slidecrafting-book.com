@@ -1,0 +1,29 @@
+---
+format:
+  revealjs:
+    theme: [default, paper-card-default.scss]
+---
+
+## Every slide is a card
+
+All slides get the card effect by default.
+No class needed.
+
+## Colored background {background-color="#ffe83e"}
+
+The yellow background fills the full viewport,
+while the content stays cleanly inside the white card.
+
+## Another background {background-color="#5be95c"}
+
+The background can be any color or image without
+affecting the readability of your content.
+
+## Background image {background-image="galen-crout.jpg" background-size="cover"}
+
+A photo fills the full viewport behind the card,
+keeping the content easy to read.
+
+## Opt out with paperless {.paperless background-color="#ff64b9"}
+
+Use `.paperless` on a specific slide to remove the card effect.

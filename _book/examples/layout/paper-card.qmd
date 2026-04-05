@@ -1,0 +1,30 @@
+---
+format:
+  revealjs:
+    theme: [default, paper-card.scss]
+---
+
+## Standard slide
+
+The content sits at the edge of the slide.
+A `background-color` on this slide would sit behind the text.
+
+## Paper card slide {.paper}
+
+The content sits in a card that floats above the background.
+A `background-color` on this slide sits behind the card.
+
+## Colored background {.paper background-color="#ffe83e"}
+
+The yellow background fills the full viewport,
+while the content stays cleanly inside the white card.
+
+## Pattern background {.paper background-color="#5be95c"}
+
+The background can be any color or image without
+affecting the readability of your content.
+
+## Background image {.paper background-image="galen-crout.jpg" background-size="cover"}
+
+A photo fills the full viewport behind the card,
+keeping the content easy to read.

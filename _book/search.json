@@ -544,11 +544,22 @@
     ]
   },
   {
+    "objectID": "layout.html#paper-card-effect",
+    "href": "layout.html#paper-card-effect",
+    "title": "8  Layout",
+    "section": "8.10 Paper Card Effect",
+    "text": "8.10 Paper Card Effect\nOne underused layout trick in slidecrafting is making each slide appear as a floating paper card. By elevating the content area of the slides “above” the background elements, you can now have a clean slidecrafting experience as you are guaranteed to not have any background elements interfere with the content.\nThe effect is achieved with a few CSS rules on .paper slides:\n/*-- scss:rules --*/\n\n.reveal .slides section.paper {\n  width: 92%;\n  height: 86% !important;\n  max-height: 86% !important;\n  left: 4% !important;\n  top: 6% !important;\n  border-radius: 4px;\n  padding: 40px;\n  box-sizing: border-box;\n  overflow: hidden;\n  background-color: #fdfcfa;\n  box-shadow:\n    0 2px 4px rgba(0, 0, 0, 0.1),\n    0 8px 24px rgba(0, 0, 0, 0.15),\n    0 16px 48px rgba(0, 0, 0, 0.1);\n}\nThe !important overrides are needed because Reveal.js positions slides with inline styles.\nOnce the card is set up, you can set a background-color (or background-image) on the slide and it fills the full viewport behind the card, not over the content.\n## My Slide {.paper background-color=\"#ffe83e\"}\n\nContent goes here, cleanly inside the card.\nThe same works with background-image:\n## My Slide {.paper background-image=\"galen-crout.jpg\" background-size=\"cover\"}\nBecause the card shrinks the content area, elements placed via JavaScript into the slide background (.slide-background) can extend freely outside the card bounds. This is the technique the quarto-revealjs-highlighter-theme extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.\nqmd scss\n\n8.10.1 Paper card as the default\nIf you want every slide to be a card without adding .paper each time, just change the selector from section.paper to section. The .paperless class then becomes the opt-out for slides that shouldn’t have the effect.\n/*-- scss:rules --*/\n\n.reveal .slides section {\n  /* ... same card styles ... */\n}\n\n.reveal .slides section.paperless {\n  width: 100%;\n  height: 100% !important;\n  max-height: 100% !important;\n  left: 0 !important;\n  top: 0 !important;\n  background: transparent !important;\n  box-shadow: none !important;\n}\nqmd scss",
+    "crumbs": [
+      "Content",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Layout</span>"
+    ]
+  },
+  {
     "objectID": "layout.html#vary-the-type-of-slides",
     "href": "layout.html#vary-the-type-of-slides",
     "title": "8  Layout",
-    "section": "8.10 Vary the type of slides",
-    "text": "8.10 Vary the type of slides\nThis post has shown a number of ways to place content on your slides. My final advice in this post is to use some of these tips to vary how the content is laid out. It doesn’t have to be over the top, but slight variations can help a slide deck feel fresh.",
+    "section": "8.11 Vary the type of slides",
+    "text": "8.11 Vary the type of slides\nThis post has shown a number of ways to place content on your slides. My final advice in this post is to use some of these tips to vary how the content is laid out. It doesn’t have to be over the top, but slight variations can help a slide deck feel fresh.",
     "crumbs": [
       "Content",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Layout</span>"

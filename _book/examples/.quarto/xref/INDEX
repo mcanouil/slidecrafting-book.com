@@ -176,5 +176,11 @@
   },
   "layout/spread.qmd": {
     "spread.html": "d047229d"
+  },
+  "layout/paper-card.qmd": {
+    "paper-card.html": "5bdc10af"
+  },
+  "layout/paper-card-default.qmd": {
+    "paper-card-default.html": "e80069b7"
   }
 }

@@ -10,11 +10,19 @@ This chapter celebrates the [asciicast](https://github.com/r-lib/asciicast) R pa
 When R code produces messages with colors or styling,
 they are typically lost when we write slides
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="R code output without asciicast (no terminal colors)" src="examples/asciicast/no-asciicast.html">
-Slide showing R code output without asciicast: terminal colors and styling are stripped, producing plain unstyled text output.
-</iframe>
+![
+  Slide showing R code output without asciicast: terminal colors and styling are stripped, producing plain unstyled text output.
+](
+  examples/asciicast/no-asciicast.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="R code output without asciicast (no terminal colors)"
+}
 
-<a href="examples/asciicast/no-asciicast.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/asciicast/no-asciicast.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Default asciicast
 
@@ -43,11 +51,19 @@ library(tidymodels)
 With this change, we get the following output,
 nicely styled with colors and everything.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Asciicast output with default settings" src="examples/asciicast/asciicast-default.html">
-Slides using the asciicast knitr engine with default settings: `library(tidymodels)` output is rendered as a colorized animated terminal recording, preserving the original ANSI colors.
-</iframe>
+![
+  Slides using the asciicast knitr engine with default settings: `library(tidymodels)` output is rendered as a colorized animated terminal recording, preserving the original ANSI colors.
+](
+  examples/asciicast/asciicast-default.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Asciicast output with default settings"
+}
 
-<a href="examples/asciicast/asciicast-default.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/asciicast/asciicast-default.qmd){.listing-slides .btn-links target="_blank"}
 
 ::: {.callout-note}
 The output of asciicast will by default fill the screen horizontally,
@@ -79,11 +95,19 @@ asciicast::init_knitr_engine(
 
 and gives the following results
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Asciicast with same_process = FALSE" src="examples/asciicast/asciicast-same_process.html">
-Asciicast with `same_process = FALSE`: each chunk runs in a fresh R process, so startup messages (like package loading) are shown fresh each time.
-</iframe>
+![
+  Asciicast with `same_process = FALSE`: each chunk runs in a fresh R process, so startup messages (like package loading) are shown fresh each time.
+](
+  examples/asciicast/asciicast-same_process.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Asciicast with same_process = FALSE"
+}
 
-<a href="examples/asciicast/asciicast-same_process.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/asciicast/asciicast-same_process.qmd){.listing-slides .btn-links target="_blank"}
 
 You will notice that the code that is being run is included in the asciicast output.
 This is happening because the default arguments `echo = FALSE` and `echo_input = TRUE`.
@@ -97,11 +121,19 @@ asciicast::init_knitr_engine(
 )
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Asciicast with echo = TRUE, echo_input = FALSE" src="examples/asciicast/asciicast-echos.html">
-Asciicast with `echo = TRUE, echo_input = FALSE`: the code is shown as a normal Quarto code block while only the output is rendered as an asciicast terminal recording.
-</iframe>
+![
+  Asciicast with `echo = TRUE, echo_input = FALSE`: the code is shown as a normal Quarto code block while only the output is rendered as an asciicast terminal recording.
+](
+  examples/asciicast/asciicast-echos.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Asciicast with echo = TRUE, echo_input = FALSE"
+}
 
-<a href="examples/asciicast/asciicast-echos.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/asciicast/asciicast-echos.qmd){.listing-slides .btn-links target="_blank"}
 
 It wouldn't make much sense to set both of these to `TRUE` as you would have duplication,
 but there are certainly cases where you want both of these to be `FALSE` as you just want the output.
@@ -131,11 +163,19 @@ The below example showcases the `"solarized-light"` theme.
 options(asciicast_theme = "solarized-light")
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Asciicast with solarized-light theme" src="examples/asciicast/asciicast-solarized.html">
-Asciicast output styled with the `solarized-light` theme: warm beige background with muted colors typical of the Solarized palette.
-</iframe>
+![
+  Asciicast output styled with the `solarized-light` theme: warm beige background with muted colors typical of the Solarized palette.
+](
+  examples/asciicast/asciicast-solarized.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Asciicast with solarized-light theme"
+}
 
-<a href="examples/asciicast/asciicast-solarized.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/asciicast/asciicast-solarized.qmd){.listing-slides .btn-links target="_blank"}
 
 If none of these is what you need,
 you can use a completely custom theme.
@@ -172,11 +212,19 @@ options(
 )
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Asciicast with custom white-background theme" src="examples/asciicast/asciicast-theme.html">
-Asciicast with a fully custom theme based on github-light but with a pure white background, making the terminal output blend seamlessly into the white slide background.
-</iframe>
+![
+  Asciicast with a fully custom theme based on github-light but with a pure white background, making the terminal output blend seamlessly into the white slide background.
+](
+  examples/asciicast/asciicast-theme.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Asciicast with custom white-background theme"
+}
 
-<a href="examples/asciicast/asciicast-theme.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/asciicast/asciicast-theme.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Roundup
 

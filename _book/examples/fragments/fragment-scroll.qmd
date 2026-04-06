@@ -13,5 +13,5 @@ Press → and ← to scroll up and down
 mtcars
 ```
 
-:::: {.fragment .scroll}
+::: {.fragment .scroll}
 :::

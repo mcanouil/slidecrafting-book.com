@@ -38,9 +38,17 @@ These colors are simply there to spruce up the visuals.
 
 This is what you get with the default themes that are provided in Quarto, and you can see them here in this gif:
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Interactive demo of all 11 built-in Quarto Reveal.js themes" src="examples/all-themes/index.html">
-Interactive demo cycling through all 11 built-in Quarto Reveal.js themes (default, beige, blood, dark, league, moon, night, serif, simple, sky, solarized), showing the color and font differences between each.
-</iframe>
+![
+  Interactive demo cycling through all 11 built-in Quarto Reveal.js themes (default, beige, blood, dark, league, moon, night, serif, simple, sky, solarized), showing the color and font differences between each.
+](
+  examples/all-themes/index.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Interactive demo of all 11 built-in Quarto Reveal.js themes"
+}
 
 Which colors you choose will depend on what you are doing and who you are doing it for.
 Some of you will have to follow the corporate mandated style guide,
@@ -50,7 +58,7 @@ to see what you like about them and what to take inspiration off.
 Another personal favorite place of mine to go color theme hunting is on [pinterest](https://www.pinterest.com/).
 I do a google search for "Pinterest color palettes" and go wild.
 
-:::: {.content-visible when-format="html"}
+::: {.content-visible when-format="html"}
 ![](media/pinterest.webp)
 :::
 
@@ -181,9 +189,17 @@ All done with minimal effort.
 Using one of the highlight colors here to color the links,
 which also affects the hamburger menu and the progress bar at the bottom.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Slides with custom color palette via Sass variables" src="examples/colors/colors.html">
-Slides with a blue and yellow palette applied via Sass variables: dark blue background (#01364C), white body text, teal links (#99D9DD). Setting `$body-bg`, `$body-color`, and `$link-color` also automatically styles the hamburger menu and progress bar.
-</iframe>
+![
+  Slides with a blue and yellow palette applied via Sass variables: dark blue background (#01364C), white body text, teal links (#99D9DD). Setting `$body-bg`, `$body-color`, and `$link-color` also automatically styles the hamburger menu and progress bar.
+](
+  examples/colors/colors.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Slides with custom color palette via Sass variables"
+}
 
 There are [several sass variables](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables) that are used to control how our slides look.
 Notice how many of the values are defined as transformations of other values.
@@ -214,9 +230,17 @@ $presentation-heading-color: lighten($theme-yellow, 35%);
 
 ````
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Slides with heading color set via lighten() Sass function" src="examples/colors/colors-headers.html">
-Same blue and yellow palette as before, but with `$presentation-heading-color` set to a lightened yellow using `lighten($theme-yellow, 35%)`, making headings stand out more from the body text.
-</iframe>
+![
+  Same blue and yellow palette as before, but with `$presentation-heading-color` set to a lightened yellow using `lighten($theme-yellow, 35%)`, making headings stand out more from the body text.
+](
+  examples/colors/colors-headers.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Slides with heading color set via lighten() Sass function"
+}
 
 ## Code Syntax Highlighter
 
@@ -619,16 +643,32 @@ code {
 
 Below is some before and after using the theme we have developed in the chapter so far:
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Code slides without custom syntax highlighting" src="examples/colors/no-syntax-highlighting.html">
-Code slides without custom syntax highlighting: all code tokens appear in the same default color.
-</iframe>
+![
+  Code slides without custom syntax highlighting: all code tokens appear in the same default color.
+](
+  examples/colors/no-syntax-highlighting.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Code slides without custom syntax highlighting"
+}
 
-<a href="examples/colors/no-syntax-highlighting.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/colors/no-syntax-highlighting.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
+![{{< fa file >}}qmd](examples/colors/no-syntax-highlighting.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands sass >}}scss](examples/colors/no-syntax-highlighting.scss){.listing-video .btn-links target="_blank"}
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Code slides with custom CSS syntax highlighting" src="examples/colors/syntax-highlighting.html">
-Same code slides with custom CSS syntax highlighting applied: keywords, strings, functions, and other token types each colored individually using the skylighting CSS class system.
-</iframe>
+![
+  Same code slides with custom CSS syntax highlighting applied: keywords, strings, functions, and other token types each colored individually using the skylighting CSS class system.
+](
+  examples/colors/syntax-highlighting.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Code slides with custom CSS syntax highlighting"
+}
 
-<a href="examples/colors/syntax-highlighting.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/colors/syntax-highlighting.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
+![{{< fa file >}}qmd](examples/colors/syntax-highlighting.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands sass >}}scss](examples/colors/syntax-highlighting.scss){.listing-video .btn-links target="_blank"}

@@ -9,7 +9,7 @@ format:
 
 Press → and ← to toggle tabsets
 
-:::: {.panel-tabset}
+::: {.panel-tabset}
 
 ### Tab A
 
@@ -21,5 +21,5 @@ Content for `Tab B`
 
 :::
 
-:::: {.fragment .tabswitch}
+::: {.fragment .tabswitch}
 :::

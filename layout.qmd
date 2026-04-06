@@ -13,7 +13,7 @@ This is done using the following syntax.
 We use the `width` attribute to determine the width of each of the columns.
 
 ```md
-:::: {.columns}
+::: {.columns}
 
 ::: {.column width="40%"}
 Left column
@@ -23,19 +23,27 @@ Left column
 Right column
 :::
 
-::::
+:::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Standard two-column layout (40% left, 60% right)" src="examples/layout/left-right.html#/standard-columns">
-Standard two-column layout: 40% left column and 60% right column using the `.columns` / `.column` div syntax.
-</iframe>
+![
+  Standard two-column layout: 40% left column and 60% right column using the `.columns` / `.column` div syntax.
+](
+  examples/layout/left-right.html#/standard-columns
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Standard two-column layout (40% left, 60% right)"
+}
 
 but you can use it in quite a few ways beyond this!
 Firstly, each column is by itself a div, so you can style it directly.
 Such as making the right column have the right aligned text.
 
 ```md
-:::: {.columns}
+::: {.columns}
 
 ::: {.column width="50%"}
 Left column
@@ -45,19 +53,27 @@ Left column
 Right column
 :::
 
-::::
+:::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Two equal columns with right-justified text in the right column" src="examples/layout/left-right.html#/justified-columns">
-Two equal columns where the right column has `style="text-align: right;"` applied directly to the column div for right-justified text.
-</iframe>
+![
+  Two equal columns where the right column has `style="text-align: right;"` applied directly to the column div for right-justified text.
+](
+  examples/layout/left-right.html#/justified-columns
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Two equal columns with right-justified text in the right column"
+}
 
 The structure of columns doesn't require that we just use 2 columns.
 You can do as many columns as you want,
 but generally, you will have a hard time using more than 4.
 
 ```md
-:::: {.columns}
+::: {.columns}
 
 ::: {.column width="25%"}
 1st column
@@ -75,18 +91,26 @@ but generally, you will have a hard time using more than 4.
 4th column
 :::
 
-::::
+:::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Four equal-width columns (25% each)" src="examples/layout/left-right.html#/many-columns">
-Four equal-width columns (25% each) demonstrating that the `.columns` syntax is not limited to two columns.
-</iframe>
+![
+  Four equal-width columns (25% each) demonstrating that the `.columns` syntax is not limited to two columns.
+](
+  examples/layout/left-right.html#/many-columns
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Four equal-width columns (25% each)"
+}
 
 Another way I like to use columns is by keeping one of them empty.
 This way provides a fast and easy way to add space or put text in specific locations.
 
 ```md
-:::: {.columns}
+::: {.columns}
 
 ::: {.column width="30%"}
 :::
@@ -95,14 +119,22 @@ This way provides a fast and easy way to add space or put text in specific locat
 Only right side
 :::
 
-::::
+:::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Empty 30% left column pushing content into the 70% right column" src="examples/layout/left-right.html#/one-sided--column">
-Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.
-</iframe>
+![
+  Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.
+](
+  examples/layout/left-right.html#/one-sided--column
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Empty 30% left column pushing content into the 70% right column"
+}
 
-<a href="examples/layout/left-right.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/layout/left-right.qmd){.listing-slides .btn-links target="_blank"}
 
 ## r-fit-text
 
@@ -116,9 +148,17 @@ Big Text
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Single line of text stretched to full slide width with r-fit-text" src="examples/layout/r-fit-text.html#/section">
-Single line of text inside `::: r-fit-text` stretched to fill the full horizontal width of the slide.
-</iframe>
+![
+  Single line of text inside `::: r-fit-text` stretched to fill the full horizontal width of the slide.
+](
+  examples/layout/r-fit-text.html#/section
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Single line of text stretched to full slide width with r-fit-text"
+}
 
 This works well combined with the [center](https://quarto.org/docs/presentations/revealjs/advanced.html#center) class,
 which makes sure the text appears in the center vertically on the slide.
@@ -131,9 +171,17 @@ This fits perfectly!
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="r-fit-text combined with .center class for vertical and horizontal centering" src="examples/layout/r-fit-text.html#/section-1">
-`r-fit-text` combined with the `.center` slide class: the oversized text is centered both horizontally and vertically on the slide.
-</iframe>
+![
+  `r-fit-text` combined with the `.center` slide class: the oversized text is centered both horizontally and vertically on the slide.
+](
+  examples/layout/r-fit-text.html#/section-1
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="r-fit-text combined with .center class for vertical and horizontal centering"
+}
 
 One thing about using `r-fit-text` is that it applies the same text size to all the text inside it,
 so when you use it across multiple lines,
@@ -147,9 +195,17 @@ On two lines
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Two lines in one r-fit-text block forced to the same font size" src="examples/layout/r-fit-text.html#/section-2">
-Two lines of text in a single `r-fit-text` block: both lines are forced to the same smaller font size determined by the longer line, rather than each filling the slide independently.
-</iframe>
+![
+  Two lines of text in a single `r-fit-text` block: both lines are forced to the same smaller font size determined by the longer line, rather than each filling the slide independently.
+](
+  examples/layout/r-fit-text.html#/section-2
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Two lines in one r-fit-text block forced to the same font size"
+}
 
 This can however be fixed,
 by using a `r-fit-text` for each line of text.
@@ -164,11 +220,19 @@ On two lines
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Two separate r-fit-text blocks each filling the full slide width" src="examples/layout/r-fit-text.html#/section-3">
-Two separate `r-fit-text` blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.
-</iframe>
+![
+  Two separate `r-fit-text` blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.
+](
+  examples/layout/r-fit-text.html#/section-3
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Two separate r-fit-text blocks each filling the full slide width"
+}
 
-<a href="examples/layout/r-fit-text.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/layout/r-fit-text.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Loud Extension
 
@@ -176,9 +240,17 @@ If you find yourself using `r-fit-text` frequently,
 the [quarto-revealjs-loud](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) extension automates this process.
 It automatically makes text big when there isn't much content on a slide.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-loud extension" src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/">
-Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
-</iframe>
+![
+  Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
+](
+  https://emilhvitfeldt.github.io/quarto-revealjs-loud/
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Demo of the quarto-revealjs-loud extension"
+}
 
 To install:
 
@@ -198,14 +270,12 @@ revealjs-plugins:
 The extension will automatically detect slides with minimal content and scale the text to fill the available space.
 This is particularly useful for quote slides, section breaks, or emphasis slides where you want a single statement to have maximum impact.
 
-<div class="project-buttons">
-<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-loud">
-  {{< fa brands github >}} Github
-</a>
-<a href="https://emilhvitfeldt.github.io/quarto-revealjs-loud/">
-  {{< fa door-open >}} Demo
-</a>
-</div>
+::: {.project-buttons}
+
+![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-loud)
+![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-loud/)
+
+:::
 
 ## Using images
 
@@ -232,13 +302,21 @@ But I end up not using this style that much because it is added as content,
 so it will push other content around,
 and it adheres to margins which I rarely want for tasks like this.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Basic figure added with standard Markdown syntax" src="examples/layout/image-basics.html">
-Basic figure added with standard Markdown syntax `![](image.jpg)`: image is inserted as content, respects slide margins, and pushes other content around.
-</iframe>
+![
+  Basic figure added with standard Markdown syntax `![](image.jpg)`: image is inserted as content, respects slide margins, and pushes other content around.
+](
+  examples/layout/image-basics.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Basic figure added with standard Markdown syntax"
+}
 
-Photo by <a href="https://unsplash.com/@hollymandarich?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Holly Mandarich</a> on <a href="https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Photo by [Holly Mandarich](https://unsplash.com/@hollymandarich?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-<a href="examples/layout/image-basics.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/layout/image-basics.qmd){.listing-slides .btn-links target="_blank"}
 
 ### Absolute position
 
@@ -267,9 +345,17 @@ I find that just using one of `width` or `height` is easier as it doesn't distor
 All of these attributes accept all known CSS values, such as pixels, inches, and percentages.
 [All about CSS length](https://developer.mozilla.org/en-US/docs/Web/CSS/length) for more information.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Image placed with .absolute positioning at top-right corner" src="examples/layout/image-absolute.html">
-Image placed with `.absolute` positioning: `{.absolute top=0 right=0 height="100%"}` places the image flush against the top-right corner at full slide height, independent of content flow.
-</iframe>
+![
+  Image placed with `.absolute` positioning: `{.absolute top=0 right=0 height="100%"}` places the image flush against the top-right corner at full slide height, independent of content flow.
+](
+  examples/layout/image-absolute.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Image placed with .absolute positioning at top-right corner"
+}
 
 All images in revealjs default to the following maximum sizes:
 
@@ -290,13 +376,21 @@ Notice that we are using negative locations to make this happen as `0` is inside
 ![](noelle-rebekah.jpg){.absolute top="-10%" right="-10%" height="120%" style="max-height: unset;"}
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Image with max-height unset overflowing slide edges at 120% height" src="examples/layout/image-absolute.html#/no-restrictions">
-Image with `max-height: unset; max-width: unset;` and negative position values: the image overflows the slide edges at 120% height, filling beyond the frame for a bleed effect.
-</iframe>
+![
+  Image with `max-height: unset; max-width: unset;` and negative position values: the image overflows the slide edges at 120% height, filling beyond the frame for a bleed effect.
+](
+  examples/layout/image-absolute.html#/no-restrictions
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Image with max-height unset overflowing slide edges at 120% height"
+}
 
-Photo by <a href="https://unsplash.com/@noellerebekah?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Noelle Rebekah</a> on <a href="https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Photo by [Noelle Rebekah](https://unsplash.com/@noellerebekah?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
  
-<a href="examples/layout/image-absolute.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/layout/image-absolute.qmd){.listing-slides .btn-links target="_blank"}
 
 ::: callout-warning
 Since the way that positions are done in revealjs,
@@ -327,11 +421,19 @@ I like to use it with text in the following way:
 [and so is R]{.absolute bottom="0%" right="0%"}
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Text elements placed at specific coordinates using .absolute" src="examples/layout/tip-5.html">
-Slide with text elements placed using `.absolute`: "python is great" and "and so is R" positioned at specific percentage coordinates on the slide using `bottom` and `left`/`right` attributes.
-</iframe>
+![
+  Slide with text elements placed using `.absolute`: "python is great" and "and so is R" positioned at specific percentage coordinates on the slide using `bottom` and `left`/`right` attributes.
+](
+  examples/layout/tip-5.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Text elements placed at specific coordinates using .absolute"
+}
 
-<a href="examples/layout/tip-5.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/layout/tip-5.qmd){.listing-slides .btn-links target="_blank"}
 
 ### Background image
 
@@ -345,9 +447,17 @@ you specify it on the slide level in the following way:
 ## Slide Title {background-image="galen-crout.jpg"}
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Slide using background-image to fill the full viewport" src="examples/layout/image-background.html">
-Slide using `{background-image="photo.jpg"}` on the slide header: the image fills the entire slide viewport behind all content.
-</iframe>
+![
+  Slide using `{background-image="photo.jpg"}` on the slide header: the image fills the entire slide viewport behind all content.
+](
+  examples/layout/image-background.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Slide using background-image to fill the full viewport"
+}
 
 you can set other options such as [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) and [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) but I rarely end up using them.
 
@@ -359,13 +469,21 @@ I end up not setting a default title and use `.absolute` to place any content I 
 [always explore]{.absolute left="50%" top="20%" style="rotate: -10deg;"}
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Background image with absolutely positioned rotated text overlay" src="examples/layout/image-background.html#/section">
-Background image slide with absolutely positioned text overlay: the word "always explore" placed at 50% left / 20% top with a slight rotation using `style="rotate: -10deg;"`.
-</iframe>
+![
+  Background image slide with absolutely positioned text overlay: the word "always explore" placed at 50% left / 20% top with a slight rotation using `style="rotate: -10deg;"`.
+](
+  examples/layout/image-background.html#/section
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Background image with absolutely positioned rotated text overlay"
+}
 
-Photo by <a href="https://unsplash.com/@galen_crout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Galen Crout</a> on <a href="https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Photo by [Galen Crout](https://unsplash.com/@galen_crout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-<a href="examples/layout/image-background.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/layout/image-background.qmd){.listing-slides .btn-links target="_blank"}
 
 As we see here, the text positioning can change how the slides are perceived.
 Both in style and emotion,
@@ -385,9 +503,17 @@ If we take the first slide here as an example.
 ## {background-image="tim-marshall.jpg"}
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Background image slide with no text overlay" src="examples/layout/overlay-textbox.html">
-Background image slide with no text overlay, showing how busy or high-contrast images make text placement difficult.
-</iframe>
+![
+  Background image slide with no text overlay, showing how busy or high-contrast images make text placement difficult.
+](
+  examples/layout/overlay-textbox.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Background image slide with no text overlay"
+}
 
 First, we try to use `.absolute` to add some inspiring text.
 It adds text, but it is not easy to read at all!!
@@ -402,9 +528,17 @@ Take Risks
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Background image with absolutely positioned text (low contrast)" src="examples/layout/overlay-textbox.html#/section-1">
-Background image with absolutely positioned text "Be Brave / Take Risks" at 55% left, 55% top: text is present but hard to read due to insufficient contrast with the image.
-</iframe>
+![
+  Background image with absolutely positioned text "Be Brave / Take Risks" at 55% left, 55% top: text is present but hard to read due to insufficient contrast with the image.
+](
+  examples/layout/overlay-textbox.html#/section-1
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Background image with absolutely positioned text (low contrast)"
+}
 
 But we can expand on this idea,
 adding a `background-color` to make it stand out.
@@ -419,9 +553,17 @@ Take Risks
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Text box with semi-transparent white background for readability" src="examples/layout/overlay-textbox.html#/section-2">
-Text box with semi-transparent white `background-color: rgba(255,255,255,.5)` and padding: text is now clearly readable against the busy background image.
-</iframe>
+![
+  Text box with semi-transparent white `background-color: rgba(255,255,255,.5)` and padding: text is now clearly readable against the busy background image.
+](
+  examples/layout/overlay-textbox.html#/section-2
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Text box with semi-transparent white background for readability"
+}
 
 it already looks quite good!
 We can make it pop just a little bit more,
@@ -439,13 +581,21 @@ Take Risks
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Polished glass-effect text box with backdrop-filter and box-shadow" src="examples/layout/overlay-textbox.html#/section-3">
-Polished glass-effect text box: `backdrop-filter: blur(5px)`, `box-shadow`, and `border-radius` added to the semi-transparent overlay for a refined frosted-glass appearance.
-</iframe>
+![
+  Polished glass-effect text box: `backdrop-filter: blur(5px)`, `box-shadow`, and `border-radius` added to the semi-transparent overlay for a refined frosted-glass appearance.
+](
+  examples/layout/overlay-textbox.html#/section-3
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Polished glass-effect text box with backdrop-filter and box-shadow"
+}
 
-Photo by <a href="https://unsplash.com/@timmarshall?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Tim Marshall</a> on <a href="https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Photo by [Tim Marshall](https://unsplash.com/@timmarshall?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-<a href="examples/layout/overlay-textbox.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/layout/overlay-textbox.qmd){.listing-slides .btn-links target="_blank"}
 
 I think this turned out well.
 There are endless ways to use this.
@@ -485,11 +635,11 @@ The extension will output the CSS values you need to make the changes permanent 
 This is particularly useful when working with absolute positioning,
 where getting pixel values exactly right can be tedious through trial and error.
 
-<div class="project-buttons">
-<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable">
-  {{< fa brands github >}} Github
-</a>
-</div>
+::: {.project-buttons}
+
+![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
+
+:::
 
 ## Spread
 
@@ -567,9 +717,17 @@ You can still override the height with an inline style if you want less than the
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Bullet points distributed evenly with .spread class" src="examples/layout/spread.html#/with-spread">
-Three bullet points inside a `.spread` div: the items are distributed evenly from the top to the bottom of the remaining slide space using `justify-content: space-between`.
-</iframe>
+![
+  Three bullet points inside a `.spread` div: the items are distributed evenly from the top to the bottom of the remaining slide space using `justify-content: space-between`.
+](
+  examples/layout/spread.html#/with-spread
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Bullet points distributed evenly with .spread class"
+}
 
 The default uses `justify-content: space-between`, which places the first item at the top and the last at the bottom.
 For more uniform spacing including around the edges, use `.spread-evenly`:
@@ -584,13 +742,21 @@ We rarely care whether a predictor is normal
 :::
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Bullet points distributed with .spread-evenly (equal spacing including edges)" src="examples/layout/spread.html#/space-evenly">
-Same three bullet points using `.spread.spread-evenly`: items are distributed with equal spacing including above the first and below the last item using `justify-content: space-evenly`.
-</iframe>
+![
+  Same three bullet points using `.spread.spread-evenly`: items are distributed with equal spacing including above the first and below the last item using `justify-content: space-evenly`.
+](
+  examples/layout/spread.html#/space-evenly
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Bullet points distributed with .spread-evenly (equal spacing including edges)"
+}
 
-<a href="examples/layout/spread.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/layout/spread.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>
-<a href="examples/layout/spread-script.js" target="_blank" class="listing-slides btn-links">{{< fa file >}}js</a>
+![{{< fa file >}}qmd](examples/layout/spread.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa file >}}scss](examples/layout/spread.scss){.listing-slides .btn-links target="_blank"}
+![{{< fa file >}}js](examples/layout/spread-script.js){.listing-slides .btn-links target="_blank"}
 
 ## Paper Card Effect
 
@@ -633,9 +799,17 @@ and it fills the full viewport behind the card, not over the content.
 Content goes here, cleanly inside the card.
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title=".paper slide with colored background filling the viewport behind the card" src="examples/layout/paper-card.html#/colored-background">
-A slide using `.paper` with `background-color="#ffe83e"`: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.
-</iframe>
+![
+  A slide using `.paper` with `background-color="#ffe83e"`: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.
+](
+  examples/layout/paper-card.html#/colored-background
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title=".paper slide with colored background filling the viewport behind the card"
+}
 
 The same works with `background-image`:
 
@@ -643,9 +817,17 @@ The same works with `background-image`:
 ## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title=".paper slide with full-cover background image behind the content card" src="examples/layout/paper-card.html#/background-image">
-A slide using `.paper` with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.
-</iframe>
+![
+  A slide using `.paper` with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.
+](
+  examples/layout/paper-card.html#/background-image
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title=".paper slide with full-cover background image behind the content card"
+}
 
 Because the card shrinks the content area,
 elements placed via JavaScript into the slide background (`.slide-background`)
@@ -654,8 +836,8 @@ This is the technique the [quarto-revealjs-highlighter-theme](https://github.com
 extension uses to scatter decorative dashes and shapes around the edges of each slide
 without them ever overlapping the text.
 
-<a href="examples/layout/paper-card.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/layout/paper-card.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>
+![{{< fa file >}}qmd](examples/layout/paper-card.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa file >}}scss](examples/layout/paper-card.scss){.listing-slides .btn-links target="_blank"}
 
 ### Paper card as the default
 
@@ -681,12 +863,20 @@ The `.paperless` class then becomes the opt-out for slides that shouldn't have t
 }
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Every slide rendered as a card by default, with .paperless opt-out" src="examples/layout/paper-card-default.html#/every-slide-is-a-card">
-Every slide rendered as a card by default, with the `.paperless` class used on one slide to opt out of the effect and fill the full viewport.
-</iframe>
+![
+  Every slide rendered as a card by default, with the `.paperless` class used on one slide to opt out of the effect and fill the full viewport.
+](
+  examples/layout/paper-card-default.html#/every-slide-is-a-card
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Every slide rendered as a card by default, with .paperless opt-out"
+}
 
-<a href="examples/layout/paper-card-default.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/layout/paper-card-default.scss" target="_blank" class="listing-slides btn-links">{{< fa file >}}scss</a>
+![{{< fa file >}}qmd](examples/layout/paper-card-default.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa file >}}scss](examples/layout/paper-card-default.scss){.listing-slides .btn-links target="_blank"}
 
 ## Vary the type of slides
 

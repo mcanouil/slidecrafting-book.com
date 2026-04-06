@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.35">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-10a99e03521ec9ce62a914b0d4603325.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c40c0ddd606b58ba960743f60575934e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c637c4387fd00c9d762d829c448c9f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e8267730ddd4843cadbd019f792683ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -335,9 +335,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>The built in themes are a great place to look for inspiration.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Interactive demo of all 11 built-in Quarto Reveal.js themes" src="examples/all-themes/index.html">
-Interactive demo cycling through all 11 built-in Quarto Reveal.js themes for comparison and inspiration.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/all-themes/index.html" class="slide-deck" loading="lazy" title="Interactive demo of all 11 built-in Quarto Reveal.js themes" width="560" height="373"></p>
+<figcaption>Interactive demo cycling through all 11 built-in Quarto Reveal.js themes for comparison and inspiration.</figcaption>
+</figure>
+</div>
 <p>This is also a perfect place to start looking for inspiration. Using these themes with one or two modifications might get you all the way where you want to go. It is in general a good idea to look for inspiration in other people’s work.</p>
 <p>This chapter covers what I like to call <strong>theme variants</strong> and <strong>slide theme</strong>.</p>
 <section id="what-is-a-variant" class="level2" data-number="6.1">
@@ -438,13 +441,19 @@ Interactive demo cycling through all 11 built-in Quarto Reveal.js themes for com
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And that is all that is needed! I have taken the liberty to create two themes to show case how this is done in practice:</p>
 <p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-inverse" class="uri">https://github.com/EmilHvitfeldt/quarto-revealjs-inverse</a></p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-inverse theme" src="examples/theme/inverse.html">
-Demo of the quarto-revealjs-inverse theme: a dark grey “inverse” variant slide alongside the default white-background slides, used for section breaks and quotes.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/theme/inverse.html" class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-inverse theme" width="560" height="373"></p>
+<figcaption>Demo of the quarto-revealjs-inverse theme: a dark grey “inverse” variant slide alongside the default white-background slides, used for section breaks and quotes.</figcaption>
+</figure>
+</div>
 <p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-seasons" class="uri">https://github.com/EmilHvitfeldt/quarto-revealjs-seasons</a></p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-seasons theme" src="examples/theme/seasons.html">
-Demo of the quarto-revealjs-seasons theme: multiple color variants representing seasons (spring, summer, autumn, winter) used to visually distinguish sections of the presentation.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/theme/seasons.html" class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-seasons theme" width="560" height="373"></p>
+<figcaption>Demo of the quarto-revealjs-seasons theme: multiple color variants representing seasons (spring, summer, autumn, winter) used to visually distinguish sections of the presentation.</figcaption>
+</figure>
+</div>
 </section>
 <section id="what-is-a-slide-theme" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="what-is-a-slide-theme"><span class="header-section-number">6.3</span> What is a slide theme?</h2>
@@ -452,11 +461,14 @@ Demo of the quarto-revealjs-seasons theme: multiple color variants representing 
 <p><img src="media/google-slides.webp" class="img-fluid"></p>
 <p>With these menus, you can swiftly select the style of slide you intend to write and fill in the content. I find that for some presentations that I all I need.</p>
 <p>Below is one such theme I created</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-earth slide theme" src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/">
-Demo of the quarto-revealjs-earth slide theme: SVG earth imagery as backgrounds with custom text regions per slide class (<code>.theme-title1</code>, <code>.theme-section3</code>, <code>.theme-slide1</code>, etc.), controlling colors, sizes, and text positioning.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/.png" class="slide-deck figure-img" loading="lazy" title="Demo of the quarto-revealjs-earth slide theme" width="560" height="373"></p>
+<figcaption>Demo of the quarto-revealjs-earth slide theme: SVG earth imagery as backgrounds with custom text regions per slide class (<code>.theme-title1</code>, <code>.theme-section3</code>, <code>.theme-slide1</code>, etc.), controlling colors, sizes, and text positioning.</figcaption>
+</figure>
+</div>
 <div class="project-buttons">
-<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-earth"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a> <a href="https://emilhvitfeldt.github.io/quarto-revealjs-earth/"> <i class="fa-solid fa-door-open" aria-label="door-open"></i> Website </a></p>
+<p><img src="https://github.com/EmilHvitfeldt/quarto-revealjs-earth.png" class="img-fluid" alt=" Github"> <img src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/.png" class="img-fluid" alt=" Website"></p>
 </div>
 <p>Instead of carefully managing the style of all the elements of each slide. They all have an overall slide theme that controls all the content on the slide. This controls colors and sizes but can go further and control backgrounds and even the positioning of elements.</p>
 <p>Take <code>.theme-section1</code> as an example. Not only are the text and colors modified. The text region is being modified such that the text isn’t going to overlap with the globe on the right. Setting this up beforehand is quite nice. While the backgrounds might seem complicated, they are all SVGs, but you can use any other type of image or none at all.</p>
@@ -562,18 +574,24 @@ Demo of the quarto-revealjs-earth slide theme: SVG earth imagery as backgrounds 
 <section id="more-examples" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="more-examples"><span class="header-section-number">6.5</span> More Examples</h2>
 <p>Below is another theme, following very closely the construction of the previous</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-cinco-de-mayo slide theme" src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/">
-Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG background images applied via CSS slide classes, following the same construction pattern as the earth theme.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/.png" class="slide-deck figure-img" loading="lazy" title="Demo of the quarto-revealjs-cinco-de-mayo slide theme" width="560" height="373"></p>
+<figcaption>Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG background images applied via CSS slide classes, following the same construction pattern as the earth theme.</figcaption>
+</figure>
+</div>
 <div class="project-buttons">
-<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a> <a href="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/"> <i class="fa-solid fa-door-open" aria-label="door-open"></i> Website </a> <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo/blob/main/_extensions/cinco-de-mayo/cinco.scss"> <i class="fa-brands fa-github" aria-label="github"></i> Scss file </a></p>
+<p><img src="https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo.png" class="img-fluid" alt=" Github"> <img src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/.png" class="img-fluid" alt=" Website"> <img src="https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo/blob/main/_extensions/cinco-de-mayo/cinco.scss" class="img-fluid" alt=" Scss file"></p>
 </div>
 <p>Another approach to creating these styles of themes is to use Lua to further expand the capabilities of the slides</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of a PositConf 2023 slide theme using a Lua extension" src="https://katie.quarto.pub/positconf2023/">
-Demo of a PositConf 2023 slide theme by Katie Masiello using a Lua extension for advanced theming capabilities beyond what CSS alone provides.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://katie.quarto.pub/positconf2023/.png" class="slide-deck figure-img" loading="lazy" title="Demo of a PositConf 2023 slide theme using a Lua extension" width="560" height="373"></p>
+<figcaption>Demo of a PositConf 2023 slide theme by Katie Masiello using a Lua extension for advanced theming capabilities beyond what CSS alone provides.</figcaption>
+</figure>
+</div>
 <div class="project-buttons">
-<p><a href="https://github.com/kmasiello/positconfslides"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a> <a href="https://katie.quarto.pub/positconf2023/"> <i class="fa-solid fa-door-open" aria-label="door-open"></i> Website </a> <a href="https://github.com/kmasiello/positconfslides/blob/main/_extensions/positconfslides/positconfslides.lua"> <i class="fa-brands fa-github" aria-label="github"></i> Lua file </a></p>
+<p><img src="https://github.com/kmasiello/positconfslides.png" class="img-fluid" alt=" Github"> <img src="https://katie.quarto.pub/positconf2023/.png" class="img-fluid" alt=" Website"> <img src="https://github.com/kmasiello/positconfslides/blob/main/_extensions/positconfslides/positconfslides.lua" class="img-fluid" alt=" Lua file"></p>
 </div>
 
 

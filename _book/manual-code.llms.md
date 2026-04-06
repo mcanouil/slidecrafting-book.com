@@ -37,4 +37,6 @@ seperately highlights the code `method = "lm"` then `formula = "y ~ x"` in red a
 
 Slide deck showing hand-styled code with incremental fragment highlighting: a ggplot2 code block where `method = "lm"` is highlighted in red on the first fragment advance, then `formula = "y ~ x"` in blue on the second.
 
-[qmd](examples/manual-code/tip-4.qmd)
+![](examples/manual-code/tip-4.qmd)
+
+qmd

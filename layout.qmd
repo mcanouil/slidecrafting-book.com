@@ -243,7 +243,7 @@ It automatically makes text big when there isn't much content on a slide.
 ![
   Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
 ](
-  https://emilhvitfeldt.github.io/quarto-revealjs-loud/
+  https://emilhvitfeldt.github.io/quarto-revealjs-loud/index.html
 ){
   .slide-deck
   loading="lazy"

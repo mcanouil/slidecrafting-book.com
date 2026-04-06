@@ -218,7 +218,7 @@ Below is one such theme I created
 ![
   Demo of the quarto-revealjs-earth slide theme: SVG earth imagery as backgrounds with custom text regions per slide class (`.theme-title1`, `.theme-section3`, `.theme-slide1`, etc.), controlling colors, sizes, and text positioning.
 ](
-  https://emilhvitfeldt.github.io/quarto-revealjs-earth/
+  https://emilhvitfeldt.github.io/quarto-revealjs-earth/index.html
 ){
   .slide-deck
   loading="lazy"
@@ -403,7 +403,7 @@ following very closely the construction of the previous
 ![
   Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG background images applied via CSS slide classes, following the same construction pattern as the earth theme.
 ](
-  https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/
+  https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/index.html
 ){
   .slide-deck
   loading="lazy"

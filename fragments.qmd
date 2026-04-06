@@ -870,7 +870,7 @@ Reveal.on('fragmenthidden', event => {
 ![
   Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a `.advance-slide` fragment controls it using `iframe.contentWindow.Reveal.right()` so a clicker can advance both the outer and inner slides.
 ](
-  https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/
+  https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/index.html
 ){
   .slide-deck
   loading="lazy"

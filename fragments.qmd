@@ -1003,7 +1003,7 @@ so they can be navigated with arrow keys or a clicker instead of requiring mouse
 ![
   Demo of the quarto-revealjs-tabset extension: tabs in a panel tabset are treated as fragments, enabling keyboard navigation through tabs without mouse clicks.
 ](
-  https://m.canouil.dev/quarto-revealjs-tabset/
+  https://m.canouil.dev/quarto-revealjs-tabset/index.html
 ){
   .slide-deck
   loading="lazy"

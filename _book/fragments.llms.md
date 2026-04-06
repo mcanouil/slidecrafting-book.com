@@ -564,62 +564,68 @@ Fragment that smoothly scrolls a long code output block: advancing the fragment 
 
 Quarto also has [tabset](https://quarto.org/docs/presentations/revealjs/index.html#tabsets) support for slides, which is again a very nice feature. It runs into the same clicker interaction we noted earlier. It requires a mouse to correctly toggle in the middle of a presentation.
 
-We can deal with this as well. As always we need to find the elements and how to toggle them.
+The [quarto-revealjs-tabset](https://github.com/mcanouil/quarto-revealjs-tabset) extension handles this for us. It turns tabs into fragments so they can be advanced with arrow keys or a clicker. See the [Tabset](#tabset) section below for installation and usage details.
 
-We are again using `.getCurrentSlide()` and `querySelector()`, and with some trial and error, determine that the following two [CSS selectors](https://www.w3schools.com/cssref/css_selectors.php) captures the two tabs.
-
-- `.panel-tabset ul li:first-of-type a`
-- `.panel-tabset ul li:last-of-type a`
-
-And we are lucky because these elements have a working [`.click()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click) method that we can use.
-
-This means that the full fragment looks like this:
-
-``` js
-Reveal.on('fragmentshown', (event) => {
-  if (event.fragment.classList.contains("tabswitch")) {
- Reveal
-      .getCurrentSlide()
-      .querySelector(".panel-tabset ul li:last-of-type a")
-      .click()
-  }
-});
-
-Reveal.on('fragmenthidden', (event) => {
-  if (event.fragment.classList.contains("tabswitch")) {
- Reveal
-      .getCurrentSlide()
-      .querySelector(".panel-tabset ul li:first-of-type a")
-      .click()
-  }
-});
-```
-
-Fragment that switches between two tabs in a tabset: a `.tabswitch` fragment uses JavaScript `.click()` to toggle between the first and last tab without needing a mouse.
-
-![qmd](examples/fragments/fragment-tabset.qmd)
-
-The above only works with 2 tabs, since we are toggling between the first and last one with `first-of-type` and `last-of-type`.
-
-Let us now see how we can expand this to work with any number of tabs. The toggling code now looks like this:
-
-``` js
-const tabs = Reveal.getCurrentSlide().querySelectorAll(
-  ".panel-tabset ul li a"
-);
-
-const currentIndex = [...tabs].findIndex(
-  (node) => node.getAttribute("aria-selected") === "true"
-);
-
-tabs[currentIndex + 1]?.click();
-```
-
-We have a slightly different strategy now. First we find all the tabs. next we identify the index of current tab that we are on. Lastly we select the next tab and `.click()` on it. For the reverse we do `currentIndex - 1` instead.
-
-Extended tabset fragment supporting any number of tabs: uses `querySelectorAll` to find all tabs, then advances to the next tab by index on each fragment trigger.
-
-![qmd](examples/fragments/fragment-tabset-full.qmd)
+> **NOTE:**
+>
+> Before the tabset extension existed, the only option was to write custom JavaScript. This is a useful exercise for understanding how fragments work, but for production use the extension is strongly recommended.
+>
+> As always we need to find the elements and how to toggle them.
+>
+> We are again using `.getCurrentSlide()` and `querySelector()`, and with some trial and error, determine that the following two [CSS selectors](https://www.w3schools.com/cssref/css_selectors.php) captures the two tabs.
+>
+> - `.panel-tabset ul li:first-of-type a`
+> - `.panel-tabset ul li:last-of-type a`
+>
+> And we are lucky because these elements have a working [`.click()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click) method that we can use.
+>
+> This means that the full fragment looks like this:
+>
+> ``` js
+> Reveal.on('fragmentshown', (event) => {
+>   if (event.fragment.classList.contains("tabswitch")) {
+>  Reveal
+>       .getCurrentSlide()
+>       .querySelector(".panel-tabset ul li:last-of-type a")
+>       .click()
+>   }
+> });
+>
+> Reveal.on('fragmenthidden', (event) => {
+>   if (event.fragment.classList.contains("tabswitch")) {
+>  Reveal
+>       .getCurrentSlide()
+>       .querySelector(".panel-tabset ul li:first-of-type a")
+>       .click()
+>   }
+> });
+> ```
+>
+> Fragment that switches between two tabs in a tabset: a `.tabswitch` fragment uses JavaScript `.click()` to toggle between the first and last tab without needing a mouse.
+>
+> ![qmd](examples/fragments/fragment-tabset.qmd)
+>
+> The above only works with 2 tabs, since we are toggling between the first and last one with `first-of-type` and `last-of-type`.
+>
+> Let us now see how we can expand this to work with any number of tabs. The toggling code now looks like this:
+>
+> ``` js
+> const tabs = Reveal.getCurrentSlide().querySelectorAll(
+>   ".panel-tabset ul li a"
+> );
+>
+> const currentIndex = [...tabs].findIndex(
+>   (node) => node.getAttribute("aria-selected") === "true"
+> );
+>
+> tabs[currentIndex + 1]?.click();
+> ```
+>
+> We have a slightly different strategy now. First we find all the tabs. next we identify the index of current tab that we are on. Lastly we select the next tab and `.click()` on it. For the reverse we do `currentIndex - 1` instead.
+>
+> Extended tabset fragment supporting any number of tabs: uses `querySelectorAll` to find all tabs, then advances to the next tab by index on each fragment trigger.
+>
+> ![qmd](examples/fragments/fragment-tabset-full.qmd)
 
 ## 11.10 advance embedded slides
 
@@ -723,13 +729,21 @@ quarto add EmilHvitfeldt/quarto-revealjs-more-fragments
 
 Once installed, you can use any of the animation classes as fragments. Some popular options include:
 
-**Attention seekers:** - `bounce`, `flash`, `pulse`, `shake`, `swing`, `wobble`
+**Attention seekers:**
 
-**Entrances:** - `bounceIn`, `fadeIn`, `flipInX`, `rotateIn`, `zoomIn`, `slideInUp`
+- `bounce`, `flash`, `pulse`, `shake`, `swing`, `wobble`
 
-**Exits:** - `bounceOut`, `fadeOut`, `flipOutX`, `rotateOut`, `zoomOut`
+**Entrances:**
 
-**Magic animations:** - `magic`, `twisterInDown`, `swap`, `puffIn`, `vanishIn`
+- `bounceIn`, `fadeIn`, `flipInX`, `rotateIn`, `zoomIn`, `slideInUp`
+
+**Exits:**
+
+- `bounceOut`, `fadeOut`, `flipOutX`, `rotateOut`, `zoomOut`
+
+**Magic animations:**
+
+- `magic`, `twisterInDown`, `swap`, `puffIn`, `vanishIn`
 
 Usage:
 
@@ -740,3 +754,57 @@ Usage:
 ```
 
 ![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/.png)
+
+### 11.11.3 Tabset
+
+The [quarto-revealjs-tabset](https://github.com/mcanouil/quarto-revealjs-tabset) extension turns tabs into fragments, so they can be navigated with arrow keys or a clicker instead of requiring mouse clicks.
+
+![](https://m.canouil.dev/quarto-revealjs-tabset/.png "Demo of the quarto-revealjs-tabset extension")
+
+Demo of the quarto-revealjs-tabset extension: tabs in a panel tabset are treated as fragments, enabling keyboard navigation through tabs without mouse clicks.
+
+To install:
+
+``` bash
+quarto add mcanouil/quarto-revealjs-tabset@1.3.0
+```
+
+Once installed, add the plugin to your YAML header:
+
+``` yaml
+---
+title: "My Presentation"
+format:
+  revealjs: default
+revealjs-plugins:
+  - tabset
+---
+```
+
+Then use standard Quarto tabset syntax. No special classes or fragment divs are needed:
+
+``` markdown
+## Slide with Tabset
+
+::: {.panel-tabset}
+
+### Tab 1
+
+Content for the first tab.
+
+### Tab 2
+
+Content for the second tab.
+
+### Tab 3
+
+Content for the third tab.
+
+:::
+```
+
+The plugin automatically detects `.panel-tabset` divs and treats each tab as a fragment. It supports multiple tabsets per slide, nested fragments within tabs, and bidirectional navigation.
+
+When exporting to PDF, each tab automatically appears on its own page without needing `pdf-separate-fragments: true` globally.
+
+![ Github](https://github.com/mcanouil/quarto-revealjs-tabset.png) ![ Demo](https://m.canouil.dev/quarto-revealjs-tabset/.png)

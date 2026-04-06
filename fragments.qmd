@@ -963,15 +963,19 @@ Once installed, you can use any of the animation classes as fragments.
 Some popular options include:
 
 **Attention seekers:**
+
 - `bounce`, `flash`, `pulse`, `shake`, `swing`, `wobble`
 
 **Entrances:**
+
 - `bounceIn`, `fadeIn`, `flipInX`, `rotateIn`, `zoomIn`, `slideInUp`
 
 **Exits:**
+
 - `bounceOut`, `fadeOut`, `flipOutX`, `rotateOut`, `zoomOut`
 
 **Magic animations:**
+
 - `magic`, `twisterInDown`, `swap`, `puffIn`, `vanishIn`
 
 Usage:
@@ -982,23 +986,29 @@ Usage:
 [This will fade in from the left]{.fragment .fadeInLeft}
 ```
 
-<div class="project-buttons">
-<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments">
-  {{< fa brands github >}} Github
-</a>
-<a href="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/">
-  {{< fa door-open >}} Demo
-</a>
-</div>
+::: {.project-buttons}
+
+![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments)
+![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)
+
+:::
 
 ### Tabset {#tabset}
 
 The [quarto-revealjs-tabset](https://github.com/mcanouil/quarto-revealjs-tabset) extension turns tabs into fragments,
 so they can be navigated with arrow keys or a clicker instead of requiring mouse clicks.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-tabset extension" src="https://m.canouil.dev/quarto-revealjs-tabset/">
-Demo of the quarto-revealjs-tabset extension: tabs in a panel tabset are treated as fragments, enabling keyboard navigation through tabs without mouse clicks.
-</iframe>
+![
+  Demo of the quarto-revealjs-tabset extension: tabs in a panel tabset are treated as fragments, enabling keyboard navigation through tabs without mouse clicks.
+](
+  https://m.canouil.dev/quarto-revealjs-tabset/
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Demo of the quarto-revealjs-tabset extension"
+}
 
 To install:
 
@@ -1024,7 +1034,7 @@ No special classes or fragment divs are needed:
 ````markdown
 ## Slide with Tabset
 
-:::: {.panel-tabset}
+::: {.panel-tabset}
 
 ### Tab 1
 
@@ -1046,11 +1056,9 @@ It supports multiple tabsets per slide, nested fragments within tabs, and bidire
 
 When exporting to PDF, each tab automatically appears on its own page without needing `pdf-separate-fragments: true` globally.
 
-<div class="project-buttons">
-<a href="https://github.com/mcanouil/quarto-revealjs-tabset">
-  {{< fa brands github >}} Github
-</a>
-<a href="https://m.canouil.dev/quarto-revealjs-tabset/">
-  {{< fa door-open >}} Demo
-</a>
-</div>
+::: {.project-buttons}
+
+![{{< fa brands github >}} Github](https://github.com/mcanouil/quarto-revealjs-tabset)
+![{{< fa door-open >}} Demo](https://m.canouil.dev/quarto-revealjs-tabset/)
+
+:::

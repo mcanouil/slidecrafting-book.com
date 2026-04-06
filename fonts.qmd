@@ -1,6 +1,6 @@
 ---
 title: "Fonts"
-description: "How to find, apply, and embed fonts in Quarto reveal.js slides using Google Fonts, Sass variables, and local font files with @font-face."
+description: "How to find, apply, and embed fonts in Quarto reveal.js slides using Google Fonts, Sass variables, and local font files with `@font-face`."
 ---
 
 ## Finding Fonts
@@ -48,9 +48,17 @@ $presentation-heading-font: 'IBM Plex Serif', serif;
 
 Which, when rendered, results in the following slides.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Slides with Google Fonts applied (Manrope body, IBM Plex Serif headings)" src="examples/fonts/google-fonts.html">
-Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for headings, demonstrating bold and italic font weights in use.
-</iframe>
+![
+  Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for headings, demonstrating bold and italic font weights in use.
+](
+  examples/fonts/google-fonts.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Slides with Google Fonts applied (Manrope body, IBM Plex Serif headings)"
+}
 
 Notice how the fonts we used allow us to bold the words "finished presentation" and italicize "content and executable code".
 If you don't see those working, it is because you either didn't select those high font weights to allow for boldness,
@@ -83,9 +91,17 @@ supplying the fonts instead of downloading them will reduce the load time for yo
 
 I just added some new code to a slide.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Code slides before embedding FiraCode (no ligatures)" src="examples/fonts/before-fira.html">
-Code slides before embedding FiraCode: multi-character operators like `!=` and `|>` appear as plain separate characters without ligatures.
-</iframe>
+![
+  Code slides before embedding FiraCode: multi-character operators like `!=` and `|>` appear as plain separate characters without ligatures.
+](
+  examples/fonts/before-fira.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Code slides before embedding FiraCode (no ligatures)"
+}
 
 And this code uses some multi-character symbols like `!=` and `|>`.
 These and many like them are common to all the different programming languages,
@@ -120,6 +136,14 @@ An [issue has been filed](https://github.com/quarto-dev/quarto-cli/issues/5712) 
 
 With all of that, we now have beautiful ligatures.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Code slides after embedding FiraCode (with ligatures)" src="examples/fonts/after-fira.html">
-Same code slides after embedding FiraCode via `@font-face`: operators like `!=` and `|>` are rendered as beautiful single-glyph ligatures.
-</iframe>
+![
+  Same code slides after embedding FiraCode via `@font-face`: operators like `!=` and `|>` are rendered as beautiful single-glyph ligatures.
+](
+  examples/fonts/after-fira.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Code slides after embedding FiraCode (with ligatures)"
+}

@@ -7,7 +7,7 @@ format:
 
 ## Color Changing Title Text
 
-:::: {.fragment .color data-color="orange"}
+::: {.fragment .color data-color="orange"}
 :::
 
 Press → and ← to change colors

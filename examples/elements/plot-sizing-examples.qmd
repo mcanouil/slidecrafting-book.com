@@ -65,7 +65,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch - `out-width: 6in` & `out-height: 3in`
 :::
 
@@ -84,7 +84,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch - `out-width: 12in` & `out-height: 6in`
 :::
 
@@ -103,7 +103,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 12` & `fig-height: 8`
 :::
 
@@ -123,7 +123,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 9` & `fig-height: 5`
 :::
 
@@ -142,7 +142,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 6` & `fig-height: 3.5`
 :::
 
@@ -160,7 +160,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 ```
 
 ##
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 3` & `fig-height: 1.6`
 :::
 
@@ -179,7 +179,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 5` & `fig-height: 5`
 :::
 
@@ -198,7 +198,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 6` & `fig-asp: 0.618`
 :::
 
@@ -217,7 +217,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 4` & `fig-asp: 0.618`
 :::
 
@@ -235,7 +235,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 ```
 
 ##
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 4` & `fig-asp: 0.618` & `fig-align: left`
 :::
 
@@ -255,7 +255,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 4` & `fig-asp: 0.618` & `fig-align: center`
 :::
 
@@ -276,7 +276,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 4` & `fig-asp: 0.618` & `fig-align: right`
 :::
 
@@ -296,7 +296,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 3` & `fig-height: 1.6` & `fig-dpi: 50`
 :::
 
@@ -316,7 +316,7 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 3` & `fig-height: 1.6` & `fig-dpi: 300`
 :::
 
@@ -336,12 +336,12 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 
 ##
 
-:::: r-fit-text
+::: r-fit-text
 auto-stretch `fig-width: 4` & `fig-asp: 1.236`
 :::
 
-:::: {.columns}
-:::: {.column}
+::: {.columns}
+::: {.column}
 ```{r}
 #| fig-width: 4
 #| fig-asp: 1.236
@@ -356,6 +356,6 @@ ggplot(diamonds, aes(carat, price, color = clarity)) +
 ```
 
 :::
-:::: {.column}
+::: {.column}
 :::
 :::

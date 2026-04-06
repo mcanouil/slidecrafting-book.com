@@ -44,12 +44,20 @@ but it is a way to downplay the "not-current" items
 
 These together yield these slides:
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Incremental list with .highlight-last CSS class" src="examples/fragments/tip-1.html">
-Incremental list with the `.highlight-last` CSS class: all items appear grey, and the most recently revealed item is highlighted in purple using the `.current-fragment` selector.
-</iframe>
+![
+  Incremental list with the `.highlight-last` CSS class: all items appear grey, and the most recently revealed item is highlighted in purple using the `.current-fragment` selector.
+](
+  examples/fragments/tip-1.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Incremental list with .highlight-last CSS class"
+}
 
-<a href="examples/fragments/tip-1.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/tip-1.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
+![{{< fa file >}}qmd](examples/fragments/tip-1.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands sass >}}scss](examples/fragments/tip-1.scss){.listing-video .btn-links target="_blank"}
 
 ## Changing fragments with CSS
 
@@ -79,7 +87,7 @@ Which corresponds to `before`, `after`, and `current`.
 }
 ```
 
-:::: {.callout-important}
+::: {.callout-important}
 The reason why this ordering is important is because `.visible` and `.current-fragment` are triggered at the same time.
 And because I simplified the order a little too much. There isn't `before`, `current`, and `after`.
 Instead, we have `always`, `current`, and `not-before-current`.
@@ -106,7 +114,7 @@ you should be careful about position and size.
 While you might be able to make it work,
 it is likely to cause a lot of shifting and jittering as elements resize.
 
-:::: {.callout-tip}
+::: {.callout-tip}
 Looking at the [source code](https://github.com/quarto-dev/quarto-cli/blob/39dc173c4869ebaf4d6bb087a972acb87533b64e/src/resources/formats/revealjs/reveal/css/reveal.scss#L67-L207) for the default fragments gives us a good idea for how different styles of fragments work.
 :::
 
@@ -135,12 +143,20 @@ This leaves us with the following fragment:
 
 Advancing and de-advancing(?) the slides showcase how the different classes are applied for fragments.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="RGB fragment demo illustrating before, current, and after fragment phases" src="examples/fragments/fragment-rgb.html">
-RGB fragment demo illustrating the three fragment phases: text is red (before), green (current), and blue (after/visible), with opacity and visibility unset so the text is always visible.
-</iframe>
+![
+  RGB fragment demo illustrating the three fragment phases: text is red (before), green (current), and blue (after/visible), with opacity and visibility unset so the text is always visible.
+](
+  examples/fragments/fragment-rgb.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="RGB fragment demo illustrating before, current, and after fragment phases"
+}
 
-<a href="examples/fragments/fragment-rgb.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/rgb.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
+![{{< fa file >}}qmd](examples/fragments/fragment-rgb.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands sass >}}scss](examples/fragments/rgb.scss){.listing-video .btn-links target="_blank"}
 
 Worth noting that this single fragment could be rewritten as the following using SCSS nesting.
 
@@ -268,12 +284,20 @@ $colors: (
 }
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Background highlight fragment demo with custom .hl-* classes" src="examples/fragments/fragment-highlighter.html">
-Background highlight fragment demo: text items are highlighted with colored backgrounds (orange, yellow, brown, pink) using custom `.hl-*` fragment classes generated via a SCSS `@each` loop.
-</iframe>
+![
+  Background highlight fragment demo: text items are highlighted with colored backgrounds (orange, yellow, brown, pink) using custom `.hl-*` fragment classes generated via a SCSS `@each` loop.
+](
+  examples/fragments/fragment-highlighter.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Background highlight fragment demo with custom .hl-* classes"
+}
 
-<a href="examples/fragments/fragment-highlighter.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/highlighter.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
+![{{< fa file >}}qmd](examples/fragments/fragment-highlighter.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands sass >}}scss](examples/fragments/highlighter.scss){.listing-video .btn-links target="_blank"}
 
 ## Example 3
 
@@ -477,7 +501,7 @@ Reveal.getCurrentSlide()
 
 From this, we can get to the title using `.querySelector()`
 
-:::: {.callout-note}
+::: {.callout-note}
 We don't need `.querySelectorAll()` because by definition there will only be one `h2` on a quarto slide using default options.
 :::
 
@@ -525,7 +549,7 @@ Below is the same fragment div as before,
 but with a data set value named `color`.
 
 ```markdown
-:::: {.fragment .color data-color="orange"}
+::: {.fragment .color data-color="orange"}
 :::
 ```
 
@@ -535,7 +559,7 @@ We can now on the javascript side pull out this value with ease.
 color = event.fragment.dataset.color;
 ```
 
-:::: {.callout-warning}
+::: {.callout-warning}
 We are not doing any input checking,
 so this code will fail silently if you don't have a color specified in the div.
 :::
@@ -578,12 +602,20 @@ Reveal.on('fragmenthidden', (event) => {
 });
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Fragment that changes the slide heading color on each trigger" src="examples/fragments/fragment-color.html">
-Fragment that changes the slide heading color on each trigger: an empty `.color` fragment div uses a JavaScript `Reveal.on('fragmentshown')` listener to set a random color on the `h2` element.
-</iframe>
+![
+  Fragment that changes the slide heading color on each trigger: an empty `.color` fragment div uses a JavaScript `Reveal.on('fragmentshown')` listener to set a random color on the `h2` element.
+](
+  examples/fragments/fragment-color.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Fragment that changes the slide heading color on each trigger"
+}
 
-<a href="examples/fragments/fragment-color.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/color.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
+![{{< fa file >}}qmd](examples/fragments/fragment-color.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands js >}}js](examples/fragments/color.html){.listing-video .btn-links target="_blank"}
 
 ## Scroll output
 
@@ -655,20 +687,28 @@ Reveal.on('fragmenthidden', (event) => {
 });
 ```
 
-:::: {.callout-note}
+::: {.callout-note}
 Some changes to our slides are really hard to reverse.
 They would thus make for bad fragments.
 You could implement them halfway without the `fragmenthidden` and you would just need to be really confident that you never have to go backwards in your slides.
 :::
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Fragment that smoothly scrolls a long code output block" src="examples/fragments/fragment-scroll.html">
-Fragment that smoothly scrolls a long code output block: advancing the fragment triggers `.scrollTo({top: 1000, behavior: "smooth"})` via JavaScript; reversing scrolls back to top.
-</iframe>
+![
+  Fragment that smoothly scrolls a long code output block: advancing the fragment triggers `.scrollTo({top: 1000, behavior: "smooth"})` via JavaScript; reversing scrolls back to top.
+](
+  examples/fragments/fragment-scroll.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Fragment that smoothly scrolls a long code output block"
+}
 
-<a href="examples/fragments/fragment-scroll.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/scroll.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
+![{{< fa file >}}qmd](examples/fragments/fragment-scroll.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands js >}}js](examples/fragments/scroll.html){.listing-video .btn-links target="_blank"}
 
-:::: {.callout-tip}
+::: {.callout-tip}
 We didn't do it here,
 but you could use dataset values to help determine which elements should be scrolled and how much to scroll them by instead of hardcoding it all as we do here.
 :::
@@ -714,12 +754,20 @@ Reveal.on('fragmenthidden', (event) => {
 });
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Fragment that switches between two tabs in a tabset" src="examples/fragments/fragment-tabset.html">
-Fragment that switches between two tabs in a tabset: a `.tabswitch` fragment uses JavaScript `.click()` to toggle between the first and last tab without needing a mouse.
-</iframe>
+![
+  Fragment that switches between two tabs in a tabset: a `.tabswitch` fragment uses JavaScript `.click()` to toggle between the first and last tab without needing a mouse.
+](
+  examples/fragments/fragment-tabset.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Fragment that switches between two tabs in a tabset"
+}
 
-<a href="examples/fragments/fragment-tabset.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/tabset.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
+![{{< fa file >}}qmd](examples/fragments/fragment-tabset.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands js >}}js](examples/fragments/tabset.html){.listing-video .btn-links target="_blank"}
 
 The above only works with 2 tabs, 
 since we are toggling between the first and last one with `first-of-type` and `last-of-type`.
@@ -745,12 +793,20 @@ next we identify the index of current tab that we are on.
 Lastly we select the next tab and `.click()` on it.
 For the reverse we do `currentIndex - 1` instead.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Fragment switching any number of tabs using querySelectorAll" src="examples/fragments/fragment-tabset-full.html">
-Extended tabset fragment supporting any number of tabs: uses `querySelectorAll` to find all tabs, then advances to the next tab by index on each fragment trigger.
-</iframe>
+![
+  Extended tabset fragment supporting any number of tabs: uses `querySelectorAll` to find all tabs, then advances to the next tab by index on each fragment trigger.
+](
+  examples/fragments/fragment-tabset-full.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Fragment switching any number of tabs using querySelectorAll"
+}
 
-<a href="examples/fragments/fragment-tabset-full.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/tabset-full.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
+![{{< fa file >}}qmd](examples/fragments/fragment-tabset-full.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands js >}}js](examples/fragments/tabset-full.html){.listing-video .btn-links target="_blank"}
 
 ## advance embedded slides
 
@@ -801,12 +857,20 @@ Reveal.on('fragmenthidden', event => {
 });
 ```
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of embedded slide advancement via contentWindow.Reveal.right()" src="https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/">
-Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a `.advance-slide` fragment controls it using `iframe.contentWindow.Reveal.right()` so a clicker can advance both the outer and inner slides.
-</iframe>
+![
+  Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a `.advance-slide` fragment controls it using `iframe.contentWindow.Reveal.right()` so a clicker can advance both the outer and inner slides.
+](
+  https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Demo of embedded slide advancement via contentWindow.Reveal.right()"
+}
 
-<a href="examples/fragments/fragment-advance.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/fragments/advance.html" target="_blank" class="listing-video btn-links">{{< fa brands js >}}js</a>
+![{{< fa file >}}qmd](examples/fragments/fragment-advance.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands js >}}js](examples/fragments/advance.html){.listing-video .btn-links target="_blank"}
 
 ## Fragment Extensions
 
@@ -817,9 +881,17 @@ The following extensions provide additional fragment capabilities beyond what we
 The [quarto-roughnotation](https://github.com/EmilHvitfeldt/quarto-roughnotation) extension uses the [Rough Notation](https://roughnotation.com/) JavaScript library to add hand-drawn styled annotations to your slides.
 These annotations can circle, underline, highlight, or strike-through text with an animated sketchy appearance.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-roughnotation extension" src="https://emilhvitfeldt.github.io/quarto-roughnotation/examples/example.html">
-Demo of the quarto-roughnotation extension: hand-drawn style annotations (circle, underline, highlight, strike-through, bracket) applied to text as animated fragments using the Rough Notation JavaScript library.
-</iframe>
+![
+  Demo of the quarto-roughnotation extension: hand-drawn style annotations (circle, underline, highlight, strike-through, bracket) applied to text as animated fragments using the Rough Notation JavaScript library.
+](
+  https://emilhvitfeldt.github.io/quarto-roughnotation/examples/example.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Demo of the quarto-roughnotation extension"
+}
 
 To install:
 
@@ -850,22 +922,28 @@ You can customize colors and other properties using data attributes:
 [Important!]{.rn-underline data-rn-color="red" .fragment}
 ```
 
-<div class="project-buttons">
-<a href="https://github.com/EmilHvitfeldt/quarto-roughnotation">
-  {{< fa brands github >}} Github
-</a>
-<a href="https://emilhvitfeldt.github.io/quarto-roughnotation/">
-  {{< fa door-open >}} Demo
-</a>
-</div>
+::: {.project-buttons}
+
+![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-roughnotation)
+![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-roughnotation/)
+
+:::
 
 ### More Fragments
 
 The [quarto-revealjs-more-fragments](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments) extension adds over 90 additional fragment animations to your presentations using the [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-more-fragments extension (90+ animations)" src="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/examples/example.html">
-Demo of the quarto-revealjs-more-fragments extension: over 90 additional CSS animation classes (bounce, fadeIn, zoomOut, magic, etc.) from Animate.css and Magic.css usable as Reveal.js fragments.
-</iframe>
+![
+  Demo of the quarto-revealjs-more-fragments extension: over 90 additional CSS animation classes (bounce, fadeIn, zoomOut, magic, etc.) from Animate.css and Magic.css usable as Reveal.js fragments.
+](
+  https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/examples/example.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Demo of the quarto-revealjs-more-fragments extension (90+ animations)"
+}
 
 To install:
 
@@ -896,11 +974,9 @@ Usage:
 [This will fade in from the left]{.fragment .fadeInLeft}
 ```
 
-<div class="project-buttons">
-<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments">
-  {{< fa brands github >}} Github
-</a>
-<a href="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/">
-  {{< fa door-open >}} Demo
-</a>
-</div>
+::: {.project-buttons}
+
+![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments)
+![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)
+
+:::

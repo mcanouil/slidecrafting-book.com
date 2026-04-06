@@ -6,6 +6,8 @@ The [quarto-revealjs-letterbox](https://github.com/EmilHvitfeldt/quarto-revealjs
 
 Letterbox is a presentation style that adds colored bars at the top and bottom of your slides, creating a cinematic feel while also providing a consistent visual anchor for your content. This style became popular through the xaringan R package and many presenters found it helpful for branding and visual consistency.
 
+![](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/.png "Demo of the quarto-revealjs-letterbox extension")
+
 Demo of the letterbox extension: slides with colored bars at the top and bottom creating a cinematic framing effect, similar to the popular xaringan letterbox style.
 
 ## 12.2 Installation
@@ -59,4 +61,4 @@ format:
 
 This allows you to have the letterbox style while still applying all the color, font, and size customizations discussed in earlier chapters.
 
-[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox) [ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/)
+![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/.png)

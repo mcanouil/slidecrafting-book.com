@@ -37,7 +37,7 @@ These together yield these slides:
 
 Incremental list with the `.highlight-last` CSS class: all items appear grey, and the most recently revealed item is highlighted in purple using the `.current-fragment` selector.
 
-[qmd](examples/fragments/tip-1.qmd) [scss](examples/fragments/tip-1.scss)
+![qmd](examples/fragments/tip-1.qmd) ![scss](examples/fragments/tip-1.scss)
 
 ## 11.2 Changing fragments with CSS
 
@@ -105,7 +105,7 @@ Advancing and de-advancing(?) the slides showcase how the different classes are 
 
 RGB fragment demo illustrating the three fragment phases: text is red (before), green (current), and blue (after/visible), with opacity and visibility unset so the text is always visible.
 
-[qmd](examples/fragments/fragment-rgb.qmd) [scss](examples/fragments/rgb.scss)
+![qmd](examples/fragments/fragment-rgb.qmd) ![scss](examples/fragments/rgb.scss)
 
 Worth noting that this single fragment could be rewritten as the following using SCSS nesting.
 
@@ -228,7 +228,7 @@ $colors: (
 
 Background highlight fragment demo: text items are highlighted with colored backgrounds (orange, yellow, brown, pink) using custom `.hl-*` fragment classes generated via a SCSS `@each` loop.
 
-[qmd](examples/fragments/fragment-highlighter.qmd) [scss](examples/fragments/highlighter.scss)
+![qmd](examples/fragments/fragment-highlighter.qmd) ![scss](examples/fragments/highlighter.scss)
 
 ## 11.5 Example 3
 
@@ -432,7 +432,7 @@ We could stop here. But I want to show a little more with this example. For righ
 Luckily it is quite effortless to specify data set values in quarto. Below is the same fragment div as before, but with a data set value named `color`.
 
 ``` markdown
-:::: {.fragment .color data-color="orange"}
+::: {.fragment .color data-color="orange"}
 :::
 ```
 
@@ -486,7 +486,7 @@ Reveal.on('fragmenthidden', (event) => {
 
 Fragment that changes the slide heading color on each trigger: an empty `.color` fragment div uses a JavaScript `Reveal.on('fragmentshown')` listener to set a random color on the `h2` element.
 
-[qmd](examples/fragments/fragment-color.qmd) [js](examples/fragments/color.llms.md)
+![qmd](examples/fragments/fragment-color.qmd)
 
 ## 11.8 Scroll output
 
@@ -554,7 +554,7 @@ Reveal.on('fragmenthidden', (event) => {
 
 Fragment that smoothly scrolls a long code output block: advancing the fragment triggers `.scrollTo({top: 1000, behavior: "smooth"})` via JavaScript; reversing scrolls back to top.
 
-[qmd](examples/fragments/fragment-scroll.qmd) [js](examples/fragments/scroll.llms.md)
+![qmd](examples/fragments/fragment-scroll.qmd)
 
 > **TIP:**
 >
@@ -597,7 +597,7 @@ Reveal.on('fragmenthidden', (event) => {
 
 Fragment that switches between two tabs in a tabset: a `.tabswitch` fragment uses JavaScript `.click()` to toggle between the first and last tab without needing a mouse.
 
-[qmd](examples/fragments/fragment-tabset.qmd) [js](examples/fragments/tabset.llms.md)
+![qmd](examples/fragments/fragment-tabset.qmd)
 
 The above only works with 2 tabs, since we are toggling between the first and last one with `first-of-type` and `last-of-type`.
 
@@ -619,7 +619,7 @@ We have a slightly different strategy now. First we find all the tabs. next we i
 
 Extended tabset fragment supporting any number of tabs: uses `querySelectorAll` to find all tabs, then advances to the next tab by index on each fragment trigger.
 
-[qmd](examples/fragments/fragment-tabset-full.qmd) [js](examples/fragments/tabset-full.llms.md)
+![qmd](examples/fragments/fragment-tabset-full.qmd)
 
 ## 11.10 advance embedded slides
 
@@ -662,9 +662,11 @@ Reveal.on('fragmenthidden', event => {
 });
 ```
 
+![](https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/.png "Demo of embedded slide advancement via contentWindow.Reveal.right()")
+
 Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a `.advance-slide` fragment controls it using `iframe.contentWindow.Reveal.right()` so a clicker can advance both the outer and inner slides.
 
-[qmd](examples/fragments/fragment-advance.qmd) [js](examples/fragments/advance.llms.md)
+![qmd](examples/fragments/fragment-advance.qmd)
 
 ## 11.11 Fragment Extensions
 
@@ -705,7 +707,7 @@ You can customize colors and other properties using data attributes:
 [Important!]{.rn-underline data-rn-color="red" .fragment}
 ```
 
-[ Github](https://github.com/EmilHvitfeldt/quarto-roughnotation) [ Demo](https://emilhvitfeldt.github.io/quarto-roughnotation/)
+![ Github](https://github.com/EmilHvitfeldt/quarto-roughnotation.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-roughnotation/.png)
 
 ### 11.11.2 More Fragments
 
@@ -737,4 +739,4 @@ Usage:
 [This will fade in from the left]{.fragment .fadeInLeft}
 ```
 
-[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments) [ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)
+![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/.png)

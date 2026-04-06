@@ -50,8 +50,16 @@ geom_smooth([method = "lm"]{.fragment .highlight-red}, [formula = "y ~ x"]{.frag
 
 seperately highlights the code `method = "lm"` then `formula = "y ~ x"` in red and blue.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Hand-styled code with incremental fragment highlighting" src="examples/manual-code/tip-4.html">
-Slide deck showing hand-styled code with incremental fragment highlighting: a ggplot2 code block where `method = "lm"` is highlighted in red on the first fragment advance, then `formula = "y ~ x"` in blue on the second.
-</iframe>
+![
+  Slide deck showing hand-styled code with incremental fragment highlighting: a ggplot2 code block where `method = "lm"` is highlighted in red on the first fragment advance, then `formula = "y ~ x"` in blue on the second.
+](
+  examples/manual-code/tip-4.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Hand-styled code with incremental fragment highlighting"
+}
 
-<a href="examples/manual-code/tip-4.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
+![{{< fa file >}}qmd](examples/manual-code/tip-4.qmd){.listing-slides .btn-links target="_blank"}

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.35">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-10a99e03521ec9ce62a914b0d4603325.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c40c0ddd606b58ba960743f60575934e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c637c4387fd00c9d762d829c448c9f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e8267730ddd4843cadbd019f792683ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -119,6 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="8&nbsp; Layout – Slidecrafting">
 <meta property="og:description" content="Layout techniques for Quarto reveal.js slides: multi-column layouts, r-fit-text, absolute positioning, background images, text overlays, and the paper card effect.">
+<meta property="og:image" content="https://slidecrafting-book.com/examples/layout/left-right.qmd">
 <meta property="og:site_name" content="Slidecrafting">
 </head>
 
@@ -351,7 +352,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pulling-things-left-and-right" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="pulling-things-left-and-right"><span class="header-section-number">8.1</span> Pulling things left and right</h2>
 <p>Using <a href="https://quarto.org/docs/presentations/revealjs/#multiple-columns">multiple columns</a> is a nice way to split up the content of your slides. I use it so much that I have a <a href="https://rstudio.github.io/rstudio-extensions/rstudio_snippets.html">snippet</a> to save time since I use it so much. It works great for side-by-side comparisons as well. This is done using the following syntax. We use the <code>width</code> attribute to determine the width of each of the columns.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>::: {.columns}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>::: {.column width="40%"}</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Left column</span>
@@ -361,12 +362,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Right column</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Standard two-column layout (40% left, 60% right)" src="examples/layout/left-right.html#/standard-columns">
-Standard two-column layout: 40% left column and 60% right column using the <code>.columns</code> / <code>.column</code> div syntax.
-</iframe>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/left-right.html#/standard-columns.png" class="slide-deck" loading="lazy" title="Standard two-column layout (40% left, 60% right)" width="560" height="373"></p>
+<figcaption>Standard two-column layout: 40% left column and 60% right column using the <code>.columns</code> / <code>.column</code> div syntax.</figcaption>
+</figure>
+</div>
 <p>but you can use it in quite a few ways beyond this! Firstly, each column is by itself a div, so you can style it directly. Such as making the right column have the right aligned text.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>::: {.columns}</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>Left column</span>
@@ -376,12 +380,15 @@ Standard two-column layout: 40% left column and 60% right column using the <code
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Right column</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Two equal columns with right-justified text in the right column" src="examples/layout/left-right.html#/justified-columns">
-Two equal columns where the right column has <code>style="text-align: right;"</code> applied directly to the column div for right-justified text.
-</iframe>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/left-right.html#/justified-columns.png" class="slide-deck" loading="lazy" title="Two equal columns with right-justified text in the right column" width="560" height="373"></p>
+<figcaption>Two equal columns where the right column has <code>style="text-align: right;"</code> applied directly to the column div for right-justified text.</figcaption>
+</figure>
+</div>
 <p>The structure of columns doesn’t require that we just use 2 columns. You can do as many columns as you want, but generally, you will have a hard time using more than 4.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>::: {.columns}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>::: {.column width="25%"}</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>1st column</span>
@@ -399,12 +406,15 @@ Two equal columns where the right column has <code>style="text-align: right;"</c
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>4th column</span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Four equal-width columns (25% each)" src="examples/layout/left-right.html#/many-columns">
-Four equal-width columns (25% each) demonstrating that the <code>.columns</code> syntax is not limited to two columns.
-</iframe>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/left-right.html#/many-columns.png" class="slide-deck" loading="lazy" title="Four equal-width columns (25% each)" width="560" height="373"></p>
+<figcaption>Four equal-width columns (25% each) demonstrating that the <code>.columns</code> syntax is not limited to two columns.</figcaption>
+</figure>
+</div>
 <p>Another way I like to use columns is by keeping one of them empty. This way provides a fast and easy way to add space or put text in specific locations.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.columns}</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>::: {.column width="30%"}</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>:::</span>
@@ -413,11 +423,19 @@ Four equal-width columns (25% each) demonstrating that the <code>.columns</code>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Only right side</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>::::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Empty 30% left column pushing content into the 70% right column" src="examples/layout/left-right.html#/one-sided--column">
-Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.
-</iframe>
-<p><a href="examples/layout/left-right.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/left-right.html#/one-sided--column.png" class="slide-deck" loading="lazy" title="Empty 30% left column pushing content into the 70% right column" width="560" height="373"></p>
+<figcaption>Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="examples/layout/left-right.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
+<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
+</figure>
+</div>
 </section>
 <section id="r-fit-text" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="r-fit-text"><span class="header-section-number">8.2</span> r-fit-text</h2>
@@ -425,27 +443,36 @@ Empty 30% left column pushing all content into the 70% right column, demonstrati
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: r-fit-text</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Big Text</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Single line of text stretched to full slide width with r-fit-text" src="examples/layout/r-fit-text.html#/section">
-Single line of text inside <code>::: r-fit-text</code> stretched to fill the full horizontal width of the slide.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/r-fit-text.html#/section.png" class="slide-deck" loading="lazy" title="Single line of text stretched to full slide width with r-fit-text" width="560" height="373"></p>
+<figcaption>Single line of text inside <code>::: r-fit-text</code> stretched to fill the full horizontal width of the slide.</figcaption>
+</figure>
+</div>
 <p>This works well combined with the <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#center">center</a> class, which makes sure the text appears in the center vertically on the slide.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## {.center}</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>::: r-fit-text</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>This fits perfectly!</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="r-fit-text combined with .center class for vertical and horizontal centering" src="examples/layout/r-fit-text.html#/section-1">
-<code>r-fit-text</code> combined with the <code>.center</code> slide class: the oversized text is centered both horizontally and vertically on the slide.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/r-fit-text.html#/section-1.png" class="slide-deck" loading="lazy" title="r-fit-text combined with .center class for vertical and horizontal centering" width="560" height="373"></p>
+<figcaption><code>r-fit-text</code> combined with the <code>.center</code> slide class: the oversized text is centered both horizontally and vertically on the slide.</figcaption>
+</figure>
+</div>
 <p>One thing about using <code>r-fit-text</code> is that it applies the same text size to all the text inside it, so when you use it across multiple lines, you won’t get the same effect.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>::: r-fit-text</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>This fits perfectly!</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>On two lines</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Two lines in one r-fit-text block forced to the same font size" src="examples/layout/r-fit-text.html#/section-2">
-Two lines of text in a single <code>r-fit-text</code> block: both lines are forced to the same smaller font size determined by the longer line, rather than each filling the slide independently.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/r-fit-text.html#/section-2.png" class="slide-deck" loading="lazy" title="Two lines in one r-fit-text block forced to the same font size" width="560" height="373"></p>
+<figcaption>Two lines of text in a single <code>r-fit-text</code> block: both lines are forced to the same smaller font size determined by the longer line, rather than each filling the slide independently.</figcaption>
+</figure>
+</div>
 <p>This can however be fixed, by using a <code>r-fit-text</code> for each line of text.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>::: r-fit-text</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>This fits perfectly!</span>
@@ -454,17 +481,28 @@ Two lines of text in a single <code>r-fit-text</code> block: both lines are forc
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>::: r-fit-text</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>On two lines</span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Two separate r-fit-text blocks each filling the full slide width" src="examples/layout/r-fit-text.html#/section-3">
-Two separate <code>r-fit-text</code> blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.
-</iframe>
-<p><a href="examples/layout/r-fit-text.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/r-fit-text.html#/section-3.png" class="slide-deck" loading="lazy" title="Two separate r-fit-text blocks each filling the full slide width" width="560" height="373"></p>
+<figcaption>Two separate <code>r-fit-text</code> blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="examples/layout/r-fit-text.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
+<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
+</figure>
+</div>
 </section>
 <section id="loud-extension" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="loud-extension"><span class="header-section-number">8.3</span> Loud Extension</h2>
 <p>If you find yourself using <code>r-fit-text</code> frequently, the <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-loud">quarto-revealjs-loud</a> extension automates this process. It automatically makes text big when there isn’t much content on a slide.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-loud extension" src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/">
-Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/.png" class="slide-deck figure-img" loading="lazy" title="Demo of the quarto-revealjs-loud extension" width="560" height="373"></p>
+<figcaption>Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g.&nbsp;a single sentence or quote) automatically have their text scaled up to fill the available space.</figcaption>
+</figure>
+</div>
 <p>To install:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> add EmilHvitfeldt/quarto-revealjs-loud</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Once installed, add it to your YAML:</p>
@@ -474,7 +512,7 @@ Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> loud</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The extension will automatically detect slides with minimal content and scale the text to fill the available space. This is particularly useful for quote slides, section breaks, or emphasis slides where you want a single statement to have maximum impact.</p>
 <div class="project-buttons">
-<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-loud"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a> <a href="https://emilhvitfeldt.github.io/quarto-revealjs-loud/"> <i class="fa-solid fa-door-open" aria-label="door-open"></i> Demo </a></p>
+<p><img src="https://github.com/EmilHvitfeldt/quarto-revealjs-loud.png" class="img-fluid" alt=" Github"> <img src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/.png" class="img-fluid" alt=" Demo"></p>
 </div>
 </section>
 <section id="using-images" class="level2" data-number="8.4">
@@ -486,11 +524,19 @@ Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a
 <p>The basic way of adding figures is using the following syntax</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](holly-mandarich.jpg)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>where <code>holly-mandarich.jpg</code> is the path to the image. We can change some options such as adding <code>{fig-align="right"}</code> to the end to change the alignment. But I end up not using this style that much because it is added as content, so it will push other content around, and it adheres to margins which I rarely want for tasks like this.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Basic figure added with standard Markdown syntax" src="examples/layout/image-basics.html">
-Basic figure added with standard Markdown syntax <code>![](image.jpg)</code>: image is inserted as content, respects slide margins, and pushes other content around.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/image-basics.html" class="slide-deck" loading="lazy" title="Basic figure added with standard Markdown syntax" width="560" height="373"></p>
+<figcaption>Basic figure added with standard Markdown syntax <code>![](image.jpg)</code>: image is inserted as content, respects slide margins, and pushes other content around.</figcaption>
+</figure>
+</div>
 <p>Photo by <a href="https://unsplash.com/@hollymandarich?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Holly Mandarich</a> on <a href="https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<p><a href="examples/layout/image-basics.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="examples/layout/image-basics.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
+<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
+</figure>
+</div>
 </section>
 <section id="absolute-position" class="level3" data-number="8.4.2">
 <h3 data-number="8.4.2" class="anchored" data-anchor-id="absolute-position"><span class="header-section-number">8.4.2</span> Absolute position</h3>
@@ -533,20 +579,31 @@ Basic figure added with standard Markdown syntax <code>![](image.jpg)</code>: im
 </tbody>
 </table>
 <p>you need one of <code>left</code> and <code>right</code> and one of <code>bottom</code> and <code>top</code> to give the correct location. I find that just using one of <code>width</code> or <code>height</code> is easier as it doesn’t distort the image. All of these attributes accept all known CSS values, such as pixels, inches, and percentages. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">All about CSS length</a> for more information.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Image placed with .absolute positioning at top-right corner" src="examples/layout/image-absolute.html">
-Image placed with <code>.absolute</code> positioning: <code>{.absolute top=0 right=0 height="100%"}</code> places the image flush against the top-right corner at full slide height, independent of content flow.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/image-absolute.html" class="slide-deck" loading="lazy" title="Image placed with .absolute positioning at top-right corner" width="560" height="373"></p>
+<figcaption>Image placed with <code>.absolute</code> positioning: <code>{.absolute top=0 right=0 height="100%"}</code> places the image flush against the top-right corner at full slide height, independent of content flow.</figcaption>
+</figure>
+</div>
 <p>All images in revealjs default to the following maximum sizes:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>max-width<span class="in">:</span> 95%;</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>max-height<span class="in">:</span> 95%;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>No matter how large we set <code>width</code> or <code>height</code> we are overruled by <code>max-width</code> and <code>max-height</code>. We can make the image any size by overruling those. Specifically, we can unset them with <code>style="max-height: unset; max-width: unset;"</code>.</p>
 <p>With some experimentation, we can size the image such that it is where we want it. Notice that we are using negative locations to make this happen as <code>0</code> is inside the slide.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](noelle-rebekah.jpg)</span>{.absolute top="-10%" right="-10%" height="120%" style="max-height: unset;"}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Image with max-height unset overflowing slide edges at 120% height" src="examples/layout/image-absolute.html#/no-restrictions">
-Image with <code>max-height: unset; max-width: unset;</code> and negative position values: the image overflows the slide edges at 120% height, filling beyond the frame for a bleed effect.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/image-absolute.html#/no-restrictions.png" class="slide-deck" loading="lazy" title="Image with max-height unset overflowing slide edges at 120% height" width="560" height="373"></p>
+<figcaption>Image with <code>max-height: unset; max-width: unset;</code> and negative position values: the image overflows the slide edges at 120% height, filling beyond the frame for a bleed effect.</figcaption>
+</figure>
+</div>
 <p>Photo by <a href="https://unsplash.com/@noellerebekah?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Noelle Rebekah</a> on <a href="https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<p><a href="examples/layout/image-absolute.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="examples/layout/image-absolute.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
+<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -572,28 +629,47 @@ Warning
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">python is great</span><span class="co">]</span>{.absolute bottom="45%" left="20%"}</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">and so is R</span><span class="co">]</span>{.absolute bottom="0%" right="0%"}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Text elements placed at specific coordinates using .absolute" src="examples/layout/tip-5.html">
-Slide with text elements placed using <code>.absolute</code>: “python is great” and “and so is R” positioned at specific percentage coordinates on the slide using <code>bottom</code> and <code>left</code>/<code>right</code> attributes.
-</iframe>
-<p><a href="examples/layout/tip-5.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/tip-5.html" class="slide-deck" loading="lazy" title="Text elements placed at specific coordinates using .absolute" width="560" height="373"></p>
+<figcaption>Slide with text elements placed using <code>.absolute</code>: “python is great” and “and so is R” positioned at specific percentage coordinates on the slide using <code>bottom</code> and <code>left</code>/<code>right</code> attributes.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="examples/layout/tip-5.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
+<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
+</figure>
+</div>
 <section id="background-image" class="level3" data-number="8.5.1">
 <h3 data-number="8.5.1" class="anchored" data-anchor-id="background-image"><span class="header-section-number">8.5.1</span> Background image</h3>
 <p>The last way to add images, which I highly recommend is the use of background images. And in many ways, it is the simplest one.</p>
 <p>you specify it on the slide level in the following way:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Slide Title {background-image="galen-crout.jpg"}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Slide using background-image to fill the full viewport" src="examples/layout/image-background.html">
-Slide using <code>{background-image="photo.jpg"}</code> on the slide header: the image fills the entire slide viewport behind all content.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/image-background.html" class="slide-deck" loading="lazy" title="Slide using background-image to fill the full viewport" width="560" height="373"></p>
+<figcaption>Slide using <code>{background-image="photo.jpg"}</code> on the slide header: the image fills the entire slide viewport behind all content.</figcaption>
+</figure>
+</div>
 <p>you can set other options such as <a href="https://developer.mozilla.org/docs/Web/CSS/background-position">background-position</a> and <a href="https://developer.mozilla.org/docs/Web/CSS/background-repeat">background-repeat</a> but I rarely end up using them.</p>
 <p>I end up not setting a default title and use <code>.absolute</code> to place any content I want where I want it.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## {background-image="galen-crout.jpg"}</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">always explore</span><span class="co">]</span>{.absolute left="50%" top="20%" style="rotate: -10deg;"}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Background image with absolutely positioned rotated text overlay" src="examples/layout/image-background.html#/section">
-Background image slide with absolutely positioned text overlay: the word “always explore” placed at 50% left / 20% top with a slight rotation using <code>style="rotate: -10deg;"</code>.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/image-background.html#/section.png" class="slide-deck" loading="lazy" title="Background image with absolutely positioned rotated text overlay" width="560" height="373"></p>
+<figcaption>Background image slide with absolutely positioned text overlay: the word “always explore” placed at 50% left / 20% top with a slight rotation using <code>style="rotate: -10deg;"</code>.</figcaption>
+</figure>
+</div>
 <p>Photo by <a href="https://unsplash.com/@galen_crout?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Galen Crout</a> on <a href="https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<p><a href="examples/layout/image-background.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="examples/layout/image-background.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
+<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
+</figure>
+</div>
 <p>As we see here, the text positioning can change how the slides are perceived. Both in style and emotion, try to think about how you can incorporate text positioning to maximize engagement.</p>
 </section>
 </section>
@@ -601,9 +677,12 @@ Background image slide with absolutely positioned text overlay: the word “alwa
 <h2 data-number="8.6" class="anchored" data-anchor-id="overlayed-text-boxes"><span class="header-section-number">8.6</span> Overlayed Text Boxes</h2>
 <p>When using background images, it can be hard to place text on top of it, in a way that keeps the text readable. This is often an issue with images that are more busy or have colors that match. A simple fix is to overlay a box, and we then add text on you. If we take the first slide here as an example.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## {background-image="tim-marshall.jpg"}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Background image slide with no text overlay" src="examples/layout/overlay-textbox.html">
-Background image slide with no text overlay, showing how busy or high-contrast images make text placement difficult.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/overlay-textbox.html" class="slide-deck" loading="lazy" title="Background image slide with no text overlay" width="560" height="373"></p>
+<figcaption>Background image slide with no text overlay, showing how busy or high-contrast images make text placement difficult.</figcaption>
+</figure>
+</div>
 <p>First, we try to use <code>.absolute</code> to add some inspiring text. It adds text, but it is not easy to read at all!!</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## {background-image="tim-marshall.jpg"}</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -612,18 +691,24 @@ Background image slide with no text overlay, showing how busy or high-contrast i
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>Take Risks</span>
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Background image with absolutely positioned text (low contrast)" src="examples/layout/overlay-textbox.html#/section-1">
-Background image with absolutely positioned text “Be Brave / Take Risks” at 55% left, 55% top: text is present but hard to read due to insufficient contrast with the image.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/overlay-textbox.html#/section-1.png" class="slide-deck" loading="lazy" title="Background image with absolutely positioned text (low contrast)" width="560" height="373"></p>
+<figcaption>Background image with absolutely positioned text “Be Brave / Take Risks” at 55% left, 55% top: text is present but hard to read due to insufficient contrast with the image.</figcaption>
+</figure>
+</div>
 <p>But we can expand on this idea, adding a <code>background-color</code> to make it stand out. We also added some <code>padding</code>, otherwise the background would just be slightly bigger than the text itself.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>::: {.absolute left="55%" top="55%" style="font-size:1.8em; padding: 0.5em 1em; background-color: rgba(255, 255, 255, .5);"}</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>Be Brave</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>Take Risks</span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Text box with semi-transparent white background for readability" src="examples/layout/overlay-textbox.html#/section-2">
-Text box with semi-transparent white <code>background-color: rgba(255,255,255,.5)</code> and padding: text is now clearly readable against the busy background image.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/overlay-textbox.html#/section-2.png" class="slide-deck" loading="lazy" title="Text box with semi-transparent white background for readability" width="560" height="373"></p>
+<figcaption>Text box with semi-transparent white <code>background-color: rgba(255,255,255,.5)</code> and padding: text is now clearly readable against the busy background image.</figcaption>
+</figure>
+</div>
 <p>it already looks quite good! We can make it pop just a little bit more, by adding a <code>backdrop-filter</code> to make it look a little glass-like, adding a <code>box-shadow</code> to make it look a little 3-dimensional, and adding a small <code>border-radius</code> to stop the sharp corners.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## {background-image="tim-marshall.jpg"}</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -632,11 +717,19 @@ Text box with semi-transparent white <code>background-color: rgba(255,255,255,.5
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>Take Risks</span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Polished glass-effect text box with backdrop-filter and box-shadow" src="examples/layout/overlay-textbox.html#/section-3">
-Polished glass-effect text box: <code>backdrop-filter: blur(5px)</code>, <code>box-shadow</code>, and <code>border-radius</code> added to the semi-transparent overlay for a refined frosted-glass appearance.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/overlay-textbox.html#/section-3.png" class="slide-deck" loading="lazy" title="Polished glass-effect text box with backdrop-filter and box-shadow" width="560" height="373"></p>
+<figcaption>Polished glass-effect text box: <code>backdrop-filter: blur(5px)</code>, <code>box-shadow</code>, and <code>border-radius</code> added to the semi-transparent overlay for a refined frosted-glass appearance.</figcaption>
+</figure>
+</div>
 <p>Photo by <a href="https://unsplash.com/@timmarshall?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Tim Marshall</a> on <a href="https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<p><a href="examples/layout/overlay-textbox.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="examples/layout/overlay-textbox.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
+<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
+</figure>
+</div>
 <p>I think this turned out well. There are endless ways to use this. It is quite CSS-heavy work, but I think it is worth it. Note that you are always free to copy an example and modify it to your wants.</p>
 </section>
 <section id="editable-extension" class="level2" data-number="8.7">
@@ -665,7 +758,12 @@ Warning
 <p>When viewing your slides, you can click and drag elements to reposition them, or use handles to resize images. The extension will output the CSS values you need to make the changes permanent in your source code.</p>
 <p>This is particularly useful when working with absolute positioning, where getting pixel values exactly right can be tedious through trial and error.</p>
 <div class="project-buttons">
-<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable"> <i class="fa-brands fa-github" aria-label="github"></i> Github </a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/EmilHvitfeldt/quarto-revealjs-editable.png" class="img-fluid figure-img"></p>
+<figcaption><i class="fa-brands fa-github" aria-label="github"></i> Github</figcaption>
+</figure>
+</div>
 </div>
 </section>
 <section id="spread" class="level2" data-number="8.8">
@@ -724,9 +822,12 @@ Note
 <p>You can still override the height with an inline style if you want less than the full remaining space:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>::: {.spread style="height:60%;"}</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Bullet points distributed evenly with .spread class" src="examples/layout/spread.html#/with-spread">
-Three bullet points inside a <code>.spread</code> div: the items are distributed evenly from the top to the bottom of the remaining slide space using <code>justify-content: space-between</code>.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/spread.html#/with-spread.png" class="slide-deck" loading="lazy" title="Bullet points distributed evenly with .spread class" width="560" height="373"></p>
+<figcaption>Three bullet points inside a <code>.spread</code> div: the items are distributed evenly from the top to the bottom of the remaining slide space using <code>justify-content: space-between</code>.</figcaption>
+</figure>
+</div>
 <p>The default uses <code>justify-content: space-between</code>, which places the first item at the top and the last at the bottom. For more uniform spacing including around the edges, use <code>.spread-evenly</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>::: {.spread .spread-md .spread-evenly}</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>Think about how models are working</span>
@@ -735,10 +836,13 @@ Three bullet points inside a <code>.spread</code> div: the items are distributed
 <span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>We rarely care whether a predictor is normal</span>
 <span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Bullet points distributed with .spread-evenly (equal spacing including edges)" src="examples/layout/spread.html#/space-evenly">
-Same three bullet points using <code>.spread.spread-evenly</code>: items are distributed with equal spacing including above the first and below the last item using <code>justify-content: space-evenly</code>.
-</iframe>
-<p><a href="examples/layout/spread.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/spread.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a> <a href="examples/layout/spread-script.js" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>js</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/spread.html#/space-evenly.png" class="slide-deck" loading="lazy" title="Bullet points distributed with .spread-evenly (equal spacing including edges)" width="560" height="373"></p>
+<figcaption>Same three bullet points using <code>.spread.spread-evenly</code>: items are distributed with equal spacing including above the first and below the last item using <code>justify-content: space-evenly</code>.</figcaption>
+</figure>
+</div>
+<p><img src="examples/layout/spread.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/layout/spread.scss" class="listing-slides btn-links img-fluid" target="_blank" alt="scss"> <embed src="examples/layout/spread-script.js" class="listing-slides btn-links img-fluid" target="_blank"></p>
 </section>
 <section id="paper-card-effect" class="level2" data-number="8.9">
 <h2 data-number="8.9" class="anchored" data-anchor-id="paper-card-effect"><span class="header-section-number">8.9</span> Paper Card Effect</h2>
@@ -767,16 +871,22 @@ Same three bullet points using <code>.spread.spread-evenly</code>: items are dis
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Slide {.paper background-color="#ffe83e"}</span></span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>Content goes here, cleanly inside the card.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title=".paper slide with colored background filling the viewport behind the card" src="examples/layout/paper-card.html#/colored-background">
-A slide using <code>.paper</code> with <code>background-color="#ffe83e"</code>: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/paper-card.html#/colored-background.png" class="slide-deck" loading="lazy" title=".paper slide with colored background filling the viewport behind the card" width="560" height="373"></p>
+<figcaption>A slide using <code>.paper</code> with <code>background-color="#ffe83e"</code>: the yellow fills the full viewport while the white card floats above it, keeping the content area clean.</figcaption>
+</figure>
+</div>
 <p>The same works with <code>background-image</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## My Slide {.paper background-image="galen-crout.jpg" background-size="cover"}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title=".paper slide with full-cover background image behind the content card" src="examples/layout/paper-card.html#/background-image">
-A slide using <code>.paper</code> with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/paper-card.html#/background-image.png" class="slide-deck" loading="lazy" title=".paper slide with full-cover background image behind the content card" width="560" height="373"></p>
+<figcaption>A slide using <code>.paper</code> with a full-cover background image: the photo fills the entire slide behind the card, while the white content card sits above it unobstructed.</figcaption>
+</figure>
+</div>
 <p>Because the card shrinks the content area, elements placed via JavaScript into the slide background (<code>.slide-background</code>) can extend freely outside the card bounds. This is the technique the <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme">quarto-revealjs-highlighter-theme</a> extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.</p>
-<p><a href="examples/layout/paper-card.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
+<p><img src="examples/layout/paper-card.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/layout/paper-card.scss" class="listing-slides btn-links img-fluid" target="_blank" alt="scss"></p>
 <section id="paper-card-as-the-default" class="level3" data-number="8.9.1">
 <h3 data-number="8.9.1" class="anchored" data-anchor-id="paper-card-as-the-default"><span class="header-section-number">8.9.1</span> Paper card as the default</h3>
 <p>If you want every slide to be a card without adding <code>.paper</code> each time, just change the selector from <code>section.paper</code> to <code>section</code>. The <code>.paperless</code> class then becomes the opt-out for slides that shouldn’t have the effect.</p>
@@ -795,10 +905,13 @@ A slide using <code>.paper</code> with a full-cover background image: the photo 
 <span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="dv">transparent</span> <span class="at">!important</span><span class="op">;</span></span>
 <span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span>: <span class="dv">none</span> <span class="at">!important</span><span class="op">;</span></span>
 <span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Every slide rendered as a card by default, with .paperless opt-out" src="examples/layout/paper-card-default.html#/every-slide-is-a-card">
-Every slide rendered as a card by default, with the <code>.paperless</code> class used on one slide to opt out of the effect and fill the full viewport.
-</iframe>
-<p><a href="examples/layout/paper-card-default.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card-default.scss" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/layout/paper-card-default.html#/every-slide-is-a-card.png" class="slide-deck" loading="lazy" title="Every slide rendered as a card by default, with .paperless opt-out" width="560" height="373"></p>
+<figcaption>Every slide rendered as a card by default, with the <code>.paperless</code> class used on one slide to opt out of the effect and fill the full viewport.</figcaption>
+</figure>
+</div>
+<p><img src="examples/layout/paper-card-default.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/layout/paper-card-default.scss" class="listing-slides btn-links img-fluid" target="_blank" alt="scss"></p>
 </section>
 </section>
 <section id="vary-the-type-of-slides" class="level2" data-number="8.10">

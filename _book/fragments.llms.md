@@ -757,8 +757,6 @@ Usage:
 
 The [quarto-revealjs-tabset](https://github.com/mcanouil/quarto-revealjs-tabset) extension turns tabs into fragments, so they can be navigated with arrow keys or a clicker instead of requiring mouse clicks.
 
-![](https://m.canouil.dev/quarto-revealjs-tabset/.png "Demo of the quarto-revealjs-tabset extension")
-
 Demo of the quarto-revealjs-tabset extension: tabs in a panel tabset are treated as fragments, enabling keyboard navigation through tabs without mouse clicks.
 
 To install:

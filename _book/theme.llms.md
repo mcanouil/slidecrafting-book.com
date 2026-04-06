@@ -296,8 +296,6 @@ Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG ba
 
 Another approach to creating these styles of themes is to use Lua to further expand the capabilities of the slides
 
-![](https://katie.quarto.pub/positconf2023/.png "Demo of a PositConf 2023 slide theme using a Lua extension")
-
 Demo of a PositConf 2023 slide theme by Katie Masiello using a Lua extension for advanced theming capabilities beyond what CSS alone provides.
 
 [ Github](https://github.com/kmasiello/positconfslides) [ Website](https://katie.quarto.pub/positconf2023/) [ Lua file](https://github.com/kmasiello/positconfslides/blob/main/_extensions/positconfslides/positconfslides.lua)

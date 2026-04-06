@@ -425,7 +425,7 @@ Another approach to creating these styles of themes is to use Lua to further exp
 ![
   Demo of a PositConf 2023 slide theme by Katie Masiello using a Lua extension for advanced theming capabilities beyond what CSS alone provides.
 ](
-  https://katie.quarto.pub/positconf2023/
+  https://katie.quarto.pub/positconf2023/index.html
 ){
   .slide-deck
   loading="lazy"

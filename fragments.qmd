@@ -816,6 +816,8 @@ For the reverse we do `currentIndex - 1` instead.
 ![{{< fa file >}}qmd](examples/fragments/fragment-tabset-full.qmd){.listing-slides .btn-links target="_blank"}
 ![{{< fa brands js >}}js](examples/fragments/tabset-full.html){.listing-video .btn-links target="_blank"}
 
+:::
+
 ## advance embedded slides
 
 The last example I'll show for now is one you have seen me use already.

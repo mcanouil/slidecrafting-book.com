@@ -56,8 +56,8 @@ These together yield these slides:
   title="Incremental list with .highlight-last CSS class"
 }
 
-![{{< fa file >}}qmd](examples/fragments/tip-1.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/fragments/tip-1.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](/examples/fragments/tip-1.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/fragments/tip-1.scss){.listing-video .btn-links target="_blank"}
 
 ## Changing fragments with CSS
 
@@ -155,8 +155,8 @@ Advancing and de-advancing(?) the slides showcase how the different classes are 
   title="RGB fragment demo illustrating before, current, and after fragment phases"
 }
 
-![{{< fa file >}}qmd](examples/fragments/fragment-rgb.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/fragments/rgb.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/fragments/fragment-rgb.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/fragments/rgb.scss){.listing-video .btn-links target="_blank"}
 
 Worth noting that this single fragment could be rewritten as the following using SCSS nesting.
 
@@ -296,8 +296,8 @@ $colors: (
   title="Background highlight fragment demo with custom .hl-* classes"
 }
 
-![{{< fa file >}}qmd](examples/fragments/fragment-highlighter.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/fragments/highlighter.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/fragments/fragment-highlighter.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/fragments/highlighter.scss){.listing-video .btn-links target="_blank"}
 
 ## Example 3
 
@@ -614,8 +614,8 @@ Reveal.on('fragmenthidden', (event) => {
   title="Fragment that changes the slide heading color on each trigger"
 }
 
-![{{< fa file >}}qmd](examples/fragments/fragment-color.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands js >}}js](examples/fragments/color.html){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/fragments/fragment-color.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands js >}}js](examples/fragments/color.html){.listing-video .btn-links target="_blank"}
 
 ## Scroll output
 
@@ -705,8 +705,8 @@ You could implement them halfway without the `fragmenthidden` and you would just
   title="Fragment that smoothly scrolls a long code output block"
 }
 
-![{{< fa file >}}qmd](examples/fragments/fragment-scroll.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands js >}}js](examples/fragments/scroll.html){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/fragments/fragment-scroll.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands js >}}js](examples/fragments/scroll.html){.listing-video .btn-links target="_blank"}
 
 ::: {.callout-tip}
 We didn't do it here,
@@ -774,8 +774,8 @@ Reveal.on('fragmenthidden', (event) => {
   title="Fragment that switches between two tabs in a tabset"
 }
 
-![{{< fa file >}}qmd](examples/fragments/fragment-tabset.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands js >}}js](examples/fragments/tabset.html){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/fragments/fragment-tabset.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands js >}}js](examples/fragments/tabset.html){.listing-video .btn-links target="_blank"}
 
 The above only works with 2 tabs,
 since we are toggling between the first and last one with `first-of-type` and `last-of-type`.
@@ -813,8 +813,8 @@ For the reverse we do `currentIndex - 1` instead.
   title="Fragment switching any number of tabs using querySelectorAll"
 }
 
-![{{< fa file >}}qmd](examples/fragments/fragment-tabset-full.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands js >}}js](examples/fragments/tabset-full.html){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/fragments/fragment-tabset-full.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands js >}}js](examples/fragments/tabset-full.html){.listing-video .btn-links target="_blank"}
 
 :::
 
@@ -879,8 +879,8 @@ Reveal.on('fragmenthidden', event => {
   title="Demo of embedded slide advancement via contentWindow.Reveal.right()"
 }
 
-![{{< fa file >}}qmd](examples/fragments/fragment-advance.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands js >}}js](examples/fragments/advance.html){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/fragments/fragment-advance.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands js >}}js](examples/fragments/advance.html){.listing-video .btn-links target="_blank"}
 
 ## Fragment Extensions
 
@@ -934,8 +934,8 @@ You can customize colors and other properties using data attributes:
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-roughnotation)
-![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-roughnotation/)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-roughnotation)
+[{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-roughnotation/)
 
 :::
 
@@ -990,8 +990,8 @@ Usage:
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments)
-![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments)
+[{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)
 
 :::
 
@@ -1060,7 +1060,7 @@ When exporting to PDF, each tab automatically appears on its own page without ne
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/mcanouil/quarto-revealjs-tabset)
-![{{< fa door-open >}} Demo](https://m.canouil.dev/quarto-revealjs-tabset/)
+[{{< fa brands github >}} Github](https://github.com/mcanouil/quarto-revealjs-tabset)
+[{{< fa door-open >}} Demo](https://m.canouil.dev/quarto-revealjs-tabset/)
 
 :::

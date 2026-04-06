@@ -100,7 +100,7 @@ print("Hello, world!")
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow)
-![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow)
+[{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/)
 
 :::

@@ -62,4 +62,4 @@ seperately highlights the code `method = "lm"` then `formula = "y ~ x"` in red a
   title="Hand-styled code with incremental fragment highlighting"
 }
 
-![{{< fa file >}}qmd](examples/manual-code/tip-4.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/manual-code/tip-4.qmd){.listing-slides .btn-links target="_blank"}

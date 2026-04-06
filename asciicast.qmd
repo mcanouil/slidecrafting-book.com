@@ -22,7 +22,7 @@ they are typically lost when we write slides
   title="R code output without asciicast (no terminal colors)"
 }
 
-![{{< fa file >}}qmd](examples/asciicast/no-asciicast.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/asciicast/no-asciicast.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Default asciicast
 
@@ -63,7 +63,7 @@ nicely styled with colors and everything.
   title="Asciicast output with default settings"
 }
 
-![{{< fa file >}}qmd](examples/asciicast/asciicast-default.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/asciicast/asciicast-default.qmd){.listing-slides .btn-links target="_blank"}
 
 ::: {.callout-note}
 The output of asciicast will by default fill the screen horizontally,
@@ -107,7 +107,7 @@ and gives the following results
   title="Asciicast with same_process = FALSE"
 }
 
-![{{< fa file >}}qmd](examples/asciicast/asciicast-same_process.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/asciicast/asciicast-same_process.qmd){.listing-slides .btn-links target="_blank"}
 
 You will notice that the code that is being run is included in the asciicast output.
 This is happening because the default arguments `echo = FALSE` and `echo_input = TRUE`.
@@ -133,7 +133,7 @@ asciicast::init_knitr_engine(
   title="Asciicast with echo = TRUE, echo_input = FALSE"
 }
 
-![{{< fa file >}}qmd](examples/asciicast/asciicast-echos.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/asciicast/asciicast-echos.qmd){.listing-slides .btn-links target="_blank"}
 
 It wouldn't make much sense to set both of these to `TRUE` as you would have duplication,
 but there are certainly cases where you want both of these to be `FALSE` as you just want the output.
@@ -175,7 +175,7 @@ options(asciicast_theme = "solarized-light")
   title="Asciicast with solarized-light theme"
 }
 
-![{{< fa file >}}qmd](examples/asciicast/asciicast-solarized.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/asciicast/asciicast-solarized.qmd){.listing-slides .btn-links target="_blank"}
 
 If none of these is what you need,
 you can use a completely custom theme.
@@ -224,7 +224,7 @@ options(
   title="Asciicast with custom white-background theme"
 }
 
-![{{< fa file >}}qmd](examples/asciicast/asciicast-theme.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/asciicast/asciicast-theme.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Roundup
 

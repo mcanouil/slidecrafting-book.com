@@ -229,8 +229,8 @@ Below is one such theme I created
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-earth)
-![{{< fa door-open >}} Website](https://emilhvitfeldt.github.io/quarto-revealjs-earth/)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-earth)
+[{{< fa door-open >}} Website](https://emilhvitfeldt.github.io/quarto-revealjs-earth/)
 
 :::
 
@@ -414,9 +414,9 @@ following very closely the construction of the previous
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo)
-![{{< fa door-open >}} Website](https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/)
-![{{< fa brands github >}} Scss file](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo/blob/main/_extensions/cinco-de-mayo/cinco.scss)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo)
+[{{< fa door-open >}} Website](https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/)
+[{{< fa brands github >}} Scss file](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo/blob/main/_extensions/cinco-de-mayo/cinco.scss)
 
 :::
 
@@ -436,8 +436,8 @@ Another approach to creating these styles of themes is to use Lua to further exp
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/kmasiello/positconfslides)
-![{{< fa door-open >}} Website](https://katie.quarto.pub/positconf2023/)
-![{{< fa brands github >}} Lua file](https://github.com/kmasiello/positconfslides/blob/main/_extensions/positconfslides/positconfslides.lua)
+[{{< fa brands github >}} Github](https://github.com/kmasiello/positconfslides)
+[{{< fa door-open >}} Website](https://katie.quarto.pub/positconf2023/)
+[{{< fa brands github >}} Lua file](https://github.com/kmasiello/positconfslides/blob/main/_extensions/positconfslides/positconfslides.lua)
 
 :::

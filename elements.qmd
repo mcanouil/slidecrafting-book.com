@@ -38,8 +38,8 @@ background-image: url('https://cdn-icons-png.flaticon.com/512/2163/2163350.png')
   title="Custom hamburger menu icon via CSS background-image"
 }
 
-![{{< fa file >}}qmd](examples/styling/tip-2.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/styling/tip-2.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/styling/tip-2.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/styling/tip-2.scss){.listing-video .btn-links target="_blank"}
 
 ## Showing quarto code
 
@@ -76,7 +76,7 @@ This is **Quarto** code
   title="Displaying Quarto code as unexecuted source using double curly brackets"
 }
 
-![{{< fa file >}}qmd](examples/elements/tip-6.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/elements/tip-6.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Changing plot backgrounds
 
@@ -198,7 +198,7 @@ sns.set_style(rc={'axes.facecolor':'#FFFFFF00',
 
 The above was generated with this document.
 
-![{{< fa file >}}source document](examples/elements/plot-background-examples.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}source document](examples/elements/plot-background-examples.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Plot sizing
 
@@ -537,4 +537,4 @@ Below is one example of how we can modify the `fig-asp` to make it look decent i
 
 The above was generated with this document.
 
-![{{< fa file >}}source document](examples/elements/plot-sizing-examples.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}source document](examples/elements/plot-sizing-examples.qmd){.listing-slides .btn-links target="_blank"}

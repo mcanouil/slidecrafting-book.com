@@ -123,8 +123,6 @@ Two separate `r-fit-text` blocks, one per line: each line independently fills th
 
 If you find yourself using `r-fit-text` frequently, the [quarto-revealjs-loud](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) extension automates this process. It automatically makes text big when there isn’t much content on a slide.
 
-![](https://emilhvitfeldt.github.io/quarto-revealjs-loud/.png "Demo of the quarto-revealjs-loud extension")
-
 Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
 
 To install:

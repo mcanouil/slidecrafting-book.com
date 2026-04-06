@@ -668,8 +668,6 @@ Reveal.on('fragmenthidden', event => {
 });
 ```
 
-![](https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/.png "Demo of embedded slide advancement via contentWindow.Reveal.right()")
-
 Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a `.advance-slide` fragment controls it using `iframe.contentWindow.Reveal.right()` so a clicker can advance both the outer and inner slides.
 
 [qmd](examples/fragments/fragment-advance.qmd) [js](examples/fragments/advance.llms.md)

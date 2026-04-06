@@ -148,8 +148,6 @@ With these menus, you can swiftly select the style of slide you intend to write 
 
 Below is one such theme I created
 
-![](https://emilhvitfeldt.github.io/quarto-revealjs-earth/.png "Demo of the quarto-revealjs-earth slide theme")
-
 Demo of the quarto-revealjs-earth slide theme: SVG earth imagery as backgrounds with custom text regions per slide class (`.theme-title1`, `.theme-section3`, `.theme-slide1`, etc.), controlling colors, sizes, and text positioning.
 
 [ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-earth) [ Website](https://emilhvitfeldt.github.io/quarto-revealjs-earth/)
@@ -291,8 +289,6 @@ I hope you can see that with this style of slidecrafting, the skies the limit. T
 ## 6.5 More Examples
 
 Below is another theme, following very closely the construction of the previous
-
-![](https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/.png "Demo of the quarto-revealjs-cinco-de-mayo slide theme")
 
 Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG background images applied via CSS slide classes, following the same construction pattern as the earth theme.
 

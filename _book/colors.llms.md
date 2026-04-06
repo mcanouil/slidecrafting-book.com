@@ -529,8 +529,8 @@ Below is some before and after using the theme we have developed in the chapter 
 
 Code slides without custom syntax highlighting: all code tokens appear in the same default color.
 
-![qmd](examples/colors/no-syntax-highlighting.qmd) ![scss](examples/colors/no-syntax-highlighting.scss)
+[qmd](examples/colors/no-syntax-highlighting.qmd) [scss](examples/colors/no-syntax-highlighting.scss)
 
 Same code slides with custom CSS syntax highlighting applied: keywords, strings, functions, and other token types each colored individually using the skylighting CSS class system.
 
-![qmd](examples/colors/syntax-highlighting.qmd) ![scss](examples/colors/syntax-highlighting.scss)
+[qmd](examples/colors/syntax-highlighting.qmd) [scss](examples/colors/syntax-highlighting.scss)

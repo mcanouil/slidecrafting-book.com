@@ -20,7 +20,7 @@ background-image: url('https://cdn-icons-png.flaticon.com/512/2163/2163350.png')
 
 Slide showing a custom hamburger menu icon: the default three-bar icon is replaced with a custom image via CSS background-image on `.reveal .slide-menu-button .fa-bars::before`.
 
-![qmd](examples/styling/tip-2.qmd) ![scss](examples/styling/tip-2.scss)
+[qmd](examples/styling/tip-2.qmd) [scss](examples/styling/tip-2.scss)
 
 ## 7.2 Showing quarto code
 
@@ -42,9 +42,7 @@ This is **Quarto** code
 
 Slide demonstrating how to display Quarto/R code as literal unexecuted source using double curly brackets (`{{python}}`), so the code block appears verbatim rather than being run.
 
-![](examples/elements/tip-6.qmd)
-
-qmd
+[qmd](examples/elements/tip-6.qmd)
 
 ## 7.3 Changing plot backgrounds
 
@@ -145,9 +143,7 @@ sns.set_style(rc={'axes.facecolor':'#FFFFFF00',
 
 The above was generated with this document.
 
-![](examples/elements/plot-background-examples.qmd)
-
-source document
+[source document](examples/elements/plot-background-examples.qmd)
 
 ## 7.4 Plot sizing
 
@@ -256,6 +252,4 @@ Chart inside a two-column layout with `fig-asp` adjusted to fit the narrower col
 
 The above was generated with this document.
 
-![](examples/elements/plot-sizing-examples.qmd)
-
-source document
+[source document](examples/elements/plot-sizing-examples.qmd)

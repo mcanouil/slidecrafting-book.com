@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.35">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-10a99e03521ec9ce62a914b0d4603325.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c40c0ddd606b58ba960743f60575934e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c637c4387fd00c9d762d829c448c9f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e8267730ddd4843cadbd019f792683ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -119,9 +119,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="11&nbsp; Fragments – Slidecrafting">
 <meta property="og:description" content="How to use Quarto reveal.js fragments for incremental reveals, custom highlight animations, tab switching, scrolling, and embedded slide advancement via JavaScript.">
-<meta property="og:image" content="https://slidecrafting-book.com/examples/fragments/tip-1.qmd">
+<meta property="og:image" content="https://slidecrafting-book.com/media/developer-tools-fragments.webp">
 <meta property="og:site_name" content="Slidecrafting">
-<meta property="og:image:alt" content="qmd">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -373,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Incremental list with the <code>.highlight-last</code> CSS class: all items appear grey, and the most recently revealed item is highlighted in purple using the <code>.current-fragment</code> selector.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/tip-1.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/fragments/tip-1.scss" class="listing-video btn-links img-fluid" target="_blank" alt="scss"></p>
+<p><a href="./examples/fragments/tip-1.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/tip-1.scss" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 </section>
 <section id="changing-fragments-with-css" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="changing-fragments-with-css"><span class="header-section-number">11.2</span> Changing fragments with CSS</h2>
@@ -448,7 +447,7 @@ Tip
 <figcaption>RGB fragment demo illustrating the three fragment phases: text is red (before), green (current), and blue (after/visible), with opacity and visibility unset so the text is always visible.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/fragment-rgb.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/fragments/rgb.scss" class="listing-video btn-links img-fluid" target="_blank" alt="scss"></p>
+<p><a href="examples/fragments/fragment-rgb.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/rgb.scss" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 <p>Worth noting that this single fragment could be rewritten as the following using SCSS nesting.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode scss code-with-copy"><code class="sourceCode scss"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.reveal</span> <span class="fu">.slides</span> section <span class="fu">.fragment.rgb</span> {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">opacity</span>: <span class="bu">unset</span><span class="op">;</span></span>
@@ -558,7 +557,7 @@ Tip
 <figcaption>Background highlight fragment demo: text items are highlighted with colored backgrounds (orange, yellow, brown, pink) using custom <code>.hl-*</code> fragment classes generated via a SCSS <code>@each</code> loop.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/fragment-highlighter.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/fragments/highlighter.scss" class="listing-video btn-links img-fluid" target="_blank" alt="scss"></p>
+<p><a href="examples/fragments/fragment-highlighter.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/highlighter.scss" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
 </section>
 <section id="example-3" class="level2" data-number="11.5">
 <h2 data-number="11.5" class="anchored" data-anchor-id="example-3"><span class="header-section-number">11.5</span> Example 3</h2>
@@ -771,7 +770,7 @@ Warning
 <figcaption>Fragment that changes the slide heading color on each trigger: an empty <code>.color</code> fragment div uses a JavaScript <code>Reveal.on('fragmentshown')</code> listener to set a random color on the <code>h2</code> element.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/fragment-color.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <embed src="examples/fragments/color.html" class="listing-video btn-links img-fluid" target="_blank"></p>
+<p><a href="examples/fragments/fragment-color.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/color.html" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
 </section>
 <section id="scroll-output" class="level2" data-number="11.8">
 <h2 data-number="11.8" class="anchored" data-anchor-id="scroll-output"><span class="header-section-number">11.8</span> Scroll output</h2>
@@ -834,7 +833,7 @@ Note
 <figcaption>Fragment that smoothly scrolls a long code output block: advancing the fragment triggers <code>.scrollTo({top: 1000, behavior: "smooth"})</code> via JavaScript; reversing scrolls back to top.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/fragment-scroll.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <embed src="examples/fragments/scroll.html" class="listing-video btn-links img-fluid" target="_blank"></p>
+<p><a href="examples/fragments/fragment-scroll.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/scroll.html" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -897,7 +896,7 @@ Tip
 <figcaption>Fragment that switches between two tabs in a tabset: a <code>.tabswitch</code> fragment uses JavaScript <code>.click()</code> to toggle between the first and last tab without needing a mouse.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/fragment-tabset.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <embed src="examples/fragments/tabset.html" class="listing-video btn-links img-fluid" target="_blank"></p>
+<p><a href="examples/fragments/fragment-tabset.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/tabset.html" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
 <p>The above only works with 2 tabs, since we are toggling between the first and last one with <code>first-of-type</code> and <code>last-of-type</code>.</p>
 <p>Let us now see how we can expand this to work with any number of tabs. The toggling code now looks like this:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> tabs <span class="op">=</span> Reveal<span class="op">.</span><span class="fu">getCurrentSlide</span>()<span class="op">.</span><span class="fu">querySelectorAll</span>(</span>
@@ -916,7 +915,7 @@ Tip
 <figcaption>Extended tabset fragment supporting any number of tabs: uses <code>querySelectorAll</code> to find all tabs, then advances to the next tab by index on each fragment trigger.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/fragment-tabset-full.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <embed src="examples/fragments/tabset-full.html" class="listing-video btn-links img-fluid" target="_blank"></p>
+<p><a href="examples/fragments/fragment-tabset-full.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/tabset-full.html" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
 </div>
 </div>
 </div>
@@ -958,7 +957,7 @@ Tip
 <figcaption>Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a <code>.advance-slide</code> fragment controls it using <code>iframe.contentWindow.Reveal.right()</code> so a clicker can advance both the outer and inner slides.</figcaption>
 </figure>
 </div>
-<p><img src="examples/fragments/fragment-advance.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <embed src="examples/fragments/advance.html" class="listing-video btn-links img-fluid" target="_blank"></p>
+<p><a href="examples/fragments/fragment-advance.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/fragments/advance.html" class="listing-video btn-links" target="_blank"><i class="fa-brands fa-js" aria-label="js"></i>js</a></p>
 </section>
 <section id="fragment-extensions" class="level2" data-number="11.11">
 <h2 data-number="11.11" class="anchored" data-anchor-id="fragment-extensions"><span class="header-section-number">11.11</span> Fragment Extensions</h2>
@@ -990,7 +989,7 @@ Tip
 <p>You can customize colors and other properties using data attributes:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Important!</span><span class="co">]</span>{.rn-underline data-rn-color="red" .fragment}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="project-buttons">
-<p><img src="https://github.com/EmilHvitfeldt/quarto-roughnotation.png" class="img-fluid" alt=" Github"> <img src="https://emilhvitfeldt.github.io/quarto-roughnotation/.png" class="img-fluid" alt=" Demo"></p>
+<p><a href="https://github.com/EmilHvitfeldt/quarto-roughnotation"><i class="fa-brands fa-github" aria-label="github"></i> Github</a> <a href="https://emilhvitfeldt.github.io/quarto-roughnotation/"><i class="fa-solid fa-door-open" aria-label="door-open"></i> Demo</a></p>
 </div>
 </section>
 <section id="more-fragments" class="level3" data-number="11.11.2">
@@ -1026,7 +1025,7 @@ Tip
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">This will fade in from the left</span><span class="co">]</span>{.fragment .fadeInLeft}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="project-buttons">
-<p><img src="https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments.png" class="img-fluid" alt=" Github"> <img src="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/.png" class="img-fluid" alt=" Demo"></p>
+<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments"><i class="fa-brands fa-github" aria-label="github"></i> Github</a> <a href="https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/"><i class="fa-solid fa-door-open" aria-label="door-open"></i> Demo</a></p>
 </div>
 </section>
 <section id="tabset" class="level3" data-number="11.11.3">
@@ -1069,7 +1068,7 @@ Tip
 <p>The plugin automatically detects <code>.panel-tabset</code> divs and treats each tab as a fragment. It supports multiple tabsets per slide, nested fragments within tabs, and bidirectional navigation.</p>
 <p>When exporting to PDF, each tab automatically appears on its own page without needing <code>pdf-separate-fragments: true</code> globally.</p>
 <div class="project-buttons">
-<p><img src="https://github.com/mcanouil/quarto-revealjs-tabset.png" class="img-fluid" alt=" Github"> <img src="https://m.canouil.dev/quarto-revealjs-tabset/.png" class="img-fluid" alt=" Demo"></p>
+<p><a href="https://github.com/mcanouil/quarto-revealjs-tabset"><i class="fa-brands fa-github" aria-label="github"></i> Github</a> <a href="https://m.canouil.dev/quarto-revealjs-tabset/"><i class="fa-solid fa-door-open" aria-label="door-open"></i> Demo</a></p>
 </div>
 
 

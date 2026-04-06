@@ -152,7 +152,7 @@ Below is one such theme I created
 
 Demo of the quarto-revealjs-earth slide theme: SVG earth imagery as backgrounds with custom text regions per slide class (`.theme-title1`, `.theme-section3`, `.theme-slide1`, etc.), controlling colors, sizes, and text positioning.
 
-![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-earth.png) ![ Website](https://emilhvitfeldt.github.io/quarto-revealjs-earth/.png)
+[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-earth) [ Website](https://emilhvitfeldt.github.io/quarto-revealjs-earth/)
 
 Instead of carefully managing the style of all the elements of each slide. They all have an overall slide theme that controls all the content on the slide. This controls colors and sizes but can go further and control backgrounds and even the positioning of elements.
 
@@ -296,7 +296,7 @@ Below is another theme, following very closely the construction of the previous
 
 Demo of the quarto-revealjs-cinco-de-mayo slide theme: festive colors and SVG background images applied via CSS slide classes, following the same construction pattern as the earth theme.
 
-![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo.png) ![ Website](https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/.png) ![ Scss file](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo/blob/main/_extensions/cinco-de-mayo/cinco.scss)
+[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo) [ Website](https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/) [ Scss file](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo/blob/main/_extensions/cinco-de-mayo/cinco.scss)
 
 Another approach to creating these styles of themes is to use Lua to further expand the capabilities of the slides
 
@@ -304,4 +304,4 @@ Another approach to creating these styles of themes is to use Lua to further exp
 
 Demo of a PositConf 2023 slide theme by Katie Masiello using a Lua extension for advanced theming capabilities beyond what CSS alone provides.
 
-![ Github](https://github.com/kmasiello/positconfslides.png) ![ Website](https://katie.quarto.pub/positconf2023/.png) ![ Lua file](https://github.com/kmasiello/positconfslides/blob/main/_extensions/positconfslides/positconfslides.lua)
+[ Github](https://github.com/kmasiello/positconfslides) [ Website](https://katie.quarto.pub/positconf2023/) [ Lua file](https://github.com/kmasiello/positconfslides/blob/main/_extensions/positconfslides/positconfslides.lua)

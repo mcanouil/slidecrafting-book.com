@@ -61,4 +61,4 @@ format:
 
 This allows you to have the letterbox style while still applying all the color, font, and size customizations discussed in earlier chapters.
 
-![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/.png)
+[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox) [ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/)

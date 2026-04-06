@@ -354,7 +354,7 @@ I know we are creating some non-interesting classes such as `.hl-yellow-yellow` 
 
 Interactive demo of compound gradient highlight classes (e.g. `.hl-red-blue`, `.hl-yellow-purple`) auto-generated via nested SCSS `@each` loops over a color map. Advance the slide to see each combination.
 
-![qmd](examples/scss/tip-1.qmd) ![scss](examples/scss/tip-1.scss)
+[qmd](examples/scss/tip-1.qmd) [scss](examples/scss/tip-1.scss)
 
 > **NOTE:**
 >
@@ -366,6 +366,6 @@ I was able to create that effect, by layering 2 gradients on top of each other. 
 
 Slide with a decorative gradient stripe along the right edge: created by layering two CSS gradients — a colored gradient underneath and a sharp white-to-transparent gradient on top.
 
-![qmd](examples/scss/tip-2.qmd) ![scss](examples/scss/tip-2.scss)
+[qmd](examples/scss/tip-2.qmd) [scss](examples/scss/tip-2.scss)
 
 since we are doing something interesting, we could also have used a separate `$colors` map just for this effect to not interfere with what else we are doing.

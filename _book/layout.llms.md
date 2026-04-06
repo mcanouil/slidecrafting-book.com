@@ -4,7 +4,7 @@
 
 Using [multiple columns](https://quarto.org/docs/presentations/revealjs/#multiple-columns) is a nice way to split up the content of your slides. I use it so much that I have a [snippet](https://rstudio.github.io/rstudio-extensions/rstudio_snippets.html) to save time since I use it so much. It works great for side-by-side comparisons as well. This is done using the following syntax. We use the `width` attribute to determine the width of each of the columns.
 
-    :::: {.columns}
+    ::: {.columns}
 
     ::: {.column width="40%"}
     Left column
@@ -14,13 +14,13 @@ Using [multiple columns](https://quarto.org/docs/presentations/revealjs/#multipl
     Right column
     :::
 
-    ::::
+    :::
 
 Standard two-column layout: 40% left column and 60% right column using the `.columns` / `.column` div syntax.
 
 but you can use it in quite a few ways beyond this! Firstly, each column is by itself a div, so you can style it directly. Such as making the right column have the right aligned text.
 
-    :::: {.columns}
+    ::: {.columns}
 
     ::: {.column width="50%"}
     Left column
@@ -30,13 +30,13 @@ but you can use it in quite a few ways beyond this! Firstly, each column is by i
     Right column
     :::
 
-    ::::
+    :::
 
 Two equal columns where the right column has `style="text-align: right;"` applied directly to the column div for right-justified text.
 
 The structure of columns doesn’t require that we just use 2 columns. You can do as many columns as you want, but generally, you will have a hard time using more than 4.
 
-    :::: {.columns}
+    ::: {.columns}
 
     ::: {.column width="25%"}
     1st column
@@ -54,13 +54,13 @@ The structure of columns doesn’t require that we just use 2 columns. You can d
     4th column
     :::
 
-    ::::
+    :::
 
 Four equal-width columns (25% each) demonstrating that the `.columns` syntax is not limited to two columns.
 
 Another way I like to use columns is by keeping one of them empty. This way provides a fast and easy way to add space or put text in specific locations.
 
-    :::: {.columns}
+    ::: {.columns}
 
     ::: {.column width="30%"}
     :::
@@ -69,11 +69,13 @@ Another way I like to use columns is by keeping one of them empty. This way prov
     Only right side
     :::
 
-    ::::
+    :::
 
 Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.
 
-[qmd](examples/layout/left-right.qmd)
+![](examples/layout/left-right.qmd)
+
+qmd
 
 ## 8.2 r-fit-text
 
@@ -117,11 +119,15 @@ This can however be fixed, by using a `r-fit-text` for each line of text.
 
 Two separate `r-fit-text` blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.
 
-[qmd](examples/layout/r-fit-text.qmd)
+![](examples/layout/r-fit-text.qmd)
+
+qmd
 
 ## 8.3 Loud Extension
 
 If you find yourself using `r-fit-text` frequently, the [quarto-revealjs-loud](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) extension automates this process. It automatically makes text big when there isn’t much content on a slide.
+
+![](https://emilhvitfeldt.github.io/quarto-revealjs-loud/.png "Demo of the quarto-revealjs-loud extension")
 
 Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
 
@@ -142,7 +148,7 @@ revealjs-plugins:
 
 The extension will automatically detect slides with minimal content and scale the text to fill the available space. This is particularly useful for quote slides, section breaks, or emphasis slides where you want a single statement to have maximum impact.
 
-[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-loud) [ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-loud/)
+![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-loud.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-loud/.png)
 
 ## 8.4 Using images
 
@@ -162,7 +168,9 @@ Basic figure added with standard Markdown syntax `![](image.jpg)`: image is inse
 
 Photo by [Holly Mandarich](https://unsplash.com/@hollymandarich?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-[qmd](examples/layout/image-basics.qmd)
+![](examples/layout/image-basics.qmd)
+
+qmd
 
 ### 8.4.2 Absolute position
 
@@ -204,7 +212,9 @@ Image with `max-height: unset; max-width: unset;` and negative position values: 
 
 Photo by [Noelle Rebekah](https://unsplash.com/@noellerebekah?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-[qmd](examples/layout/image-absolute.qmd)
+![](examples/layout/image-absolute.qmd)
+
+qmd
 
 > **WARNING:**
 >
@@ -232,7 +242,9 @@ I like to use it with text in the following way:
 
 Slide with text elements placed using `.absolute`: “python is great” and “and so is R” positioned at specific percentage coordinates on the slide using `bottom` and `left`/`right` attributes.
 
-[qmd](examples/layout/tip-5.qmd)
+![](examples/layout/tip-5.qmd)
+
+qmd
 
 ### 8.5.1 Background image
 
@@ -256,7 +268,9 @@ Background image slide with absolutely positioned text overlay: the word “alwa
 
 Photo by [Galen Crout](https://unsplash.com/@galen_crout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-[qmd](examples/layout/image-background.qmd)
+![](examples/layout/image-background.qmd)
+
+qmd
 
 As we see here, the text positioning can change how the slides are perceived. Both in style and emotion, try to think about how you can incorporate text positioning to maximize engagement.
 
@@ -304,7 +318,9 @@ Polished glass-effect text box: `backdrop-filter: blur(5px)`, `box-shadow`, and 
 
 Photo by [Tim Marshall](https://unsplash.com/@timmarshall?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-[qmd](examples/layout/overlay-textbox.qmd)
+![](examples/layout/overlay-textbox.qmd)
+
+qmd
 
 I think this turned out well. There are endless ways to use this. It is quite CSS-heavy work, but I think it is worth it. Note that you are always free to copy an example and modify it to your wants.
 
@@ -335,7 +351,9 @@ When viewing your slides, you can click and drag elements to reposition them, or
 
 This is particularly useful when working with absolute positioning, where getting pixel values exactly right can be tedious through trial and error.
 
-[ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
+![](https://github.com/EmilHvitfeldt/quarto-revealjs-editable.png)
+
+Github
 
 ## 8.8 Spread
 
@@ -415,7 +433,7 @@ The default uses `justify-content: space-between`, which places the first item a
 
 Same three bullet points using `.spread.spread-evenly`: items are distributed with equal spacing including above the first and below the last item using `justify-content: space-evenly`.
 
-[qmd](examples/layout/spread.qmd) [scss](examples/layout/spread.scss) [js](examples/layout/spread-script.js)
+![qmd](examples/layout/spread.qmd) ![scss](examples/layout/spread.scss)
 
 ## 8.9 Paper Card Effect
 
@@ -462,7 +480,7 @@ A slide using `.paper` with a full-cover background image: the photo fills the e
 
 Because the card shrinks the content area, elements placed via JavaScript into the slide background (`.slide-background`) can extend freely outside the card bounds. This is the technique the [quarto-revealjs-highlighter-theme](https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme) extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.
 
-[qmd](examples/layout/paper-card.qmd) [scss](examples/layout/paper-card.scss)
+![qmd](examples/layout/paper-card.qmd) ![scss](examples/layout/paper-card.scss)
 
 ### 8.9.1 Paper card as the default
 
@@ -488,7 +506,7 @@ If you want every slide to be a card without adding `.paper` each time, just cha
 
 Every slide rendered as a card by default, with the `.paperless` class used on one slide to opt out of the effect and fill the full viewport.
 
-[qmd](examples/layout/paper-card-default.qmd) [scss](examples/layout/paper-card-default.scss)
+![qmd](examples/layout/paper-card-default.qmd) ![scss](examples/layout/paper-card-default.scss)
 
 ## 8.10 Vary the type of slides
 

@@ -8,7 +8,9 @@ When R code produces messages with colors or styling, they are typically lost wh
 
 Slide showing R code output without asciicast: terminal colors and styling are stripped, producing plain unstyled text output.
 
-[qmd](examples/asciicast/no-asciicast.qmd)
+![](examples/asciicast/no-asciicast.qmd)
+
+qmd
 
 ## 10.2 Default asciicast
 
@@ -42,7 +44,9 @@ With this change, we get the following output, nicely styled with colors and eve
 
 Slides using the asciicast knitr engine with default settings: `library(tidymodels)` output is rendered as a colorized animated terminal recording, preserving the original ANSI colors.
 
-[qmd](examples/asciicast/asciicast-default.qmd)
+![](examples/asciicast/asciicast-default.qmd)
+
+qmd
 
 > **NOTE:**
 >
@@ -91,7 +95,9 @@ and gives the following results
 
 Asciicast with `same_process = FALSE`: each chunk runs in a fresh R process, so startup messages (like package loading) are shown fresh each time.
 
-[qmd](examples/asciicast/asciicast-same_process.qmd)
+![](examples/asciicast/asciicast-same_process.qmd)
+
+qmd
 
 You will notice that the code that is being run is included in the asciicast output. This is happening because the default arguments `echo = FALSE` and `echo_input = TRUE`. By swapping these options we get the code as normal quarto code, with the output as asciicast
 
@@ -106,7 +112,9 @@ asciicast::init_knitr_engine(
 
 Asciicast with `echo = TRUE, echo_input = FALSE`: the code is shown as a normal Quarto code block while only the output is rendered as an asciicast terminal recording.
 
-[qmd](examples/asciicast/asciicast-echos.qmd)
+![](examples/asciicast/asciicast-echos.qmd)
+
+qmd
 
 It wouldn’t make much sense to set both of these to `TRUE` as you would have duplication, but there are certainly cases where you want both of these to be `FALSE` as you just want the output.
 
@@ -135,7 +143,9 @@ options(asciicast_theme = "solarized-light")
 
 Asciicast output styled with the `solarized-light` theme: warm beige background with muted colors typical of the Solarized palette.
 
-[qmd](examples/asciicast/asciicast-solarized.qmd)
+![](examples/asciicast/asciicast-solarized.qmd)
+
+qmd
 
 If none of these is what you need, you can use a completely custom theme. I suggest that you modify one of the [existing theme](https://github.com/r-lib/asciicast/blob/4e6302182264a0fe7c58c427c9878b9135dac4fd/R/svg.R#L190)
 
@@ -172,7 +182,9 @@ options(
 
 Asciicast with a fully custom theme based on github-light but with a pure white background, making the terminal output blend seamlessly into the white slide background.
 
-[qmd](examples/asciicast/asciicast-theme.qmd)
+![](examples/asciicast/asciicast-theme.qmd)
+
+qmd
 
 ## 10.5 Roundup
 

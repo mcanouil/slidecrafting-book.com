@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.35">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Advanced SCSS techniques for Quarto reveal.js slides: CSS classes, Sass maps, functions, (each?) loops, mixins, and nested rules for maintainable slide themes.">
+<meta name="description" content="Advanced SCSS techniques for Quarto reveal.js slides: CSS classes, Sass maps, functions, @each loops, mixins, and nested rules for maintainable slide themes.">
 
 <title>5&nbsp; CSS/SCSS – Slidecrafting</title>
 <style>
@@ -78,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-10a99e03521ec9ce62a914b0d4603325.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c40c0ddd606b58ba960743f60575934e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c637c4387fd00c9d762d829c448c9f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e8267730ddd4843cadbd019f792683ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -118,8 +118,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="5&nbsp; CSS/SCSS – Slidecrafting">
-<meta property="og:description" content="Advanced SCSS techniques for Quarto reveal.js slides: CSS classes, Sass maps, functions, (each?) loops, mixins, and nested rules for maintainable slide themes.">
+<meta property="og:description" content="Advanced SCSS techniques for Quarto reveal.js slides: CSS classes, Sass maps, functions, @each loops, mixins, and nested rules for maintainable slide themes.">
+<meta property="og:image" content="https://slidecrafting-book.com/examples/scss/tip-1.qmd">
 <meta property="og:site_name" content="Slidecrafting">
+<meta property="og:image:alt" content="qmd">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -347,9 +349,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-decoration</span>: <span class="dv">underline</span><span class="op">;</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And the changes have been applied.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Links styled with underline via .reveal .slide CSS prefix" src="examples/scss/links.html">
-Slide showing links styled with an underline via <code>.reveal .slide a { text-decoration: underline; }</code>, demonstrating that the <code>.reveal .slide</code> prefix is required to override Reveal.js default specificity.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/scss/links.html" class="slide-deck" loading="lazy" title="Links styled with underline via .reveal .slide CSS prefix" width="560" height="373"></p>
+<figcaption>Slide showing links styled with an underline via <code>.reveal .slide a { text-decoration: underline; }</code>, demonstrating that the <code>.reveal .slide</code> prefix is required to override Reveal.js default specificity.</figcaption>
+</figure>
+</div>
 </section>
 <section id="using-css-classes" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="using-css-classes"><span class="header-section-number">5.2</span> Using CSS Classes</h2>
@@ -371,9 +376,12 @@ Slide showing links styled with an underline via <code>.reveal .slide a { text-d
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now that we have our classes defined, we can apply these changes in the source editor by using the <code>[text]{.class}</code> syntax. I added (slightly excessive) highlighting to a couple of words. See below</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">]</span>{.blue} enables you to weave together <span class="co">[</span><span class="ot">content</span><span class="co">]</span>{.yellow} and <span class="co">[</span><span class="ot">executable code</span><span class="co">]</span>{.yellow} into a **finished presentation**. To learn more about <span class="co">[</span><span class="ot">Quarto</span><span class="co">]</span>{.blue} presentations see <span class="ot">&lt;https://quarto.org/docs/presentations/&gt;</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Custom .blue and .yellow CSS classes applied inline" src="examples/scss/css-classes.html">
-Slide with custom <code>.blue</code> and <code>.yellow</code> CSS classes applied inline to individual words: “Quarto” appears in bold blue and “content” / “executable code” in bold yellow using the <code>[text]{.class}</code> syntax.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/scss/css-classes.html" class="slide-deck" loading="lazy" title="Custom .blue and .yellow CSS classes applied inline" width="560" height="373"></p>
+<figcaption>Slide with custom <code>.blue</code> and <code>.yellow</code> CSS classes applied inline to individual words: “Quarto” appears in bold blue and “content” / “executable code” in bold yellow using the <code>[text]{.class}</code> syntax.</figcaption>
+</figure>
+</div>
 <p>The idea behind CSS classes are quite powerful. We are essentially adding CSS attributes to specific elements of our slides, without needing to figure out how to target it with CSS selectors.</p>
 <p>You can also apply CSS classes to whole sections of the slide using fenced divs.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>::: blue</span>
@@ -627,10 +635,13 @@ Important
 <p>The slides in this post are interactive, advance them to see the other classes.</p>
 </div>
 </div>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Compound gradient highlight classes from nested SCSS @each loops" src="examples/scss/tip-1.html">
-Interactive demo of compound gradient highlight classes (e.g. <code>.hl-red-blue</code>, <code>.hl-yellow-purple</code>) auto-generated via nested SCSS <code>@each</code> loops over a color map. Advance the slide to see each combination.
-</iframe>
-<p><a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/scss/tip-1.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/scss/tip-1.html" class="slide-deck" loading="lazy" title="Compound gradient highlight classes from nested SCSS `@each` loops" width="560" height="373"></p>
+<figcaption>Interactive demo of compound gradient highlight classes (e.g.&nbsp;<code>.hl-red-blue</code>, <code>.hl-yellow-purple</code>) auto-generated via nested SCSS <code>@each</code> loops over a color map. Advance the slide to see each combination.</figcaption>
+</figure>
+</div>
+<p><img src="examples/scss/tip-1.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/scss/tip-1.scss" class="listing-video btn-links img-fluid" target="_blank" alt="scss"></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -646,10 +657,13 @@ Note
 </div>
 <p>For our second example, we are continuing with the gradients, but instead trying to apply them to the background. My goal was to add a gradient line to the right side of the slide.</p>
 <p>I was able to create that effect, by layering 2 gradients on top of each other. The first gradient contained the two colors I was interested in, and the names of the class. The second layer, which I placed on top, goes from white to transparent. I set up the transition between those two colors to be super sharp, resulting in the effect you see below</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Decorative gradient stripe along the right slide edge" src="examples/scss/tip-2.html">
-Slide with a decorative gradient stripe along the right edge: created by layering two CSS gradients — a colored gradient underneath and a sharp white-to-transparent gradient on top.
-</iframe>
-<p><a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/scss/tip-2.scss" target="_blank" class="listing-video btn-links"><i class="fa-brands fa-sass" aria-label="sass"></i>scss</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/scss/tip-2.html" class="slide-deck" loading="lazy" title="Decorative gradient stripe along the right slide edge" width="560" height="373"></p>
+<figcaption>Slide with a decorative gradient stripe along the right edge: created by layering two CSS gradients — a colored gradient underneath and a sharp white-to-transparent gradient on top.</figcaption>
+</figure>
+</div>
+<p><img src="examples/scss/tip-2.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/scss/tip-2.scss" class="listing-video btn-links img-fluid" target="_blank" alt="scss"></p>
 <p>since we are doing something interesting, we could also have used a separate <code>$colors</code> map just for this effect to not interfere with what else we are doing.</p>
 
 

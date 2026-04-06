@@ -1,6 +1,6 @@
 ---
 title: "CSS/SCSS"
-description: "Advanced SCSS techniques for Quarto reveal.js slides: CSS classes, Sass maps, functions, @each loops, mixins, and nested rules for maintainable slide themes."
+description: "Advanced SCSS techniques for Quarto reveal.js slides: CSS classes, Sass maps, functions, `@each` loops, mixins, and nested rules for maintainable slide themes."
 ---
 
 ## General CSS
@@ -28,9 +28,17 @@ Note that CSS rules that target Reveal content generally need to use the `.revea
 
 And the changes have been applied.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Links styled with underline via .reveal .slide CSS prefix" src="examples/scss/links.html">
-Slide showing links styled with an underline via `.reveal .slide a { text-decoration: underline; }`, demonstrating that the `.reveal .slide` prefix is required to override Reveal.js default specificity.
-</iframe>
+![
+  Slide showing links styled with an underline via `.reveal .slide a { text-decoration: underline; }`, demonstrating that the `.reveal .slide` prefix is required to override Reveal.js default specificity.
+](
+  examples/scss/links.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Links styled with underline via .reveal .slide CSS prefix"
+}
 
 ## Using CSS Classes
 
@@ -69,9 +77,17 @@ See below
 [Quarto]{.blue} enables you to weave together [content]{.yellow} and [executable code]{.yellow} into a **finished presentation**. To learn more about [Quarto]{.blue} presentations see <https://quarto.org/docs/presentations/>.
 ````
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Custom .blue and .yellow CSS classes applied inline" src="examples/scss/css-classes.html">
-Slide with custom `.blue` and `.yellow` CSS classes applied inline to individual words: "Quarto" appears in bold blue and "content" / "executable code" in bold yellow using the `[text]{.class}` syntax.
-</iframe>
+![
+  Slide with custom `.blue` and `.yellow` CSS classes applied inline to individual words: "Quarto" appears in bold blue and "content" / "executable code" in bold yellow using the `[text]{.class}` syntax.
+](
+  examples/scss/css-classes.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Custom .blue and .yellow CSS classes applied inline"
+}
 
 The idea behind CSS classes are quite powerful. 
 We are essentially adding CSS attributes to specific elements of our slides,
@@ -410,12 +426,20 @@ The slides in this post are interactive,
 advance them to see the other classes.
 :::
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Compound gradient highlight classes from nested SCSS @each loops" src="examples/scss/tip-1.html">
-Interactive demo of compound gradient highlight classes (e.g. `.hl-red-blue`, `.hl-yellow-purple`) auto-generated via nested SCSS `@each` loops over a color map. Advance the slide to see each combination.
-</iframe>
+![
+  Interactive demo of compound gradient highlight classes (e.g. `.hl-red-blue`, `.hl-yellow-purple`) auto-generated via nested SCSS `@each` loops over a color map. Advance the slide to see each combination.
+](
+  examples/scss/tip-1.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Compound gradient highlight classes from nested SCSS `@each` loops"
+}
 
-<a href="examples/scss/tip-1.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/scss/tip-1.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
+![{{< fa file >}}qmd](examples/scss/tip-1.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands sass >}}scss](examples/scss/tip-1.scss){.listing-video .btn-links target="_blank"}
 
 ::: {.callout-note}
 You don't need these compound classes for everything.
@@ -437,12 +461,20 @@ The second layer, which I placed on top, goes from white to transparent.
 I set up the transition between those two colors to be super sharp,
 resulting in the effect you see below
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Decorative gradient stripe along the right slide edge" src="examples/scss/tip-2.html">
-Slide with a decorative gradient stripe along the right edge: created by layering two CSS gradients — a colored gradient underneath and a sharp white-to-transparent gradient on top.
-</iframe>
+![
+  Slide with a decorative gradient stripe along the right edge: created by layering two CSS gradients — a colored gradient underneath and a sharp white-to-transparent gradient on top.
+](
+  examples/scss/tip-2.html
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Decorative gradient stripe along the right slide edge"
+}
 
-<a href="examples/scss/tip-2.qmd" target="_blank" class="listing-slides btn-links">{{< fa file >}}qmd</a>
-<a href="examples/scss/tip-2.scss" target="_blank" class="listing-video btn-links">{{< fa brands sass >}}scss</a>
+![{{< fa file >}}qmd](examples/scss/tip-2.qmd){.listing-slides .btn-links target="_blank"}
+![{{< fa brands sass >}}scss](examples/scss/tip-2.scss){.listing-video .btn-links target="_blank"}
 
 since we are doing something interesting,
 we could also have used a separate `$colors` map just for this effect to not interfere with what else we are doing.

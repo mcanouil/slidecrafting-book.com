@@ -11,9 +11,17 @@ Letterbox is a presentation style that adds colored bars at the top and bottom o
 creating a cinematic feel while also providing a consistent visual anchor for your content.
 This style became popular through the xaringan R package and many presenters found it helpful for branding and visual consistency.
 
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Demo of the quarto-revealjs-letterbox extension" src="https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/">
-Demo of the letterbox extension: slides with colored bars at the top and bottom creating a cinematic framing effect, similar to the popular xaringan letterbox style.
-</iframe>
+![
+  Demo of the letterbox extension: slides with colored bars at the top and bottom creating a cinematic framing effect, similar to the popular xaringan letterbox style.
+](
+  https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/
+){
+  .slide-deck
+  loading="lazy"
+  width="560"
+  height="373"
+  title="Demo of the quarto-revealjs-letterbox extension"
+}
 
 ## Installation
 
@@ -68,11 +76,9 @@ format:
 
 This allows you to have the letterbox style while still applying all the color, font, and size customizations discussed in earlier chapters.
 
-<div class="project-buttons">
-<a href="https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox">
-  {{< fa brands github >}} Github
-</a>
-<a href="https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/">
-  {{< fa door-open >}} Demo
-</a>
-</div>
+::: {.project-buttons}
+
+![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox)
+![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/)
+
+:::

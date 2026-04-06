@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.35">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="How to find, apply, and embed fonts in Quarto reveal.js slides using Google Fonts, Sass variables, and local font files with (font-face?).">
+<meta name="description" content="How to find, apply, and embed fonts in Quarto reveal.js slides using Google Fonts, Sass variables, and local font files with @font-face.">
 
 <title>3&nbsp; Fonts – Slidecrafting</title>
 <style>
@@ -78,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-10a99e03521ec9ce62a914b0d4603325.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c40c0ddd606b58ba960743f60575934e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c637c4387fd00c9d762d829c448c9f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e8267730ddd4843cadbd019f792683ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <meta property="og:title" content="3&nbsp; Fonts – Slidecrafting">
-<meta property="og:description" content="How to find, apply, and embed fonts in Quarto reveal.js slides using Google Fonts, Sass variables, and local font files with (font-face?).">
+<meta property="og:description" content="How to find, apply, and embed fonts in Quarto reveal.js slides using Google Fonts, Sass variables, and local font files with @font-face.">
 <meta property="og:site_name" content="Slidecrafting">
 </head>
 
@@ -348,9 +348,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">/*-- scss:rules --*/</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Which, when rendered, results in the following slides.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Slides with Google Fonts applied (Manrope body, IBM Plex Serif headings)" src="examples/fonts/google-fonts.html">
-Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for headings, demonstrating bold and italic font weights in use.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/fonts/google-fonts.html" class="slide-deck" loading="lazy" title="Slides with Google Fonts applied (Manrope body, IBM Plex Serif headings)" width="560" height="373"></p>
+<figcaption>Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for headings, demonstrating bold and italic font weights in use.</figcaption>
+</figure>
+</div>
 <p>Notice how the fonts we used allow us to bold the words “finished presentation” and italicize “content and executable code”. If you don’t see those working, it is because you either didn’t select those high font weights to allow for boldness, or italic versions to allow for italics.</p>
 <p>You can also change the code font; this should ideally be a monospaced font. This is done using the <code>$font-family-monospace</code> sass variable.</p>
 <p>You might have noticed that when we specify fonts there are multiple names listed. These names are comma-separated. This is related to fallback fonts. If any font specified isn’t available for whatever reason, because of a misspecification or slow internet connection, then the next font in line will be selected. In the above example, if <code>Manrope</code> isn’t available, then the system <code>sans-serif</code> font will be selected. You can have as many fonts as you like in a specification.</p>
@@ -365,9 +368,12 @@ Slides with Google Fonts applied: Manrope for body text and IBM Plex Serif for h
 </ul>
 <p>You might even have your own special font you wanna use. While it isn’t that important in slides compared to websites, supplying the fonts instead of downloading them will reduce the load time for your slides.</p>
 <p>I just added some new code to a slide.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Code slides before embedding FiraCode (no ligatures)" src="examples/fonts/before-fira.html">
-Code slides before embedding FiraCode: multi-character operators like <code>!=</code> and <code>|&gt;</code> appear as plain separate characters without ligatures.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/fonts/before-fira.html" class="slide-deck" loading="lazy" title="Code slides before embedding FiraCode (no ligatures)" width="560" height="373"></p>
+<figcaption>Code slides before embedding FiraCode: multi-character operators like <code>!=</code> and <code>|&gt;</code> appear as plain separate characters without ligatures.</figcaption>
+</figure>
+</div>
 <p>And this code uses some multi-character symbols like <code>!=</code> and <code>|&gt;</code>. These and many like them are common to all the different programming languages, so much so that people have created special fonts with ligatures to make them prettier.</p>
 <p>One such font is <a href="https://github.com/tonsky/FiraCode">FiraCode</a>.</p>
 <p>And we can add these types of fonts to our slides as well! Start by downloading the font from the site, and copy over a <code>.woff</code> and <code>.woff2</code> file to your slide directory. I selected <code>FiraCode-Regular.woff</code> and <code>FiraCode-Regular.woff2</code>.</p>
@@ -381,9 +387,12 @@ Code slides before embedding FiraCode: multi-character operators like <code>!=</
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="va">$font-family-monospace</span>: <span class="st">'FiraCode'</span><span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You might have noticed some ugliness with the <code>../../../../../</code>s. To my knowledge, this is the best way of using a local font-face from a file. You might want to add or remove <code>../</code> depending on your folder structure. I found that 5 sets were what was needed when the <code>.qmd</code> file and the <code>woff</code> files were located in the same folder. An <a href="https://github.com/quarto-dev/quarto-cli/issues/5712">issue has been filed</a> regarding this problem.</p>
 <p>With all of that, we now have beautiful ligatures.</p>
-<iframe class="slide-deck" loading="lazy" width="560" height="373" title="Code slides after embedding FiraCode (with ligatures)" src="examples/fonts/after-fira.html">
-Same code slides after embedding FiraCode via <code>@font-face</code>: operators like <code>!=</code> and <code>|&gt;</code> are rendered as beautiful single-glyph ligatures.
-</iframe>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><embed src="examples/fonts/after-fira.html" class="slide-deck" loading="lazy" title="Code slides after embedding FiraCode (with ligatures)" width="560" height="373"></p>
+<figcaption>Same code slides after embedding FiraCode via <code>@font-face</code>: operators like <code>!=</code> and <code>|&gt;</code> are rendered as beautiful single-glyph ligatures.</figcaption>
+</figure>
+</div>
 
 
 </section>

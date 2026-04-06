@@ -626,175 +626,185 @@ The [quarto-revealjs-tabset](https://github.com/mcanouil/quarto-revealjs-tabset)
 > Extended tabset fragment supporting any number of tabs: uses `querySelectorAll` to find all tabs, then advances to the next tab by index on each fragment trigger.
 >
 > ![qmd](examples/fragments/fragment-tabset-full.qmd)
->
-> ## 11.10 advance embedded slides
->
-> The last example I’ll show for now is one you have seen me use already. I like to put quarto slides inside quarto slides. However, it becomes messy to advance the embedded slides, because they take focus of the mouse. I have used a fragment to advance these.
->
-> We start by embedding a set of slides in our set of slides. We do thing with `<iframe class="slide-deck" loading="lazy" src="fragment-scroll.html" style="width:100%; height: 500px;" ></iframe>`.
->
-> The `Reveal` object has a [fairly extensive API](https://revealjs.com/api/) you can use. So we just need to fetch the right `Reveal` object so we can use the `.left()` and `.right()` methods to advance the slides. It took me a while to find the right code, but [`.contentWindow`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow) was the missing piece. The following returns the embedded `Reveal` object.
->
-> ``` js
-> Reveal
->   .getCurrentSlide()
->   .querySelector("iframe")
->   .contentWindow
->   .Reveal
-> ```
->
-> Which then gives us the following as our fragment
->
-> ``` js
-> Reveal.on('fragmentshown', event => {
->   if (event.fragment.classList.contains("advance-slide")) {
->  Reveal
->       .getCurrentSlide()
->        .querySelector("iframe")
->       .contentWindow
->       .Reveal
->       .right()
->     }
-> });
-> Reveal.on('fragmenthidden', event => {
->   if (event.fragment.classList.contains("advance-slide")) {
->  Reveal
->       .getCurrentSlide()
->       .querySelector("iframe")
->       .contentWindow
->       .Reveal
->       .left()
->     }
-> });
-> ```
->
-> ![](https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/.png "Demo of embedded slide advancement via contentWindow.Reveal.right()")
->
-> Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a `.advance-slide` fragment controls it using `iframe.contentWindow.Reveal.right()` so a clicker can advance both the outer and inner slides.
->
-> ![qmd](examples/fragments/fragment-advance.qmd)
->
-> ## 11.11 Fragment Extensions
->
-> The following extensions provide additional fragment capabilities beyond what we’ve covered so far.
->
-> ### 11.11.1 Roughnotation
->
-> The [quarto-roughnotation](https://github.com/EmilHvitfeldt/quarto-roughnotation) extension uses the [Rough Notation](https://roughnotation.com/) JavaScript library to add hand-drawn styled annotations to your slides. These annotations can circle, underline, highlight, or strike-through text with an animated sketchy appearance.
->
-> Demo of the quarto-roughnotation extension: hand-drawn style annotations (circle, underline, highlight, strike-through, bracket) applied to text as animated fragments using the Rough Notation JavaScript library.
->
-> To install:
->
-> ``` bash
-> quarto add EmilHvitfeldt/quarto-roughnotation
-> ```
->
-> The extension provides several annotation types that can be triggered as fragments:
->
-> - `rn-underline` - Underline text
-> - `rn-circle` - Circle around text
-> - `rn-highlight` - Highlight text
-> - `rn-strike-through` - Strike through text
-> - `rn-crossed-off` - X through text
-> - `rn-bracket` - Bracket around text
->
-> Usage is simple:
->
-> ``` markdown
-> [This text will be circled]{.rn-circle .fragment}
->
-> [This will be highlighted]{.rn-highlight .fragment fragment-index=2}
-> ```
->
-> You can customize colors and other properties using data attributes:
->
-> ``` markdown
-> [Important!]{.rn-underline data-rn-color="red" .fragment}
-> ```
->
-> ![ Github](https://github.com/EmilHvitfeldt/quarto-roughnotation.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-roughnotation/.png)
->
-> ### 11.11.2 More Fragments
->
-> The [quarto-revealjs-more-fragments](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments) extension adds over 90 additional fragment animations to your presentations using the [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries.
->
-> Demo of the quarto-revealjs-more-fragments extension: over 90 additional CSS animation classes (bounce, fadeIn, zoomOut, magic, etc.) from Animate.css and Magic.css usable as Reveal.js fragments.
->
-> To install:
->
-> ``` bash
-> quarto add EmilHvitfeldt/quarto-revealjs-more-fragments
-> ```
->
-> Once installed, you can use any of the animation classes as fragments. Some popular options include:
->
-> **Attention seekers:** - `bounce`, `flash`, `pulse`, `shake`, `swing`, `wobble`
->
-> **Entrances:** - `bounceIn`, `fadeIn`, `flipInX`, `rotateIn`, `zoomIn`, `slideInUp`
->
-> **Exits:** - `bounceOut`, `fadeOut`, `flipOutX`, `rotateOut`, `zoomOut`
->
-> **Magic animations:** - `magic`, `twisterInDown`, `swap`, `puffIn`, `vanishIn`
->
-> Usage:
->
-> ``` markdown
-> [This will bounce in]{.fragment .bounceIn}
->
-> [This will fade in from the left]{.fragment .fadeInLeft}
-> ```
->
-> [ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments) [ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/)
->
-> ### 11.11.3 Tabset
->
-> The [quarto-revealjs-tabset](https://github.com/mcanouil/quarto-revealjs-tabset) extension turns tabs into fragments, so they can be navigated with arrow keys or a clicker instead of requiring mouse clicks.
->
-> Demo of the quarto-revealjs-tabset extension: tabs in a panel tabset are treated as fragments, enabling keyboard navigation through tabs without mouse clicks.
->
-> To install:
->
-> ``` bash
-> quarto add mcanouil/quarto-revealjs-tabset@1.3.0
-> ```
->
-> Once installed, add the plugin to your YAML header:
->
-> ``` yaml
-> ---
-> title: "My Presentation"
-> format:
->   revealjs: default
-> revealjs-plugins:
->   - tabset
-> ---
-> ```
->
-> Then use standard Quarto tabset syntax. No special classes or fragment divs are needed:
->
-> ``` markdown
-> ## Slide with Tabset
->
-> :::: {.panel-tabset}
->
-> ### Tab 1
->
-> Content for the first tab.
->
-> ### Tab 2
->
-> Content for the second tab.
->
-> ### Tab 3
->
-> Content for the third tab.
->
-> :::
-> ```
->
-> The plugin automatically detects `.panel-tabset` divs and treats each tab as a fragment. It supports multiple tabsets per slide, nested fragments within tabs, and bidirectional navigation.
->
-> When exporting to PDF, each tab automatically appears on its own page without needing `pdf-separate-fragments: true` globally.
->
-> [ Github](https://github.com/mcanouil/quarto-revealjs-tabset) [ Demo](https://m.canouil.dev/quarto-revealjs-tabset/)
+
+## 11.10 advance embedded slides
+
+The last example I’ll show for now is one you have seen me use already. I like to put quarto slides inside quarto slides. However, it becomes messy to advance the embedded slides, because they take focus of the mouse. I have used a fragment to advance these.
+
+We start by embedding a set of slides in our set of slides. We do thing with `<iframe class="slide-deck" loading="lazy" src="fragment-scroll.html" style="width:100%; height: 500px;" ></iframe>`.
+
+The `Reveal` object has a [fairly extensive API](https://revealjs.com/api/) you can use. So we just need to fetch the right `Reveal` object so we can use the `.left()` and `.right()` methods to advance the slides. It took me a while to find the right code, but [`.contentWindow`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow) was the missing piece. The following returns the embedded `Reveal` object.
+
+``` js
+Reveal
+  .getCurrentSlide()
+  .querySelector("iframe")
+  .contentWindow
+  .Reveal
+```
+
+Which then gives us the following as our fragment
+
+``` js
+Reveal.on('fragmentshown', event => {
+  if (event.fragment.classList.contains("advance-slide")) {
+ Reveal
+      .getCurrentSlide()
+       .querySelector("iframe")
+      .contentWindow
+      .Reveal
+      .right()
+    }
+});
+Reveal.on('fragmenthidden', event => {
+  if (event.fragment.classList.contains("advance-slide")) {
+ Reveal
+      .getCurrentSlide()
+      .querySelector("iframe")
+      .contentWindow
+      .Reveal
+      .left()
+    }
+});
+```
+
+![](https://emilhvitfeldt.github.io/quarto-revealjs-fragment-advance-example/.png "Demo of embedded slide advancement via contentWindow.Reveal.right()")
+
+Demo of embedded slide advancement: an inner Reveal.js presentation is embedded in an iframe, and a `.advance-slide` fragment controls it using `iframe.contentWindow.Reveal.right()` so a clicker can advance both the outer and inner slides.
+
+![qmd](examples/fragments/fragment-advance.qmd)
+
+## 11.11 Fragment Extensions
+
+The following extensions provide additional fragment capabilities beyond what we’ve covered so far.
+
+### 11.11.1 Roughnotation
+
+The [quarto-roughnotation](https://github.com/EmilHvitfeldt/quarto-roughnotation) extension uses the [Rough Notation](https://roughnotation.com/) JavaScript library to add hand-drawn styled annotations to your slides. These annotations can circle, underline, highlight, or strike-through text with an animated sketchy appearance.
+
+Demo of the quarto-roughnotation extension: hand-drawn style annotations (circle, underline, highlight, strike-through, bracket) applied to text as animated fragments using the Rough Notation JavaScript library.
+
+To install:
+
+``` bash
+quarto add EmilHvitfeldt/quarto-roughnotation
+```
+
+The extension provides several annotation types that can be triggered as fragments:
+
+- `rn-underline` - Underline text
+- `rn-circle` - Circle around text
+- `rn-highlight` - Highlight text
+- `rn-strike-through` - Strike through text
+- `rn-crossed-off` - X through text
+- `rn-bracket` - Bracket around text
+
+Usage is simple:
+
+``` markdown
+[This text will be circled]{.rn-circle .fragment}
+
+[This will be highlighted]{.rn-highlight .fragment fragment-index=2}
+```
+
+You can customize colors and other properties using data attributes:
+
+``` markdown
+[Important!]{.rn-underline data-rn-color="red" .fragment}
+```
+
+![ Github](https://github.com/EmilHvitfeldt/quarto-roughnotation.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-roughnotation/.png)
+
+### 11.11.2 More Fragments
+
+The [quarto-revealjs-more-fragments](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments) extension adds over 90 additional fragment animations to your presentations using the [Animate.css](https://animate.style/) and [Magic.css](https://www.minimamente.com/project/magic/) libraries.
+
+Demo of the quarto-revealjs-more-fragments extension: over 90 additional CSS animation classes (bounce, fadeIn, zoomOut, magic, etc.) from Animate.css and Magic.css usable as Reveal.js fragments.
+
+To install:
+
+``` bash
+quarto add EmilHvitfeldt/quarto-revealjs-more-fragments
+```
+
+Once installed, you can use any of the animation classes as fragments. Some popular options include:
+
+**Attention seekers:**
+
+- `bounce`, `flash`, `pulse`, `shake`, `swing`, `wobble`
+
+**Entrances:**
+
+- `bounceIn`, `fadeIn`, `flipInX`, `rotateIn`, `zoomIn`, `slideInUp`
+
+**Exits:**
+
+- `bounceOut`, `fadeOut`, `flipOutX`, `rotateOut`, `zoomOut`
+
+**Magic animations:**
+
+- `magic`, `twisterInDown`, `swap`, `puffIn`, `vanishIn`
+
+Usage:
+
+``` markdown
+[This will bounce in]{.fragment .bounceIn}
+
+[This will fade in from the left]{.fragment .fadeInLeft}
+```
+
+![ Github](https://github.com/EmilHvitfeldt/quarto-revealjs-more-fragments.png) ![ Demo](https://emilhvitfeldt.github.io/quarto-revealjs-more-fragments/.png)
+
+### 11.11.3 Tabset
+
+The [quarto-revealjs-tabset](https://github.com/mcanouil/quarto-revealjs-tabset) extension turns tabs into fragments, so they can be navigated with arrow keys or a clicker instead of requiring mouse clicks.
+
+![](https://m.canouil.dev/quarto-revealjs-tabset/.png "Demo of the quarto-revealjs-tabset extension")
+
+Demo of the quarto-revealjs-tabset extension: tabs in a panel tabset are treated as fragments, enabling keyboard navigation through tabs without mouse clicks.
+
+To install:
+
+``` bash
+quarto add mcanouil/quarto-revealjs-tabset@1.3.0
+```
+
+Once installed, add the plugin to your YAML header:
+
+``` yaml
+---
+title: "My Presentation"
+format:
+  revealjs: default
+revealjs-plugins:
+  - tabset
+---
+```
+
+Then use standard Quarto tabset syntax. No special classes or fragment divs are needed:
+
+``` markdown
+## Slide with Tabset
+
+::: {.panel-tabset}
+
+### Tab 1
+
+Content for the first tab.
+
+### Tab 2
+
+Content for the second tab.
+
+### Tab 3
+
+Content for the third tab.
+
+:::
+```
+
+The plugin automatically detects `.panel-tabset` divs and treats each tab as a fragment. It supports multiple tabsets per slide, nested fragments within tabs, and bidirectional navigation.
+
+When exporting to PDF, each tab automatically appears on its own page without needing `pdf-separate-fragments: true` globally.
+
+![ Github](https://github.com/mcanouil/quarto-revealjs-tabset.png) ![ Demo](https://m.canouil.dev/quarto-revealjs-tabset/.png)

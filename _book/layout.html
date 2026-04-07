@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.35">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,10 +78,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-10a99e03521ec9ce62a914b0d4603325.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c40c0ddd606b58ba960743f60575934e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0c637c4387fd00c9d762d829c448c9f6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e8267730ddd4843cadbd019f792683ca.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -119,7 +119,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="8&nbsp; Layout – Slidecrafting">
 <meta property="og:description" content="Layout techniques for Quarto reveal.js slides: multi-column layouts, r-fit-text, absolute positioning, background images, text overlays, and the paper card effect.">
-<meta property="og:image" content="https://slidecrafting-book.com/examples/layout/left-right.qmd">
 <meta property="og:site_name" content="Slidecrafting">
 </head>
 
@@ -430,12 +429,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Empty 30% left column pushing all content into the 70% right column, demonstrating how blank columns provide quick spatial control.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="examples/layout/left-right.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
-<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
-</figure>
-</div>
+<p><a href="examples/layout/left-right.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 </section>
 <section id="r-fit-text" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="r-fit-text"><span class="header-section-number">8.2</span> r-fit-text</h2>
@@ -487,19 +481,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Two separate <code>r-fit-text</code> blocks, one per line: each line independently fills the full slide width, producing two large lines of equal visual weight.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="examples/layout/r-fit-text.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
-<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
-</figure>
-</div>
+<p><a href="examples/layout/r-fit-text.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 </section>
 <section id="loud-extension" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="loud-extension"><span class="header-section-number">8.3</span> Loud Extension</h2>
 <p>If you find yourself using <code>r-fit-text</code> frequently, the <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-loud">quarto-revealjs-loud</a> extension automates this process. It automatically makes text big when there isn’t much content on a slide.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/.png" class="slide-deck figure-img" loading="lazy" title="Demo of the quarto-revealjs-loud extension" width="560" height="373"></p>
+<p><embed src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/index.html" class="slide-deck" loading="lazy" title="Demo of the quarto-revealjs-loud extension" width="560" height="373"></p>
 <figcaption>Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g.&nbsp;a single sentence or quote) automatically have their text scaled up to fill the available space.</figcaption>
 </figure>
 </div>
@@ -512,7 +501,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> loud</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>The extension will automatically detect slides with minimal content and scale the text to fill the available space. This is particularly useful for quote slides, section breaks, or emphasis slides where you want a single statement to have maximum impact.</p>
 <div class="project-buttons">
-<p><img src="https://github.com/EmilHvitfeldt/quarto-revealjs-loud.png" class="img-fluid" alt=" Github"> <img src="https://emilhvitfeldt.github.io/quarto-revealjs-loud/.png" class="img-fluid" alt=" Demo"></p>
+<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-loud"><i class="fa-brands fa-github" aria-label="github"></i> Github</a> <a href="https://emilhvitfeldt.github.io/quarto-revealjs-loud/"><i class="fa-solid fa-door-open" aria-label="door-open"></i> Demo</a></p>
 </div>
 </section>
 <section id="using-images" class="level2" data-number="8.4">
@@ -531,12 +520,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Photo by <a href="https://unsplash.com/@hollymandarich?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Holly Mandarich</a> on <a href="https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="examples/layout/image-basics.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
-<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
-</figure>
-</div>
+<p><a href="examples/layout/image-basics.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 </section>
 <section id="absolute-position" class="level3" data-number="8.4.2">
 <h3 data-number="8.4.2" class="anchored" data-anchor-id="absolute-position"><span class="header-section-number">8.4.2</span> Absolute position</h3>
@@ -598,12 +582,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Photo by <a href="https://unsplash.com/@noellerebekah?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Noelle Rebekah</a> on <a href="https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="examples/layout/image-absolute.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
-<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
-</figure>
-</div>
+<p><a href="examples/layout/image-absolute.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -635,12 +614,7 @@ Warning
 <figcaption>Slide with text elements placed using <code>.absolute</code>: “python is great” and “and so is R” positioned at specific percentage coordinates on the slide using <code>bottom</code> and <code>left</code>/<code>right</code> attributes.</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="examples/layout/tip-5.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
-<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
-</figure>
-</div>
+<p><a href="examples/layout/tip-5.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <section id="background-image" class="level3" data-number="8.5.1">
 <h3 data-number="8.5.1" class="anchored" data-anchor-id="background-image"><span class="header-section-number">8.5.1</span> Background image</h3>
 <p>The last way to add images, which I highly recommend is the use of background images. And in many ways, it is the simplest one.</p>
@@ -664,12 +638,7 @@ Warning
 </figure>
 </div>
 <p>Photo by <a href="https://unsplash.com/@galen_crout?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Galen Crout</a> on <a href="https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="examples/layout/image-background.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
-<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
-</figure>
-</div>
+<p><a href="examples/layout/image-background.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <p>As we see here, the text positioning can change how the slides are perceived. Both in style and emotion, try to think about how you can incorporate text positioning to maximize engagement.</p>
 </section>
 </section>
@@ -724,12 +693,7 @@ Warning
 </figure>
 </div>
 <p>Photo by <a href="https://unsplash.com/@timmarshall?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Tim Marshall</a> on <a href="https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&amp;utm_medium=referral&amp;utm_source=unsplash">Unsplash</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="examples/layout/overlay-textbox.qmd" class="listing-slides btn-links img-fluid figure-img" target="_blank"></p>
-<figcaption><i class="fa-solid fa-file" aria-label="file"></i>qmd</figcaption>
-</figure>
-</div>
+<p><a href="examples/layout/overlay-textbox.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a></p>
 <p>I think this turned out well. There are endless ways to use this. It is quite CSS-heavy work, but I think it is worth it. Note that you are always free to copy an example and modify it to your wants.</p>
 </section>
 <section id="editable-extension" class="level2" data-number="8.7">
@@ -758,12 +722,7 @@ Warning
 <p>When viewing your slides, you can click and drag elements to reposition them, or use handles to resize images. The extension will output the CSS values you need to make the changes permanent in your source code.</p>
 <p>This is particularly useful when working with absolute positioning, where getting pixel values exactly right can be tedious through trial and error.</p>
 <div class="project-buttons">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://github.com/EmilHvitfeldt/quarto-revealjs-editable.png" class="img-fluid figure-img"></p>
-<figcaption><i class="fa-brands fa-github" aria-label="github"></i> Github</figcaption>
-</figure>
-</div>
+<p><a href="https://github.com/EmilHvitfeldt/quarto-revealjs-editable"><i class="fa-brands fa-github" aria-label="github"></i> Github</a></p>
 </div>
 </section>
 <section id="spread" class="level2" data-number="8.8">
@@ -842,7 +801,7 @@ Note
 <figcaption>Same three bullet points using <code>.spread.spread-evenly</code>: items are distributed with equal spacing including above the first and below the last item using <code>justify-content: space-evenly</code>.</figcaption>
 </figure>
 </div>
-<p><img src="examples/layout/spread.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/layout/spread.scss" class="listing-slides btn-links img-fluid" target="_blank" alt="scss"> <embed src="examples/layout/spread-script.js" class="listing-slides btn-links img-fluid" target="_blank"></p>
+<p><a href="examples/layout/spread.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/spread.scss" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>scss</a> <a href="examples/layout/spread-script.js" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>js</a></p>
 </section>
 <section id="paper-card-effect" class="level2" data-number="8.9">
 <h2 data-number="8.9" class="anchored" data-anchor-id="paper-card-effect"><span class="header-section-number">8.9</span> Paper Card Effect</h2>
@@ -886,7 +845,7 @@ Note
 </figure>
 </div>
 <p>Because the card shrinks the content area, elements placed via JavaScript into the slide background (<code>.slide-background</code>) can extend freely outside the card bounds. This is the technique the <a href="https://github.com/EmilHvitfeldt/quarto-revealjs-highlighter-theme">quarto-revealjs-highlighter-theme</a> extension uses to scatter decorative dashes and shapes around the edges of each slide without them ever overlapping the text.</p>
-<p><img src="examples/layout/paper-card.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/layout/paper-card.scss" class="listing-slides btn-links img-fluid" target="_blank" alt="scss"></p>
+<p><a href="examples/layout/paper-card.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card.scss" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
 <section id="paper-card-as-the-default" class="level3" data-number="8.9.1">
 <h3 data-number="8.9.1" class="anchored" data-anchor-id="paper-card-as-the-default"><span class="header-section-number">8.9.1</span> Paper card as the default</h3>
 <p>If you want every slide to be a card without adding <code>.paper</code> each time, just change the selector from <code>section.paper</code> to <code>section</code>. The <code>.paperless</code> class then becomes the opt-out for slides that shouldn’t have the effect.</p>
@@ -911,7 +870,7 @@ Note
 <figcaption>Every slide rendered as a card by default, with the <code>.paperless</code> class used on one slide to opt out of the effect and fill the full viewport.</figcaption>
 </figure>
 </div>
-<p><img src="examples/layout/paper-card-default.qmd" class="listing-slides btn-links img-fluid" target="_blank" alt="qmd"> <img src="examples/layout/paper-card-default.scss" class="listing-slides btn-links img-fluid" target="_blank" alt="scss"></p>
+<p><a href="examples/layout/paper-card-default.qmd" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>qmd</a> <a href="examples/layout/paper-card-default.scss" class="listing-slides btn-links" target="_blank"><i class="fa-solid fa-file" aria-label="file"></i>scss</a></p>
 </section>
 </section>
 <section id="vary-the-type-of-slides" class="level2" data-number="8.10">

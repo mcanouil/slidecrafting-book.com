@@ -12,9 +12,7 @@ I find this useful when I have to give the same presentation multiple times, and
 
 Slide deck demonstrating hidden slides: a slide marked with `visibility="hidden"` is skipped entirely during the presentation but remains in the source file.
 
-![](examples/miscellaneous/tip-3.qmd)
-
-qmd
+[qmd](examples/miscellaneous/tip-3.qmd)
 
 ## 14.2 Avoid duplication using Includes
 

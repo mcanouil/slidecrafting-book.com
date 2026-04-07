@@ -655,8 +655,8 @@ Below is some before and after using the theme we have developed in the chapter 
   title="Code slides without custom syntax highlighting"
 }
 
-![{{< fa file >}}qmd](examples/colors/no-syntax-highlighting.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/colors/no-syntax-highlighting.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/colors/no-syntax-highlighting.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/colors/no-syntax-highlighting.scss){.listing-video .btn-links target="_blank"}
 
 ![
   Same code slides with custom CSS syntax highlighting applied: keywords, strings, functions, and other token types each colored individually using the skylighting CSS class system.
@@ -670,5 +670,5 @@ Below is some before and after using the theme we have developed in the chapter 
   title="Code slides with custom CSS syntax highlighting"
 }
 
-![{{< fa file >}}qmd](examples/colors/syntax-highlighting.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/colors/syntax-highlighting.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/colors/syntax-highlighting.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/colors/syntax-highlighting.scss){.listing-video .btn-links target="_blank"}

@@ -134,7 +134,7 @@ Only right side
   title="Empty 30% left column pushing content into the 70% right column"
 }
 
-![{{< fa file >}}qmd](examples/layout/left-right.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/left-right.qmd){.listing-slides .btn-links target="_blank"}
 
 ## r-fit-text
 
@@ -232,7 +232,7 @@ On two lines
   title="Two separate r-fit-text blocks each filling the full slide width"
 }
 
-![{{< fa file >}}qmd](examples/layout/r-fit-text.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/r-fit-text.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Loud Extension
 
@@ -243,7 +243,7 @@ It automatically makes text big when there isn't much content on a slide.
 ![
   Demo of the quarto-revealjs-loud extension: slides with minimal content (e.g. a single sentence or quote) automatically have their text scaled up to fill the available space.
 ](
-  https://emilhvitfeldt.github.io/quarto-revealjs-loud/
+  https://emilhvitfeldt.github.io/quarto-revealjs-loud/index.html
 ){
   .slide-deck
   loading="lazy"
@@ -272,8 +272,8 @@ This is particularly useful for quote slides, section breaks, or emphasis slides
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-loud)
-![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-loud/)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-loud)
+[{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-loud/)
 
 :::
 
@@ -316,7 +316,7 @@ and it adheres to margins which I rarely want for tasks like this.
 
 Photo by [Holly Mandarich](https://unsplash.com/@hollymandarich?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-carrying-yellow-and-black-backpack-walking-between-green-plants-UVyOfX3v0Ls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-![{{< fa file >}}qmd](examples/layout/image-basics.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/image-basics.qmd){.listing-slides .btn-links target="_blank"}
 
 ### Absolute position
 
@@ -390,7 +390,7 @@ Notice that we are using negative locations to make this happen as `0` is inside
 
 Photo by [Noelle Rebekah](https://unsplash.com/@noellerebekah?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/woman-in-gray-jacket-leaning-on-white-car-during-daytime-H0KnTivRIXw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
  
-![{{< fa file >}}qmd](examples/layout/image-absolute.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/image-absolute.qmd){.listing-slides .btn-links target="_blank"}
 
 ::: callout-warning
 Since the way that positions are done in revealjs,
@@ -433,7 +433,7 @@ I like to use it with text in the following way:
   title="Text elements placed at specific coordinates using .absolute"
 }
 
-![{{< fa file >}}qmd](examples/layout/tip-5.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/tip-5.qmd){.listing-slides .btn-links target="_blank"}
 
 ### Background image
 
@@ -483,7 +483,7 @@ I end up not setting a default title and use `.absolute` to place any content I 
 
 Photo by [Galen Crout](https://unsplash.com/@galen_crout?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/person-on-top-of-mountain-during-daytime-fItRJ7AHak8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-![{{< fa file >}}qmd](examples/layout/image-background.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/image-background.qmd){.listing-slides .btn-links target="_blank"}
 
 As we see here, the text positioning can change how the slides are perceived.
 Both in style and emotion,
@@ -595,7 +595,7 @@ Take Risks
 
 Photo by [Tim Marshall](https://unsplash.com/@timmarshall?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/ocean-tunnel-wave-uanoYn1AmPs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 
-![{{< fa file >}}qmd](examples/layout/overlay-textbox.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/overlay-textbox.qmd){.listing-slides .btn-links target="_blank"}
 
 I think this turned out well.
 There are endless ways to use this.
@@ -637,7 +637,7 @@ where getting pixel values exactly right can be tedious through trial and error.
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-editable)
 
 :::
 
@@ -754,9 +754,9 @@ We rarely care whether a predictor is normal
   title="Bullet points distributed with .spread-evenly (equal spacing including edges)"
 }
 
-![{{< fa file >}}qmd](examples/layout/spread.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa file >}}scss](examples/layout/spread.scss){.listing-slides .btn-links target="_blank"}
-![{{< fa file >}}js](examples/layout/spread-script.js){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/spread.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}scss](examples/layout/spread.scss){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}js](examples/layout/spread-script.js){.listing-slides .btn-links target="_blank"}
 
 ## Paper Card Effect
 
@@ -836,8 +836,8 @@ This is the technique the [quarto-revealjs-highlighter-theme](https://github.com
 extension uses to scatter decorative dashes and shapes around the edges of each slide
 without them ever overlapping the text.
 
-![{{< fa file >}}qmd](examples/layout/paper-card.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa file >}}scss](examples/layout/paper-card.scss){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/paper-card.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}scss](examples/layout/paper-card.scss){.listing-slides .btn-links target="_blank"}
 
 ### Paper card as the default
 
@@ -875,8 +875,8 @@ The `.paperless` class then becomes the opt-out for slides that shouldn't have t
   title="Every slide rendered as a card by default, with .paperless opt-out"
 }
 
-![{{< fa file >}}qmd](examples/layout/paper-card-default.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa file >}}scss](examples/layout/paper-card-default.scss){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/layout/paper-card-default.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}scss](examples/layout/paper-card-default.scss){.listing-slides .btn-links target="_blank"}
 
 ## Vary the type of slides
 

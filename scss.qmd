@@ -438,8 +438,8 @@ advance them to see the other classes.
   title="Compound gradient highlight classes from nested SCSS `@each` loops"
 }
 
-![{{< fa file >}}qmd](examples/scss/tip-1.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/scss/tip-1.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/scss/tip-1.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/scss/tip-1.scss){.listing-video .btn-links target="_blank"}
 
 ::: {.callout-note}
 You don't need these compound classes for everything.
@@ -473,8 +473,8 @@ resulting in the effect you see below
   title="Decorative gradient stripe along the right slide edge"
 }
 
-![{{< fa file >}}qmd](examples/scss/tip-2.qmd){.listing-slides .btn-links target="_blank"}
-![{{< fa brands sass >}}scss](examples/scss/tip-2.scss){.listing-video .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/scss/tip-2.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa brands sass >}}scss](examples/scss/tip-2.scss){.listing-video .btn-links target="_blank"}
 
 since we are doing something interesting,
 we could also have used a separate `$colors` map just for this effect to not interfere with what else we are doing.

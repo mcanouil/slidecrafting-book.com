@@ -12,7 +12,7 @@ Codewindow wraps your code chunks in a styled window frame with a file tab, simi
 ![
   Demo of the codewindow extension: code blocks styled as IDE-like windows with a title bar, file tab with language icon, and polished appearance resembling a modern code editor.
 ](
-  https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/
+  https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/index.html
 ){
   .slide-deck
   loading="lazy"
@@ -100,7 +100,7 @@ print("Hello, world!")
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow)
-![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-codewindow)
+[{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-codewindow/)
 
 :::

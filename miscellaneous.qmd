@@ -28,7 +28,7 @@ I just changed the attribute.
   title="Demo of hidden slides using visibility=hidden"
 }
 
-![{{< fa file >}}qmd](examples/miscellaneous/tip-3.qmd){.listing-slides .btn-links target="_blank"}
+[{{< fa file >}}qmd](examples/miscellaneous/tip-3.qmd){.listing-slides .btn-links target="_blank"}
 
 ## Avoid duplication using Includes
 

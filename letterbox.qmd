@@ -14,7 +14,7 @@ This style became popular through the xaringan R package and many presenters fou
 ![
   Demo of the letterbox extension: slides with colored bars at the top and bottom creating a cinematic framing effect, similar to the popular xaringan letterbox style.
 ](
-  https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/
+  https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/index.html
 ){
   .slide-deck
   loading="lazy"
@@ -78,7 +78,7 @@ This allows you to have the letterbox style while still applying all the color, 
 
 ::: {.project-buttons}
 
-![{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox)
-![{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/)
+[{{< fa brands github >}} Github](https://github.com/EmilHvitfeldt/quarto-revealjs-letterbox)
+[{{< fa door-open >}} Demo](https://emilhvitfeldt.github.io/quarto-revealjs-letterbox/)
 
 :::

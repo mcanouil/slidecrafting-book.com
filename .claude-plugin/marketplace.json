@@ -12,7 +12,7 @@
     {
       "name": "slidecrafting",
       "source": ".",
-      "description": "Build, theme, animate, and present Quarto reveal.js slide decks. Bundles three skills: quarto-revealjs (router with 43 references), quarto-revealjs-fragment, and auto-animate-elements."
+      "description": "Build, theme, animate, and present Quarto reveal.js slide decks. Bundles four skills: quarto-revealjs (router with 43 references), quarto-revealjs-fragment, auto-animate-elements, and animejs-revealjs."
     }
   ]
 }
